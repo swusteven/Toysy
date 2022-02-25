@@ -6,5 +6,6 @@ Rails.application.routes.draw do
       resource :session, only: [:create, :destroy]
   end
  
+  # static page for React
   root to: 'root#root'
 end
