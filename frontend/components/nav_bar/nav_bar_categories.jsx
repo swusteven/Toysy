@@ -8,7 +8,13 @@ class NavBarCategories extends React.Component{
 
   render(){
     return (
-      <h1>NavBarCategories stuff goes here</h1>
+      <>
+        <div>Baby & Toddler Toys</div>
+        <div>Stuffed Animals & Plushies</div>
+        <div>Learning & School</div>
+        <div>Miniature Toys</div>
+        <div>Dolls & Action Figures</div>
+      </>
     )
   };
 };

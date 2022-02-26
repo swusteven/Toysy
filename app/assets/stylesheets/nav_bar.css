@@ -1,0 +1,58 @@
+.nav-bar-main {
+  height: 72px;
+  align-items: center;
+}
+
+.nav-bar-main > div {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.nav-bar-main-logo {
+  height: 40px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: xx-large;
+  color: #ec7d10;
+  margin-right: 10px;
+}
+
+.nav-bar-main-search {
+  height: 40px;
+  width: 1035px;
+}
+
+.nav-bar-main-accout-manager {
+  height: 40px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar-main-cart {
+  height: 40px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar-main-search > form > input[type="search"]:nth-child(1) {
+  width: 950px;
+  height: 48px;
+  border-radius: 40px 0 0 40px;
+}
+
+.nav-bar-main-search > form > input[type="submit"]:nth-child(2) {
+  width: 62px;
+  height: 48px;
+  border-radius: 0 40px 40px 0;
+}

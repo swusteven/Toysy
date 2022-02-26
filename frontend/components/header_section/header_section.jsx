@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeaderSection = () =>{
   return(
-    <h1>This is the header section</h1>
+    <h1 className="header-section">Explore one-of-a-kind finds from independent makers</h1>
   ) 
 }
 

@@ -1,16 +1,31 @@
-import React from 'react'
+import React from 'react';
+import SearchBar from './search_bar';
+import AccountManager from './account_manager';
+import Cart from './cart';
 
-//props has currentUser, signup, login and logout
-class NavBarMain extends React.Component{
-  constructor(props){
-    super(props)
-  };
 
-  render(){
+const NavBarMain = ({currentUser, signup, login, logout }) =>{
     return (
-      <h1>NavBarMain stuff goes here</h1>
+      <div className="nav-bar-main-inner">
+        
+        <div className="nav-bar-main-logo">
+          <div>Toysy</div>       
+        </div>
+
+        <div className="nav-bar-main-search">
+          <SearchBar />
+        </div>
+
+        <div className="nav-bar-main-accout-manager">
+          <AccountManager currentUser={currentUser} signup={signup} login={login} logout={logout} />
+        </div>
+
+        <div className="nav-bar-main-cart">
+          <Cart currentUser={currentUser} signup={signup} login={login} logout={logout} />
+        </div>
+
+      </div>
     )
-  };
 };
 
 export default NavBarMain

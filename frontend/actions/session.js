@@ -20,10 +20,11 @@ export const signup = (user) => dispatch =>{
     .then(user => dispatch(receiveCurrentUser(user)))
 };
 
-export const login = (user) => dispatch =>(
-  SessionUtil.login(user)
+export const login = (user) => dispatch =>{
+  debugger
+  return SessionUtil.login(user)
     .then(user => dispatch(receiveCurrentUser(user)))
-);
+};
 
 export const logout = () => dispatch => (
   SessionUtil.logout()
