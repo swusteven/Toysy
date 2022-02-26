@@ -15,10 +15,10 @@ const logoutCurrentUser = () =>{
 
 //thunk action creators
 
-export const signup = (user) => dispatch =>(
-  SessionUtil.signup(user)
+export const signup = (user) => dispatch =>{
+  return SessionUtil.signup(user)
     .then(user => dispatch(receiveCurrentUser(user)))
-);
+};
 
 export const login = (user) => dispatch =>(
   SessionUtil.login(user)
