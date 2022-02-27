@@ -4,7 +4,7 @@
 }
 
 .nav-bar-main > div {
-  max-width: 1400px;
+  max-width: 1350px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -47,6 +47,10 @@
   width: 80px;
   height: 48px;
   border-radius: 0 40px 40px 0;
+}
+
+.signin-link {
+  text-decoration: none;
 }
 
 .nav-bar-main-accout-manager {

@@ -51,7 +51,7 @@ class Login extends React.Component{
         >
         
         <div className="modal-close-xxx">
-          <span onClick={() => setModalToClose(false)}>X</span>
+          <button onClick={() => setModalToClose(false)}>X</button>
         </div>
 
         <div className="session-signin-register-divider">

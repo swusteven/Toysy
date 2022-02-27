@@ -1,14 +1,6 @@
 .nav-bar-categories {
   display: flex;
   justify-content: space-between;
-  max-width: 1400px;
+  max-width: 1350px;
   margin: auto;
-}
-
-.nav-bar-categories > div:nth-child(1) {
-  margin-left: 10px;
-}
-
-.nav-bar-categories > div:nth-child(5) {
-  margin-right: 10px;
 }

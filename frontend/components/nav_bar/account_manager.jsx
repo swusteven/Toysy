@@ -9,7 +9,7 @@ const AccountManager = ({ currentUser, logout, setModalToOpen }) => {
     </div>
   ) :(
     <div>
-      <Link className="btn" onClick={()=>setModalToOpen()}to="/login" >Sign In</Link>
+      <Link className="signin-link" onClick={()=>setModalToOpen()}to="/login" >Sign In</Link>
     </div>
   );
   
