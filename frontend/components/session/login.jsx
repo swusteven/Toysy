@@ -32,30 +32,27 @@ class Login extends React.Component{
       <div className="session-form-wrapper">
         <Modal  isOpen={modalOpen} 
                 onRequestClose={()=>setModalToClose()}
-                style={
-                  {
+                style={{
                     overlay: {
-                      backgroundColor: "rgba(0, 0, 0, .4)",
+                      backgroundColor: "rgba(0, 0, 0, .5)",
                     },
                     content: {
                       borderRadius: '24px',
-                      width: "325px",
+                      width: "300px",
                       margin: "auto",
-                      height: "600px",
-                      padding: "40px",
-                      
-                    }
-                    
-                  }
-                }        
+                      height: "650px",
+                      padding: "40px",  
+                      overflow: "visible",   //this makes the close button visible outside                  
+                    }                    
+                  }}        
         >
-        
-        <div className="modal-close-xxx">
+          
+        <div className="modal-close-x">
           <button onClick={() => setModalToClose(false)}>X</button>
         </div>
 
         <div className="session-signin-register-divider">
-          <h2>Sign In</h2>
+          <div>Sign in</div>
           <button className="session-register-btn">Register</button>
         </div>
             <form className="session-form">

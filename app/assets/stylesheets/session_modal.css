@@ -1,17 +1,15 @@
-.modal-close-xxx {
-  text-align: right;
-}
-
-.modal-close-xxx button {
-  background-color: greenyellow;
+/* close button outside the modal */
+.modal-close-x button {
+  position: absolute;
   border-radius: 50%;
   border: none;
   width: 48px;
   height: 48px;
-}
-
-.session-form > label {
-  margin-top: 20px;
+  top: 5px;
+  right: -55px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: large;
 }
 
 /* two input fields */
@@ -30,9 +28,8 @@ body
   > label:nth-child(3)
   > input[type="password"] {
   margin-bottom: 20px;
-  width: 324px;
+  width: 294px;
   height: 48px;
-  border-radius: 10px;
   box-shadow: 0 1px 4px 0 rgb(34 34 34 / 10%) inset;
   transition: border 200ms ease-out, background 200ms ease-out;
   appearance: none;
@@ -55,7 +52,9 @@ body
 .session-signin-register-divider {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .session-register-btn {
@@ -69,25 +68,14 @@ body
 .signin-btn {
   background-color: black;
   color: white;
-  width: 324px;
+  width: 300px;
   height: 48px;
   outline: none;
-  padding: 10px;
-
   border-radius: 24px;
-  display: inline-block;
   font-size: 16px;
   font-weight: bold;
   line-height: 1.5;
-  min-height: 48px;
-  min-width: 48px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 18px;
-  padding-right: 18px;
-  position: relative;
   text-align: center;
   vertical-align: middle;
-  z-index: 10;
   cursor: pointer;
 }
