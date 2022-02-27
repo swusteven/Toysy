@@ -2,14 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const AccountManager = ({ currentUser, logout }) => {
+  debugger
   const display = currentUser ? (
     <div>
       <p>Hello, {currentUser.fname}</p>
-      <button onClick={logout }>Log out</button>
+      <button onClick={ logout }>Log out</button>
     </div>
   ) :(
     <div>
-      <Link className="btn" to="/signup">Sign In</Link>
+      <Link className="btn" to="/login">Sign In</Link>
     </div>
   );
   

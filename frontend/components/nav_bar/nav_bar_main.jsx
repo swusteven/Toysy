@@ -4,7 +4,7 @@ import AccountManager from './account_manager';
 import Cart from './cart';
 
 
-const NavBarMain = ({currentUser, signup, login, logout }) =>{
+const NavBarMain = ({currentUser, logout }) =>{
     return (
       <div className="nav-bar-main-inner">
         
@@ -17,11 +17,11 @@ const NavBarMain = ({currentUser, signup, login, logout }) =>{
         </div>
 
         <div className="nav-bar-main-accout-manager">
-          <AccountManager currentUser={currentUser} signup={signup} login={login} logout={logout} />
+          <AccountManager currentUser={currentUser}  logout={logout} />
         </div>
 
         <div className="nav-bar-main-cart">
-          <Cart currentUser={currentUser} signup={signup} login={login} logout={logout} />
+          <Cart currentUser={currentUser} />
         </div>
 
       </div>
