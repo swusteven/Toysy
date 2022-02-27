@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const AccountManager = ({ currentUser, logout }) => {
-  debugger
   const display = currentUser ? (
     <div>
       <p>Hello, {currentUser.fname}</p>
