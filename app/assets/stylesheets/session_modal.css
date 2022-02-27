@@ -1,0 +1,84 @@
+.modal-close-xxx {
+  background-color: aquamarine;
+}
+
+.session-form > label {
+  margin-top: 20px;
+}
+
+/* two input fields */
+body
+  > div.ReactModalPortal
+  > div
+  > div
+  > form
+  > label:nth-child(1)
+  > input[type="text"],
+body
+  > div.ReactModalPortal
+  > div
+  > div
+  > form
+  > label:nth-child(3)
+  > input[type="password"] {
+  margin-bottom: 20px;
+  width: 324px;
+  height: 48px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px 0 rgb(34 34 34 / 10%) inset;
+  transition: border 200ms ease-out, background 200ms ease-out;
+  appearance: none;
+  background: #ffffff;
+  box-shadow: 0 1px 4px 0 rgb(34 34 34 / 10%) inset;
+  border-color: rgba(34, 34, 34, 0.15);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  color: #222222;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 28px;
+  height: 48px;
+  outline: none;
+  min-width: 0;
+}
+
+.session-signin-register-divider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-register-btn {
+  border-radius: 30px;
+  width: 81px;
+  height: 36px;
+  background-color: white;
+}
+
+.signin-btn {
+  background-color: black;
+  color: white;
+  width: 324px;
+  height: 48px;
+  outline: none;
+  padding: 10px;
+
+  border-radius: 24px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  min-height: 48px;
+  min-width: 48px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  padding-right: 18px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 10;
+  cursor: pointer;
+}
