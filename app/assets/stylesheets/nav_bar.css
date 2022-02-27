@@ -12,7 +12,8 @@
   padding-top: 10px;
 }
 
-.nav-bar-main-logo {
+.nav-bar-main-logo a {
+  text-decoration: none;
   height: 40px;
   width: 80px;
   display: flex;

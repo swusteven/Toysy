@@ -27,7 +27,6 @@ class Login extends React.Component{
 
   render(){
     const { setModalToClose, modalOpen } = this.props;
-    debugger
     
     return (
       <div className="session-form">
