@@ -40,6 +40,7 @@
   height: 48px;
   border-radius: 40px 0 0 40px;
   font-size: medium;
+  text-indent: 1em;
 }
 
 .nav-bar-main-search > form > input[type="submit"]:nth-child(2) {

@@ -30,7 +30,7 @@ class Login extends React.Component{
     
     return (
       <div className="session-form">
-        <Modal isOpen={modalOpen}>
+        <Modal isOpen={modalOpen} onRequestClose={()=>setModalToClose()}>
         <h2>Log In!</h2>
             <form>
               <label>Email:
