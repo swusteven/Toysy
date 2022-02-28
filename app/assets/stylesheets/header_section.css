@@ -14,12 +14,12 @@
 }
 
 .header-section-message {
-  font-size: 52px;
+  font-size: 50px;
   line-height: 56px;
   font-weight: 50;
   font-family: "Guardian-EgypTT", Charter, "Charter Bitstream", Cambria,
     "Noto Serif Light", "Droid Serif", Georgia, serif;
-  color: rgb(84, 88, 88);
+  color: rgb(74, 74, 74);
 }
 
 .header-section-bottom {
@@ -56,4 +56,5 @@
   height: 114px;
   width: 114px;
   border-radius: 50%;
+  border: 1px solid rgba(34, 34, 34, 0.15) !important;
 }
