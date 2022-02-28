@@ -48,6 +48,8 @@
   background-color: transparent;
   border-width: 2px;
   border-color: #222222;
+  font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans",
+    Arial, sans-serif;
 }
 
 .nav-bar-main-search > form > input[type="submit"]:nth-child(2) {

@@ -3,6 +3,7 @@
   height: 300px;
   background-color: #fdebd2;
   margin-top: 10px;
+  border-top: solid lightgray 1px;
 }
 
 #root > div > h1 {
