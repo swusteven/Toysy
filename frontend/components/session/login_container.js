@@ -3,15 +3,11 @@ import {login} from "../../actions/session"
 import Login from './login';
 import { setModalToClose } from '../../actions/modal';
 
-//no need to create mapStateToProps
-const mapStateToProps = state => {
 
-  return {
+const mapStateToProps = state => ({
     modalOpen: state.modalOpen
-  }
-}
+});
 
-//this will give us a props called createNewUser in the SignUp form
 const mapDispatchToProps = dispatch =>({
   login: formUser => dispatch(login(formUser)),
   setModalToClose: (currentStatus) => dispatch(setModalToClose(currentStatus))

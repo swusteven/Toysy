@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "react-modal"
+import { Link } from "react-router-dom";
 
 class Login extends React.Component{
   constructor(props){
@@ -18,8 +19,8 @@ class Login extends React.Component{
   }
 
   handleSubmit(e){
-    e.preventDefault();    //remember to invoke it
-    this.props.login(this.state)    //login a user
+    e.preventDefault();    
+    this.props.login(this.state)
       .then(()=> this.props.history.push('./'))  //upon sucessfully create a new user. will have a callback function to redirect
   }
 
@@ -52,11 +53,14 @@ class Login extends React.Component{
         </div>
 
         <div className="session-signin-register-divider">
-          <div>Sign in</div>
-          <button className="session-register-btn">Register</button>
+          <div className="signin-signup-message">Sign in</div>
+          <Link to="/signup" className="session-register-btn">Register</Link>
+
         </div>
+
+        
             <form className="session-form">
-              <label>Email address:
+              <label>Email address
                 <br />
                 <input 
                   type="text"
@@ -67,7 +71,7 @@ class Login extends React.Component{
               
               <br />
 
-              <label>Password:
+              <label>Password
                 <br />
                 <input 
                   type="password"

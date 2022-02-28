@@ -12,24 +12,18 @@
   font-size: large;
 }
 
-/* two input fields */
+/* the input fields */
+body > div.ReactModalPortal > div > div > form > label > input[type="text"],
 body
   > div.ReactModalPortal
   > div
   > div
   > form
-  > label:nth-child(1)
-  > input[type="text"],
-body
-  > div.ReactModalPortal
-  > div
-  > div
-  > form
-  > label:nth-child(3)
+  > label
   > input[type="password"] {
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   width: 294px;
-  height: 48px;
+  height: 45px;
   box-shadow: 0 1px 4px 0 rgb(34 34 34 / 10%) inset;
   transition: border 200ms ease-out, background 200ms ease-out;
   appearance: none;
@@ -44,7 +38,6 @@ body
   font-family: inherit;
   font-size: 16px;
   line-height: 28px;
-  height: 48px;
   outline: none;
   min-width: 0;
 }
@@ -59,13 +52,25 @@ body
 
 .session-register-btn {
   border-radius: 24px;
+  border: solid 2px;
   width: 81px;
-  height: 36px;
+  height: 30px;
   background-color: white;
-  font-size: 13px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-5px);
+  font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans",
+    Arial, sans-serif;
+  font-weight: 700;
+  line-height: 24px;
 }
 
-.signin-btn {
+.signin-btn,
+.signup-btn {
   background-color: black;
   color: white;
   width: 300px;
@@ -78,4 +83,16 @@ body
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+}
+
+.signin-signup-message {
+  font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans",
+    Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.session-form-red-asteriks {
+  color: #a61a2e;
 }
