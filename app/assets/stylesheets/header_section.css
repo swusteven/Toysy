@@ -1,13 +1,59 @@
-.header-section {
+.header-section-wrapper {
   margin: auto;
   height: 300px;
-  background-color: #fdebd2;
   margin-top: 10px;
   border-top: solid lightgray 1px;
 }
 
-#root > div > h1 {
+.header-section-top {
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: center;
+  background-color: #fdebd2;
+  height: 204px;
+}
+
+.header-section-message {
+  font-size: 52px;
+  line-height: 56px;
+  font-weight: 50;
+  font-family: "Guardian-EgypTT", Charter, "Charter Bitstream", Cambria,
+    "Noto Serif Light", "Droid Serif", Georgia, serif;
+  color: rgb(84, 88, 88);
+}
+
+.header-section-bottom {
+  height: 204px;
+  max-width: 1180px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 102px;
+  transform: translateY(-102px);
+}
+
+.header-section-bottom-contents {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans",
+    Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 15px;
+}
+
+.header-section-bottom-contents-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-section-bottom-contents img {
+  height: 114px;
+  width: 114px;
+  border-radius: 50%;
 }

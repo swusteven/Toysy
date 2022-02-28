@@ -7,10 +7,10 @@ import LoginContainer from "./session/login_container"
 
 
 export default () => (
-  <div>
+  <>
     <Route path="/" component={NavBarContainer} />
     <Route path="/" component={HeaderSection} />
     <Route path="/login" component={LoginContainer} />
     <Route path="/signup" component={SignupContainer} />
-  </div>
+  </>
 );
