@@ -14,12 +14,6 @@
  *= require_self
  */
 
-html,
-body,
-div {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-}
+@import "reset_file/reset.css";
+
+@import "components/* ";
