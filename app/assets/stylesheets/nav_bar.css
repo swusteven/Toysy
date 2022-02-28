@@ -14,7 +14,7 @@
 
 .nav-bar-main-logo a {
   text-decoration: none;
-  height: 40px;
+  height: 48px;
   width: 80px;
   display: flex;
   align-items: center;
@@ -26,27 +26,37 @@
 }
 
 .nav-bar-main-search {
-  height: 40px;
-  width: 1035px;
+  height: 48px;
+  width: 100%;
 }
 
 .nav-bar-search-section {
   display: flex;
   justify-content: space-between;
+  float: 1;
 }
 
 .nav-bar-main-search > form > input[type="search"]:nth-child(1) {
+  margin-top: 2px;
   width: 100%;
-  height: 48px;
+  height: 47px;
   border-radius: 40px 0 0 40px;
   font-size: medium;
   text-indent: 1em;
+  display: flex;
+  flex: 1;
+  background-color: transparent;
+  border-width: 2px;
+  border-color: #222222;
 }
 
 .nav-bar-main-search > form > input[type="submit"]:nth-child(2) {
-  width: 80px;
-  height: 48px;
+  margin-top: 2px;
+  width: 62px;
+  height: 47px;
   border-radius: 0 40px 40px 0;
+  border-width: 2px;
+  border-color: #222222;
 }
 
 .signin-link {
@@ -54,16 +64,16 @@
 }
 
 .nav-bar-main-accout-manager {
-  height: 40px;
-  width: 140px;
+  height: 48px;
+  width: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .nav-bar-main-cart {
-  height: 40px;
-  width: 140px;
+  height: 48px;
+  width: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
