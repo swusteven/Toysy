@@ -6,7 +6,7 @@ import SignupContainer from './session/signup_container';
 import LoginContainer from "./session/login_container"
 
 
-export default () => (
+const App = () => (
   <>
     <Route path="/" component={NavBarContainer} />
     <Route path="/" component={HeaderSection} />
@@ -14,3 +14,5 @@ export default () => (
     <Route path="/signup" component={SignupContainer} />
   </>
 );
+
+export default App
