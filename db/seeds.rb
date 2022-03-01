@@ -16,6 +16,8 @@
 #     "seller_id" => 1
 # )
 
+awesomeGuest = User.create("fname"=> "awesome guest", "email"=> "awesomeguest@yahoo.com", "password": "123456")
+
 product2 = Product.create!(
     "name" => "Leaf puzzle montessori toy toddler gift for baby | Wooden Leaf Puzzle | Leaf puzzle",
     "description" => "We offer this small, very compact Montessori pencil holder. This is a perfect way to organize your pencils and it does look amazing on the desk. This is our BESSTSELLER for more than 6 years and people LOVE it! Many of them return even more than once to buy a new pencil holder as a gift to others.
@@ -27,6 +29,6 @@ Measures only 41 cm x 7 cm (15 x 2,75 inches). There is 11 holes and each one of
 The colored circles are made from hazel branches. They are sanded and colored with water based acrylic paint. These natural wooden circles with bark give the pencil holder a nice look.",
     "price" => 16.99,
     "quantity" => 200,
-    "category" => "Games & Puzzles",
+    "category" => "Baby & Toddler Toys",
     "seller_id" => 2
 )

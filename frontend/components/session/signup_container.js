@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {signup} from "../../actions/session"
+import {signup, login} from "../../actions/session"
 import Signup from './signup';
 import { setModalToClose } from '../../actions/modal';
 
@@ -9,6 +9,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch =>({
   createNewUser: formUser => dispatch(signup(formUser)),
+  login: formUser => dispatch(login(formUser)),
   setModalToClose: (currentStatus) => dispatch(setModalToClose(currentStatus))
 })
 

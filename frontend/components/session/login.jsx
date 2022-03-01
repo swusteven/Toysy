@@ -10,6 +10,7 @@ class Login extends React.Component{
                     password: ''
                   };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmitAsDemoUser = this.handleSubmitAsDemoUser.bind(this);
   }
 
   handleInput(type){
@@ -21,6 +22,14 @@ class Login extends React.Component{
   handleSubmit(e){
     e.preventDefault();    
     this.props.login(this.state)
+      .then(()=> this.props.history.push('./'))  //upon sucessfully create a new user. will have a callback function to redirect
+  }
+
+
+  handleSubmitAsDemoUser(e){
+    e.preventDefault();
+    let demoUser = {email: "awesomeguest@yahoo.com", password: "123456"}
+    this.props.login(demoUser)
       .then(()=> this.props.history.push('./'))  //upon sucessfully create a new user. will have a callback function to redirect
   }
 
@@ -52,6 +61,11 @@ class Login extends React.Component{
           <button onClick={() => setModalToClose(false)}>X</button>
         </div>
 
+        <h2 className="session-welcome-message">Weclome to Toysy! A project clone of 
+          <a href="https://www.etsy.com/"> Etsy!</a>
+          
+        </h2>
+
         <div className="session-signin-register-divider">
           <div className="signin-signup-message">Sign in</div>
           <Link to="/signup" className="session-register-btn">Register</Link>
@@ -80,10 +94,18 @@ class Login extends React.Component{
                 />
               </label>
               <br />
-              <button className="signin-btn" onClick={this.handleSubmit}>Sign In</button>
 
+              <button className="signin-btn" onClick={this.handleSubmit}>Sign In</button>
               
             </form>
+
+            <p className='session-breakline'><span> OR </span></p>
+
+            <button className="awesome-demo-user-btn" onClick={this.handleSubmitAsDemoUser}>Sign in as demo user</button>
+
+            
+            
+
         </Modal>
       </div>
     )

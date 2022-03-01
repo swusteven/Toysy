@@ -1,3 +1,10 @@
+.session-welcome-message {
+  background-color: #fdebd2;
+  height: 15px;
+  padding: 5px;
+  margin: 0 0 40px 0;
+}
+
 /* close button outside the modal */
 .modal-close-x button {
   position: absolute;
@@ -24,11 +31,10 @@ body
   margin-bottom: 8px;
   width: 294px;
   height: 45px;
-  box-shadow: 0 1px 4px 0 rgb(34, 34, 4) inset;
+  box-shadow: 0 1px 3px 0 rgb(34, 34, 4) inset;
   transition: border 200ms ease-out, background 200ms ease-out;
   appearance: none;
   background: #ffffff;
-  box-shadow: 0 1px 4px 0 rgb(34, 34, 4) inset;
   border-color: rgba(34, 34, 34, 0.15);
   border-style: solid;
   border-width: 1px;
@@ -40,6 +46,9 @@ body
   line-height: 28px;
   outline: none;
   min-width: 0;
+  &:focus {
+    border: solid 1px;
+  }
 }
 
 .session-signin-register-divider {
@@ -67,10 +76,14 @@ body
     Arial, sans-serif;
   font-weight: 700;
   line-height: 24px;
+  &:hover {
+    box-shadow: 0 1px 3px 0 rgb(34, 34, 4);
+  }
 }
 
 .signin-btn,
-.signup-btn {
+.signup-btn,
+.awesome-demo-user-btn {
   background-color: black;
   color: white;
   width: 300px;
@@ -83,6 +96,13 @@ body
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+}
+
+.signin-btn:hover,
+.signup-btn:hover,
+.awesome-demo-user-btn:hover {
+  transform: scale(1.05) perspective(1px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .signin-signup-message {
@@ -100,4 +120,20 @@ div.signup-message > p:nth-child(2) {
 
 .session-form-red-asteriks {
   color: #a61a2e;
+}
+
+//breakline
+.session-breakline {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #848181;
+  line-height: 0.1em;
+  margin: 40px 0 40px;
+}
+
+//the "or" inside the breakline
+.session-breakline span {
+  background: #fff;
+  padding: 10px 10px;
+  color: #848181;
 }

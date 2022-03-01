@@ -11,6 +11,7 @@ class Signup extends React.Component{
                     password: ''
                   };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmitAsDemoUser = this.handleSubmitAsDemoUser.bind(this);
   }
 
   handleInput(type){
@@ -22,6 +23,14 @@ class Signup extends React.Component{
   handleSubmit(e){
     e.preventDefault();    
     this.props.createNewUser(this.state) 
+      .then(()=> this.props.history.push('./'))  //upon sucessfully create a new user. will have a callback function to redirect
+  }
+
+
+  handleSubmitAsDemoUser(e){
+    e.preventDefault();
+    let demoUser = {email: "awesomeguest@yahoo.com", password: "123456"}
+    this.props.login(demoUser)
       .then(()=> this.props.history.push('./'))  //upon sucessfully create a new user. will have a callback function to redirect
   }
 
@@ -55,6 +64,7 @@ class Signup extends React.Component{
           <div className="modal-close-x">
             <button onClick={() => setModalToClose(false)}>X</button>
           </div>
+          
 
           <div className="signup-message">
             <p className="signin-signup-message">Create your account</p>
@@ -89,6 +99,10 @@ class Signup extends React.Component{
 
             <button className="signup-btn"onClick={this.handleSubmit}>Sign Up</button>
           </form>
+          
+          <p className='session-breakline'><span> OR </span></p>
+
+          <button className="awesome-demo-user-btn" onClick={this.handleSubmitAsDemoUser}>Sign in as demo user</button>
         </Modal>
 
       </div>
