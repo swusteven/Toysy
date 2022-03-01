@@ -93,6 +93,11 @@ body
   line-height: 24px;
 }
 
+div.signup-message > p:nth-child(2) {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .session-form-red-asteriks {
   color: #a61a2e;
 }
