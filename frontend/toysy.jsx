@@ -8,6 +8,7 @@ import * as sessionActions from "./actions/session"
 
 document.addEventListener("DOMContentLoaded", function(){
   const root = document.querySelector("#root");
+ 
    
   let preloadedState = undefined;
   if (window.currentUser){

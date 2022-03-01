@@ -9,7 +9,7 @@ import LoginContainer from "./session/login_container"
 const App = () => (
   <>
     <Route path="/" component={NavBarContainer} />
-    <Route path="/" component={HeaderSection} />
+    <Route path="/" component={HeaderSection} /> 
     <Route path="/login" component={LoginContainer} />
     <Route path="/signup" component={SignupContainer} />
   </>

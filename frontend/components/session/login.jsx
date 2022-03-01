@@ -24,7 +24,6 @@ class Login extends React.Component{
       .then(()=> this.props.history.push('./'))  //upon sucessfully create a new user. will have a callback function to redirect
   }
 
-  
 
   render(){
     const { setModalToClose, modalOpen } = this.props;
@@ -32,6 +31,7 @@ class Login extends React.Component{
     return (
       <div className="session-form-wrapper">
         <Modal  isOpen={modalOpen} 
+                ariaHideApp={false}
                 onRequestClose={()=>setModalToClose()}
                 style={{
                     overlay: {
