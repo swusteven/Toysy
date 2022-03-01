@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import MainPageGallery from "./main_page_gallery";
+import MainPageIndex from "./main_page_index";
 import { fetchAllProducts, fetchSingleProduct } from "../../actions/product"
 
 const mSTP = state => ({
@@ -11,6 +11,6 @@ const mDTP = dispatch => ({
   fetchSingleProduct: (productId)=> dispatch(fetchSingleProduct(productId))
 })
 
-export default connect(mSTP, mDTP)(MainPageGallery)
+export default connect(mSTP, mDTP)(MainPageIndex)
 
 

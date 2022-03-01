@@ -16,6 +16,11 @@
 #     "seller_id" => 1
 # )
 
+
+# p2.image.attach(io: File.open('/Users/swusteven/Desktop/product_images/leaf_puzzle2.jpg'), filename: 'leaf_puzzle2.jpg')
+
+
+
 awesomeGuest = User.create("fname"=> "awesome guest", "email"=> "awesomeguest@yahoo.com", "password": "123456")
 
 product2 = Product.create!(

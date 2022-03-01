@@ -10,5 +10,6 @@ class Product < ApplicationRecord
     validates :name, :description, :price, :quantity, :seller_id, presence: true
     validates :category, presence: true, inclusion: {in:CATEGORIES,  message: "invalid category" }
 
-    has_one_attached :image
+    has_one_attached :image 
+    
 end
