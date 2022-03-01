@@ -4,14 +4,16 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import HeaderSection from './header_section/header_section';
 import SignupContainer from './session/signup_container';
 import LoginContainer from "./session/login_container"
-
+import ProductContainer from './product/product_container';
 
 const App = () => (
   <>
     <Route path="/" component={NavBarContainer} />
     <Route path="/" component={HeaderSection} /> 
+    <Route path="/" component={ProductContainer} />
     <Route path="/login" component={LoginContainer} />
     <Route path="/signup" component={SignupContainer} />
+
   </>
 );
 

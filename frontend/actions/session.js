@@ -13,8 +13,8 @@ const logoutCurrentUser = () =>({
   type: LOGOUT_CURRENT_USER
 });
 
-//thunk action creators
 
+//thunk action creators
 export const signup = (user) => dispatch =>{
   return SessionUtil.signup(user)
     .then(user => dispatch(receiveCurrentUser(user)))
