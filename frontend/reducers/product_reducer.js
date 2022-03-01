@@ -4,12 +4,11 @@ import {
 } from "../actions/product"
 
 
-const productReducer = (oldState = {}, action) =>{
+const productReducer = (oldState = [], action) =>{
   Object.freeze(oldState);
   let nextState = Object.assign({}, oldState);
 
   switch (action.type) {
-
     case RECEIVE_ALL_PRODUCTS:
     return action.products
       

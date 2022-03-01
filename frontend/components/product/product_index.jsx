@@ -1,8 +1,10 @@
 import React from 'react'
 
-const ProductIndex =(props) => {
+const ProductIndex =({product}) => {
   
-  return null;
+  return (
+    <h1>{product.name}</h1>
+  );
 
 }
 
