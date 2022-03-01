@@ -3,7 +3,7 @@ import MainPageGallery from "./main_page_gallery";
 import { fetchAllProducts, fetchSingleProduct } from "../../actions/product"
 
 const mSTP = state => ({
-  products: state.products
+  products: Object.values(state.products)
 });
 
 const mDTP = dispatch => ({
@@ -12,3 +12,5 @@ const mDTP = dispatch => ({
 })
 
 export default connect(mSTP, mDTP)(MainPageGallery)
+
+
