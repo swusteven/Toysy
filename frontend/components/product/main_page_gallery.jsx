@@ -1,32 +1,23 @@
 import React from 'react'
-
+import ProductIndex from './product_index';
 
 class MainPageGallery extends React.Component{
-  constructor(props){
-    super(props)
-  }
-
   componentDidMount(){
-    console.log(this.props)
-    debugger
     this.props.fetchAllProducts();
-    debugger
-    console.log(this.props.products)
   }
 
   render(){
-    const { products } = this.props
-    debugger
     return (
-      <>
-        <h1>d</h1>
-      </>
+      <div>
+          {/* {
+            this.props.products.map((product) =>{
+              return <ProductIndex product = {product}/>
+            })
+          } */}
+      </div>
     )
   }
-
 }
-
-
 
 export default MainPageGallery
 

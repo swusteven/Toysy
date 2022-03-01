@@ -15,13 +15,13 @@ const receiveSingleProduct = (product) => ({
 });
 
 //thunk action creators
-export const fetchAllProducts = () => dispatch => (
-  ApiUtilProduct.fetchProducts()
-    .then(products => dispatch(receiveAllProducts()))
-);
+export const fetchAllProducts = () => dispatch => {
+ return ApiUtilProduct.fetchProducts()
+    .then((products) => dispatch(receiveAllProducts(products)))
+};
 
 export const fetchSingleProduct = (productId) => dispatch => (
   ApiUtilProduct.fetchProduct(productId)
-    .then(product => dispatch(receiveSingleProduct(productId)))
+    .then(productId => dispatch(receiveSingleProduct(productId)))
 );
 

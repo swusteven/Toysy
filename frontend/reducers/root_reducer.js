@@ -6,9 +6,8 @@ import productReducer from "./product_reducer";
 
 const RootReducer = combineReducers({
   session: sessionReducer,
-  product: productReducer,
+  products: productReducer,
   modalOpen: ModalReducer
-
 });
 
 export default RootReducer
