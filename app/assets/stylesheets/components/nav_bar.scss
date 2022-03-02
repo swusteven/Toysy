@@ -45,20 +45,26 @@
   text-indent: 1em;
   display: flex;
   flex: 1;
-  background-color: transparent;
-  border-width: 2px;
+  background-color: #f6f1ea7b;
+  border-width: 2px 0 2px 2px;
   border-color: #222222;
   font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans",
     Arial, sans-serif;
 }
 
-.nav-bar-main-search > form > input[type="submit"]:nth-child(2) {
+.nav-bar-search-btn {
   margin-top: 2px;
   width: 62px;
   height: 47px;
   border-radius: 0 40px 40px 0;
-  border-width: 2px;
+  border-width: 2px 2px 2px 0;
   border-color: #222222;
+  background-color: #f6f1ea7b;
+}
+
+.fa-magnifying-glass {
+  width: 24px;
+  height: 24px;
 }
 
 .signin-link {

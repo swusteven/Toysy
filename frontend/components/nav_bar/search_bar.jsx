@@ -5,7 +5,11 @@ const SearchBar = () =>{
       <>
         <form action="" className="nav-bar-search-section">
           <input type="search" name="" id="" placeholder='Search for anything'/>
-          <input type="submit" value="Search" />
+        
+  
+        <button className="nav-bar-search-btn">
+          <img className="fa-magnifying-glass" src={window.searchBarIcon} alt="" />
+        </button>
         </form>
       </>
     )

@@ -4,11 +4,9 @@
     <title>Toysy</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    
+    <script src="https://kit.fontawesome.com/fb3edc4725.js" crossorigin="anonymous"></script>
     <% if current_user %>
        <script>
           window.currentUser = {
@@ -18,8 +16,11 @@
           }; 
        </script>
     <% end %>
-    
+  <script type="text/javascript">
+    window.searchBarIcon = "<%= image_url("search.png") %>"
+  </script>
 
+  
 
   </head>
 
