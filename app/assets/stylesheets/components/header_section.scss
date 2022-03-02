@@ -13,7 +13,17 @@
   height: 204px;
 }
 
-.header-section-message {
+.header-section-message-logged-out {
+  font-size: 50px;
+  line-height: 56px;
+  font-weight: 50;
+  margin-top: 28px;
+  font-family: "Guardian-EgypTT", Charter, "Charter Bitstream", Cambria,
+    "Noto Serif Light", "Droid Serif", Georgia, serif;
+  color: rgb(74, 74, 74);
+}
+
+.header-section-message-logged-in {
   font-size: 50px;
   line-height: 56px;
   font-weight: 50;
@@ -31,7 +41,7 @@
   justify-content: space-between;
   align-items: center;
   top: 102px;
-  transform: translateY(-102px);
+  transform: translateY(-112px);
 }
 
 .header-section-bottom-contents {

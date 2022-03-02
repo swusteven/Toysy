@@ -1,10 +1,13 @@
 import React from 'react'
 
-const HeaderSection = () =>{
+const loggedOutMessage = <h1 className="header-section-message-logged-out">Explore one-of-a-kind finds from independent makers</h1>
+
+
+const HeaderSection = ({currentUser}) =>{
   return(
     <div className='header-section-wrapper'> 
       <div className='header-section-top'>
-        <h1 className="header-section-message">Explore one-of-a-kind finds from independent makers</h1>
+        {currentUser ? <h1 className="header-section-message-logged-in">{`Welcome! ${currentUser.fname}` }</h1> : loggedOutMessage }
       </div>
 
       <div className='header-section-bottom'>
