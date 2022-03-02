@@ -137,3 +137,12 @@ div.signup-message > p:nth-child(2) {
   padding: 10px 10px;
   color: #848181;
 }
+
+.session-error-messages {
+  color: red;
+}
+
+.session-error-invalid-credentials {
+  background-color: yellow;
+  text-align: center;
+}

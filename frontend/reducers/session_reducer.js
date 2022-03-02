@@ -1,6 +1,6 @@
 import {
   RECEIVE_CURRENT_USER,
-  LOGOUT_CURRENT_USER
+  LOGOUT_CURRENT_USER,
 } from "../actions/session"
 
 const _nullState = {
@@ -16,7 +16,7 @@ const sessionReducer = (oldState = _nullState, action) =>{
       
     case LOGOUT_CURRENT_USER:
       return _nullState
-  
+
     default:
       return oldState
   }

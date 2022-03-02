@@ -33,6 +33,23 @@ class Login extends React.Component{
       .then(()=> this.props.history.push('./'))  //upon sucessfully create a new user. will have a callback function to redirect
   }
 
+    _renderError(error, fieldname){
+      if (fieldname === "backend"){
+        return error;    
+      } else if (fieldname === 'Email' && this.state.email ===""){
+        return "Email can't be blank"
+      } else if (fieldname === 'Password' &&this.state.password ===""){
+        return "Password can't be blank"
+      }
+    }
+
+    renderErrors(fieldname){
+      return this.props.errors.map((error, i)=>(
+        <p className="session-error-messages" key={i}>
+          {this._renderError(error, fieldname)}
+        </p>
+      ))
+    }
 
   render(){
     const { setModalToClose, modalOpen } = this.props;
@@ -61,10 +78,8 @@ class Login extends React.Component{
           <button onClick={() => setModalToClose(false)}>X</button>
         </div>
 
-        <h2 className="session-welcome-message">Weclome to Toysy! A project clone of 
-          <a href="https://www.etsy.com/"> Etsy!</a>
-          
-        </h2>
+             <div className="session-error-invalid-credentials">{this.renderErrors("backend")}</div>
+             <br /><br />
 
         <div className="session-signin-register-divider">
           <div className="signin-signup-message">Sign in</div>
@@ -72,7 +87,7 @@ class Login extends React.Component{
 
         </div>
 
-        
+  
             <form className="session-form">
               <label>Email address
                 <br />
@@ -82,7 +97,7 @@ class Login extends React.Component{
                   onChange= {this.handleInput('email')}
                 />
               </label>
-              
+              {this.renderErrors("Email")}
               <br />
 
               <label>Password
@@ -93,6 +108,7 @@ class Login extends React.Component{
                   onChange= {this.handleInput('password')}
                 />
               </label>
+              {this.renderErrors("Password")}
               <br />
 
               <button className="signin-btn" onClick={this.handleSubmit}>Sign In</button>

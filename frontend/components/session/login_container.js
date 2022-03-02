@@ -5,7 +5,8 @@ import { setModalToClose } from '../../actions/modal';
 
 
 const mapStateToProps = state => ({
-    modalOpen: state.modalOpen
+    modalOpen: state.modalOpen,
+    errors: state.errors
 });
 
 const mapDispatchToProps = dispatch =>({

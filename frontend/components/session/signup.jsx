@@ -11,7 +11,6 @@ class Signup extends React.Component{
                     password: ''
                   };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleSubmitAsDemoUser = this.handleSubmitAsDemoUser.bind(this);
   }
 
   handleInput(type){
@@ -37,6 +36,23 @@ class Signup extends React.Component{
   componentDidMount() {
     Modal.setAppElement('#root');
   }
+
+  _renderError(error, fieldname){
+    if (error.includes(fieldname) && fieldname === "Fname"){
+      return "First name can't be blank";    
+    } else {
+      return error;
+    }
+  }
+
+  renderErrors(fieldname){
+    return this.props.errors.map((error, i)=>(
+      <p className="session-error-messages" key={i}>
+        {error.includes(fieldname) ? this._renderError(error, fieldname) : null }
+      </p>
+    ))
+  }
+
 
   render(){
     const { setModalToClose, modalOpen } = this.props;
@@ -71,6 +87,7 @@ class Signup extends React.Component{
             <p>Registration is easy.</p>
           </div>
 
+          
 
           <form className="session-form">
             <label>Email address <span className="session-form-red-asteriks">*</span>
@@ -79,7 +96,9 @@ class Signup extends React.Component{
                 value={this.state.email}
                 onChange= {this.handleInput('email')}
               />
-            </label><br />
+            </label>
+            {this.renderErrors("Email")}
+            <br />
 
             <label>First name <span className="session-form-red-asteriks">*</span>
               <input 
@@ -87,7 +106,9 @@ class Signup extends React.Component{
                 value={this.state.fname}
                 onChange={this.handleInput('fname')}
               />
-            </label><br />
+            </label>
+             {this.renderErrors("Fname")}
+            <br />
 
             <label>Password <span className="session-form-red-asteriks">*</span>
               <input 
@@ -95,7 +116,9 @@ class Signup extends React.Component{
                 value={this.state.password}
                 onChange= {this.handleInput('password')}
               />
-            </label><br />
+            </label>
+             {this.renderErrors("Password")}
+             <br />
 
             <button className="signup-btn"onClick={this.handleSubmit}>Sign Up</button>
           </form>
