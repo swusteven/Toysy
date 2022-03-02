@@ -10,9 +10,10 @@ const closeModal = () =>({
 });
 
 
-export const setModalToClose = () => dispatch =>(
-  dispatch(closeModal()) 
-);  
+export const setModalToClose = () => dispatch =>{
+  return dispatch(closeModal());
+}
+
 export const setModalToOpen = () => dispatch =>(
   dispatch(openModal()) 
 );  

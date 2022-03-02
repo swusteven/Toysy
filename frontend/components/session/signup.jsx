@@ -11,6 +11,7 @@ class Signup extends React.Component{
                     password: ''
                   };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmitAsDemoUser = this.handleSubmitAsDemoUser.bind(this);
   }
 
   componentWillUnmount(){
@@ -27,7 +28,7 @@ class Signup extends React.Component{
   handleSubmit(e){
     e.preventDefault();    
     this.props.createNewUser(this.state) 
-      .then(()=> this.props.history.push('./'))  //upon sucessfully create a new user. will have a callback function to redirect
+      .then(()=> this.props.history.push('./'))  
   }
 
 
@@ -35,7 +36,7 @@ class Signup extends React.Component{
     e.preventDefault();
     let demoUser = {email: "awesomeguest@yahoo.com", password: "123456"}
     this.props.login(demoUser)
-      .then(()=> this.props.history.push('./'))  //upon sucessfully create a new user. will have a callback function to redirect
+      .then(()=> this.props.history.push('./'))  
   }
 
   componentDidMount() {
@@ -130,7 +131,12 @@ class Signup extends React.Component{
           
           <p className='session-breakline'><span> OR </span></p>
 
-          <button className="awesome-demo-user-btn" onClick={this.handleSubmitAsDemoUser}>Sign in as demo user</button>
+          <button className="awesome-demo-user-btn" onClick={this.handleSubmitAsDemoUser}>Continue as Demo User</button>
+
+
+          <p className="session-disclaimer">
+                By clicking Sign in, Sign up or Continue as Demo User, you will find things you will love under Artsy's Terms of Use and Privacy Policy. Most importanlty, Artsy will not send you communications.
+          </p>
         </Modal>
 
       </div>

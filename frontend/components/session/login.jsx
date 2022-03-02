@@ -27,7 +27,7 @@ class Login extends React.Component{
   handleSubmit(e){
     e.preventDefault();    
     this.props.login(this.state)
-      .then(()=> this.props.history.push('./'))  //upon sucessfully create a new user. will have a callback function to redirect
+      .then(()=> this.props.history.push('./'))
   }
 
 
@@ -35,7 +35,7 @@ class Login extends React.Component{
     e.preventDefault();
     let demoUser = {email: "awesomeguest@yahoo.com", password: "123456"}
     this.props.login(demoUser)
-      .then(()=> this.props.history.push('./'))  //upon sucessfully create a new user. will have a callback function to redirect
+      .then(()=> this.props.history.push('./'))
   }
 
     _renderError(error, fieldname){
@@ -48,13 +48,13 @@ class Login extends React.Component{
       }
     }
 
-    renderErrors(fieldname){
-      return this.props.errors.map((error, i)=>(
-        <p className="session-error-messages" key={i}>
-          {this._renderError(error, fieldname)}
-        </p>
-      ))
-    }
+  renderErrors(fieldname){
+    return this.props.errors.map((error, i)=>(
+      <p className="session-error-messages" key={i}>
+        {this._renderError(error, fieldname)}
+      </p>
+    ))
+  }
 
   render(){
     const { setModalToClose, modalOpen } = this.props;
@@ -122,8 +122,11 @@ class Login extends React.Component{
 
             <p className='session-breakline'><span> OR </span></p>
 
-            <button className="awesome-demo-user-btn" onClick={this.handleSubmitAsDemoUser}>Sign in as demo user</button>
+            <button className="awesome-demo-user-btn" onClick={this.handleSubmitAsDemoUser}>Continue as Demo User</button>
 
+            <p className="session-disclaimer">
+                  By clicking Sign in, Sign up or Continue as Demo User, you will find things you will love under Artsy's Terms of Use and Privacy Policy. Most importanlty, Artsy will not send you communications.
+            </p>
             
             
 
