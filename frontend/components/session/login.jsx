@@ -13,6 +13,11 @@ class Login extends React.Component{
     this.handleSubmitAsDemoUser = this.handleSubmitAsDemoUser.bind(this);
   }
 
+  componentWillUnmount(){
+    this.props.removeErrors()
+  }
+
+
   handleInput(type){
     return (e)=>{
       this.setState({[type]: e.target.value})    

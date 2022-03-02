@@ -3,6 +3,7 @@ import * as SessionUtil from '../utils/session'
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS"
+export const REMOVE_ERRORS = "REMOVE_ERRORS"
 
 
 const receiveCurrentUser = (user) =>({
@@ -17,6 +18,10 @@ const logoutCurrentUser = () =>({
 const receiveErrors=(errors)=>({
   type: RECEIVE_ERRORS,
   errors
+});
+
+const receiveToRemoveErrors=()=>({
+  type: REMOVE_ERRORS,
 })
 
 
@@ -27,7 +32,6 @@ export const signup = (user) => dispatch =>{
           (errors) => dispatch(receiveErrors(errors)) 
          )
 };
-
 
 
 export const login = (user) => dispatch =>{
@@ -41,3 +45,7 @@ export const logout = () => dispatch => {
  return SessionUtil.logout()
     .then(() => dispatch(logoutCurrentUser()))
 };
+
+export const removeErrors =() => dispatch =>(
+  dispatch(receiveToRemoveErrors())
+)
