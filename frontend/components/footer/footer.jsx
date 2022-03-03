@@ -1,11 +1,11 @@
 import React from 'react'
-import WhatIsArtsy from './whatIsArtsy'
+import WhatIsToysy from './what_is_toysy'
 
 const Footer = () =>{
   return(
     <>
-      <section className="footer-what-is-artsy">
-        <WhatIsArtsy />
+      <section className="footer-what-is-toysy">
+        <WhatIsToysy />
       </section>
 
 

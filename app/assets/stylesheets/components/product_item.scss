@@ -1,0 +1,32 @@
+.product-item-wrapper {
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-item-left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 3%;
+}
+
+.product-item-gallery {
+  margin-bottom: 40px;
+  img {
+    width: 95%;
+    border-radius: 20px;
+  }
+}
+
+.product-item-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.seller-name {
+  color: red;
+}
