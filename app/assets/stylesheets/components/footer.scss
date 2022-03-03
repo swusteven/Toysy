@@ -1,6 +1,6 @@
 .footer-what-is-artsy {
   background-color: #fbeedc;
-  height: 400px;
+  height: 480px;
   margin-top: 70px;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .footer-WIA-top {
-  height: 60px;
+  height: 40px;
 }
 
 .footer-WIA-inner {
@@ -38,32 +38,89 @@
     font-weight: 300;
     letter-spacing: 1.5px;
   }
+  h3 {
+    font-size: 18px;
+    padding: 50px 10px 10px 0;
+    text-align: left;
+    line-height: 1.5;
+  }
+  a {
+    margin-top: 5px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 3px black solid;
+    padding: 5px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    span {
+      padding-left: 10px;
+      text-align: center;
+      transform: translateY(5px);
+      letter-spacing: 1.5px;
+    }
+  }
 }
 
-.footer-question {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer-question-contact:hover {
+  background-color: rgb(234, 172, 58);
+  transition: 0.5ms;
 }
 
 /*-------------------*/
 
-.footer-subscribe {
-  height: 134px;
-  background-color: #d7e6f5ec;
-}
-
 .footer-powered-by-renewable-elec {
-  height: 60px;
-  background-color: #5c7ddf;
+  height: 104px;
+  background-color: #bdd8f4ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    padding: 10px;
+    text-decoration-style: dotted;
+  }
 }
 
-.footer-links {
-  background-color: #344d76;
-  height: 300px;
-}
+/*-------------------*/
 
 .footer-my-info {
-  background-color: rgb(34, 34, 34);
-  height: 80px;
+  background-color: #6f87ce;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-my-info-left {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  margin-left: 100px;
+  p {
+    margin-left: 10px;
+  }
+}
+
+.footer-my-info-right {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  & * {
+    columns: white;
+    text-decoration: none;
+    color: white;
+  }
+  p {
+    text-align: right;
+  }
+}
+
+.footer-my-info-right a:hover {
+  background-color: black;
+  transition: 0.5ms;
+  border-radius: 10px;
+  padding: 8px;
 }

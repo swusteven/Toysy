@@ -21,7 +21,10 @@ const WhatIsArtsy = () =>{
            <div className='footer-WIA-bottom'>
             <h2>Support independent creators</h2>
             <p>There’s no Artsy warehouse – just millions of people selling the things they love. We make the whole process easy, helping you connect directly with makers to find something extraordinary.</p>
-            </div>    
+               <h3>Have a question? Well, we’ve got some answers.</h3>
+               <a className="footer-question-contact" href="https://www.linkedin.com/in/steven-wu-cams-29814136/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i>   <span>Contact me on LinkedIn</span> </a>
+            
+          </div>    
         </div>
 
 
@@ -31,16 +34,8 @@ const WhatIsArtsy = () =>{
             <h2>Peace of mind</h2>
             <p>Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.</p>
             </div>
-        </div>
-
-       
+        </div> 
       </div>
-       <section className="footer-question">
-            <h3>Have a question? Well, we’ve got some answers.</h3>
-            <br />
-          
-            <a href="https://www.linkedin.com/in/steven-wu-cams-29814136/"><i class="fa-brands fa-linkedin"></i> Contact me in LinkedIn</a>
-        </section>
     </>
   )
 }
