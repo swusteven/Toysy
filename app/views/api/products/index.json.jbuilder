@@ -1,7 +1,4 @@
 json.array! @products do  |product|
-    
-    json.extract! product, :id, :name, :description, :price, :quantity, :category, :seller_id
-    
+    json.extract! product, :id, :name, :description, :price, :quantity, :category, :seller_id, :seller
     json.imageUrl url_for(product.image)
-    
 end

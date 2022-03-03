@@ -11,12 +11,16 @@ import Footer from './footer/footer';
 const App = () => (
   <>
     <Route path="/" component={NavBarContainer} />
-    <Route path="/" component={HeaderSectionContainer} /> 
+    <Route exact path="/" component={HeaderSectionContainer} /> 
     <Route exact path="/" component={ProductsContainer} />
     
 
     <Route path="/login" component={LoginContainer} />
+    <Route path="/login" component={HeaderSectionContainer} /> 
+    
     <Route path="/signup" component={SignupContainer} />
+    <Route path="/signup" component={HeaderSectionContainer} /> 
+
     <Route path="/productitem/:id" component={ProductItemContainer} />
 
     <Route path="/" component={Footer} />

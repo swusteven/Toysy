@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AccountManager = ({ currentUser, logout, setModalToOpen }) => {
+  
+  
   const display = currentUser ? (
     <div className="user-menu-dropdown-main">
         <div className="user-menu-account-entry-main">
