@@ -19,8 +19,10 @@ class ProductEditorsPicks extends React.Component{
             </div>
 
             <div className="editors-pick-inner-box-2 editors-pick-inner-box-images">
-            <Link to="/productitem" product={products[0]}>
-                <img src={products.length !== 0 ? products[0].imageUrl : null} alt="" />        
+    
+
+            <Link to={`/productitem/${products.length !== 0 ? products[0].id : null}`}>
+                    <img src={products.length !== 0 ? products[0].imageUrl : null} alt="" />      
             </Link>
                      
              
@@ -46,12 +48,12 @@ class ProductEditorsPicks extends React.Component{
             </div>
 
             <div className="editors-pick-inner-box-6 editors-pick-inner-box-images" >
-               <img src="https://i.etsystatic.com/17305851/r/il/6cb808/3152662087/il_1140xN.3152662087_kks0.jpg" alt="" />
+               <img src="https://i.etsystatic.com/29675269/r/il/e94189/3632188333/il_1140xN.3632188333_66va.jpg" alt="" />
                 <span className="editors-pick-price">$50.99</span> 
             </div>
 
             <div className="editors-pick-inner-box-7 editors-pick-inner-box-images">
-               <img src="https://i.etsystatic.com/17305851/r/il/6cb808/3152662087/il_1140xN.3152662087_kks0.jpg" alt="" /> 
+               <img src="https://i.etsystatic.com/9765767/r/il/13cc71/2870974651/il_1140xN.2870974651_dycz.jpg" alt="" /> 
                <span className="editors-pick-price">$55.99</span> 
             </div> 
             <div className="editors-pick-inner-box-8">

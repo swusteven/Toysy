@@ -5,7 +5,7 @@ import HeaderSectionContainer from './header_section/header_section_container';
 import SignupContainer from './session/signup_container';
 import LoginContainer from "./session/login_container"
 import ProductContainer from './product/product_container';
-import ProductIndexItem from './product/product_index_item';
+import ProductItem from './product/product_item';
 
 const App = () => (
   <>
@@ -15,6 +15,8 @@ const App = () => (
 
     <Route path="/login" component={LoginContainer} />
     <Route path="/signup" component={SignupContainer} />
+    <Route path="/productitem/:id" component={ProductItem} />
+    
 
   </>
 );
