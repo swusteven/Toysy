@@ -3,10 +3,9 @@ import { fetchSingleProduct } from "../../actions/product"
 import ProductItem from "./product_item";
 
 
-const mSTP = state => {
-  debugger //1
-  return {
-    product: state.products
+const mSTP = (state,ownProps) => {
+    return {
+    product: state.products[ownProps.match.params.id]
   }
 };
  

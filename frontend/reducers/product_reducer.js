@@ -6,14 +6,13 @@ import {
 
 const productReducer = (oldState = {}, action) =>{
   Object.freeze(oldState);
-  let nextState = Object.assign({}, oldState);
 
   switch (action.type) {
     case RECEIVE_ALL_PRODUCTS:
-    return action.products
+    return Object.assign({}, oldState, action.products)
       
     case RECEIVE_SINGLE_PRODUCT:
-      return action.product
+      return Object.assign({}, oldState, {[action.product.id]: action.product})
       
     default:
       return oldState

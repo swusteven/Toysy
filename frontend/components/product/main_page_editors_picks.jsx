@@ -8,30 +8,31 @@ class ProductEditorsPicks extends React.Component{
 
   render(){  
     const {products} = this.props
-    const display = () =>{
-      return <section className="editors-pick-wrapper">
+    
+    return( products.length === 0 ? null :
+            <section className="editors-pick-wrapper">
                 <div className='editors-pick-top'>
                   <div className="editors-pick-inner-box-1">
                     <p>Editors’ Picks</p>
                     <h1>Made with love</h1>
                     <h3>Shop these unique finds <i className="fa-solid fa-arrow-right"></i></h3>
-                  </div>
+                </div>
 
-                  <div className="editors-pick-inner-box-2 editors-pick-inner-box-images">
+                <div className="editors-pick-inner-box-2 editors-pick-inner-box-images">
                     <Link to={`/productitem/${products[0].id}`}>
                             <img src={products[0].imageUrl} alt="" />      
                     </Link>                      
                     <span className="editors-pick-price">$20.99</span>
-                  </div>
+                </div>
                   
-                  <div className="editors-pick-inner-box-3 editors-pick-inner-box-images">
+                <div className="editors-pick-inner-box-3 editors-pick-inner-box-images">
                     <Link to={`/productitem/${products[1].id}`}>
                       <img src={products[1].imageUrl}  alt="" />
                     </Link>
                     <span className="editors-pick-price">$220.99</span>
-                  </div>
+                </div>
 
-                  <div className="editors-pick-inner-box-4 editors-pick-inner-box-images">
+                <div className="editors-pick-inner-box-4 editors-pick-inner-box-images">
                     <Link to={`/productitem/${products[2].id}`}>
                       <img src={products[1].imageUrl}  alt="" />
                     </Link>
@@ -57,10 +58,8 @@ class ProductEditorsPicks extends React.Component{
                     <div className="editors-pick-inner-box-8">
                       Express yourself in love with a collection of one-of-a-kind baby toys, games, learning, dolls and more</div>        
                 </div>
-              </section>
-    }
-
-    return (products.length !== 0 ? display() : null)
+            </section>
+    )
   }
 }
 
