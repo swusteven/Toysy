@@ -34,7 +34,7 @@ class ProductEditorsPicks extends React.Component{
 
                 <div className="editors-pick-inner-box-4 editors-pick-inner-box-images">
                     <Link to={`/productitem/${products[2].id}`}>
-                      <img src={products[1].imageUrl}  alt="" />
+                      <img src={products[2].imageUrl}  alt="" />
                     </Link>
                       <span className="editors-pick-price">$9.99</span>
                   </div>

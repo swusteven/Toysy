@@ -12,6 +12,9 @@ const App = () => (
   <>
     <Route path="/" component={NavBarContainer} />
     <Route exact path="/" component={HeaderSectionContainer} /> 
+    
+    <Route exact path="/" component={ProductsContainer} />
+    <Route exact path="/" component={ProductsContainer} />
     <Route exact path="/" component={ProductsContainer} />
     
 

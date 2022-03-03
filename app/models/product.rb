@@ -1,10 +1,10 @@
 class Product < ApplicationRecord
     CATEGORIES = [
-        "Baby & Toddler Toys",
-        "Stuffed Animals & Plushies",
-        "Learning & School",
+        "Baby and Toddler Toys",
+        "Stuffed Animals and Plushies",
+        "Learning and School",
         "Miniature Toys",
-        "Dolls & Action Figures"    
+        "Dolls and Action Figures"    
     ]
 
     validates :name, :description, :price, :quantity, :seller_id, presence: true
