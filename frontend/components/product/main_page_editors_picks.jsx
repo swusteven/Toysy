@@ -8,7 +8,7 @@ class ProductEditorsPicks extends React.Component{
 
   render(){  
     const {products} = this.props
- 
+    
     return (
       <div className="editors-pick-wrapper">
         <div className='editors-pick-top'>

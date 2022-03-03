@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "react-modal"
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 class Login extends React.Component{
   constructor(props){
