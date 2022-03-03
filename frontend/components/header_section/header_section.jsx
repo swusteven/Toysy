@@ -5,7 +5,7 @@ const loggedOutMessage = <h1 className="header-section-message-logged-out">Explo
 
 const HeaderSection = ({currentUser}) =>{
   return(
-    <div className='header-section-wrapper'> 
+    <section className='header-section-wrapper'> 
       <div className='header-section-top'>
         {currentUser ? <h1 className="header-section-message-logged-in">{`Welcome! ${currentUser.fname}` }</h1> : loggedOutMessage }
       </div>
@@ -47,7 +47,7 @@ const HeaderSection = ({currentUser}) =>{
         </div> 
       </div>
 
-    </div>    
+    </section>    
   ) 
 }
 

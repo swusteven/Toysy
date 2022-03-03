@@ -10,7 +10,7 @@ const NavBarMain = ({currentUser, logout, setModalToOpen }) =>{
       <div className="nav-bar-main-inner">
         
         <div className="nav-bar-main-logo">
-            <Link to="./">Toysy</Link>
+            <Link to="/">Toysy</Link>
         </div>
 
         <div className="nav-bar-main-search">

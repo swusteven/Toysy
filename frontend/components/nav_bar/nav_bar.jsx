@@ -4,7 +4,7 @@ import NavBarCategories from './nav_bar_categories'
 
 const NavBar = ({currentUser, logout, setModalToOpen }) =>{
     return (
-      <div className="nav-bar-wrapper" >
+      <section className="nav-bar-wrapper" >
         
         <div className="nav-bar-main">
           <NavBarMain currentUser={currentUser} logout={logout} setModalToOpen={setModalToOpen} />
@@ -14,7 +14,7 @@ const NavBar = ({currentUser, logout, setModalToOpen }) =>{
           <NavBarCategories />
         </div>
 
-      </div>
+      </section>
     )
 }
 

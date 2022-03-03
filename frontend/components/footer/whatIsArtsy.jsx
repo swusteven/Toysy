@@ -22,7 +22,7 @@ const WhatIsArtsy = () =>{
             <h2>Support independent creators</h2>
             <p>There’s no Artsy warehouse – just millions of people selling the things they love. We make the whole process easy, helping you connect directly with makers to find something extraordinary.</p>
                <h3>Have a question? Well, we’ve got some answers.</h3>
-               <a className="footer-question-contact" href="https://www.linkedin.com/in/steven-wu-cams-29814136/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i>   <span>Contact me on LinkedIn</span> </a>
+               <a className="footer-question-contact" href="https://www.linkedin.com/in/steven-wu-cams-29814136/" target="_blank"><i className="fa-brands fa-linkedin fa-2x"></i>   <span>Contact me on LinkedIn</span> </a>
             
           </div>    
         </div>

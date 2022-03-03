@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 
 const AccountManager = ({ currentUser, logout, setModalToOpen }) => {
   const display = currentUser ? (
-    <div>
-      <p>Hello, {currentUser.fname}</p>
+    <div className="user-menu-dropdown-main">
+        <div className="user-menu-account-entry-main">
+          <i className="fa-solid fa-circle-user fa-2x"></i>
+          <i className="fa-solid fa-sort-down 2x"></i>
+      </div>
       <button onClick={ logout }>Log out</button>
     </div>
   ) :(

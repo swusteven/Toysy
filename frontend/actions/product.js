@@ -14,14 +14,16 @@ const receiveSingleProduct = (product) => ({
   product
 });
 
+
+
 //thunk action creators
 export const fetchAllProducts = () => dispatch => {
  return ApiUtilProduct.fetchProducts()
     .then((products) => dispatch(receiveAllProducts(products)))
 };
 
-export const fetchSingleProduct = (productId) => dispatch => (
-  ApiUtilProduct.fetchProduct(productId)
+export const fetchSingleProduct = (productId) => dispatch => {
+ return ApiUtilProduct.fetchProduct(productId)
     .then(productId => dispatch(receiveSingleProduct(productId)))
-);
+};
 

@@ -10,11 +10,11 @@ class MainPageGallery extends React.Component{
 
   render(){
     return (
-      <div className="main-page-gallery-wrapper">
+      <section className="main-page-gallery-wrapper">
           <ProductMostPopular products ={this.props.products}/>
           <ProductEditorsPicks products ={this.props.products}/>
           <ProductDicoverUniqueItems products ={this.props.products}  />
-      </div>
+      </section>
     )
   }
 }

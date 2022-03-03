@@ -40,7 +40,7 @@
 
 //search bar
 .nav-bar-main-search > form > input[type="search"]:nth-child(1) {
-  margin-left: 10px;
+  margin-left: 20px;
   margin-top: 2px;
   width: 100%;
   height: 47px;
@@ -75,7 +75,7 @@
   border-width: 2px 2px 2px 0;
   border-color: #222222;
   background-color: #f6f1ea7b;
-  margin-right: 30px;
+  margin-right: 20px;
   &:hover {
     background-color: #9593907b;
     border-width: 2px 2px 2px 2px;
@@ -100,14 +100,37 @@
   text-decoration: none;
 }
 
+/* ----Account Manager--- */
 .nav-bar-main-accout-manager {
   height: 48px;
-  width: 130px;
+  width: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
+.user-menu-dropdown-main {
+  display: flex;
+  align-items: center;
+}
+
+.user-menu-account-entry-main {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 15px;
+  i {
+    margin: 2px;
+  }
+  .fa-sort-down {
+    transform: translateY(5px);
+  }
+  &:hover {
+    background-color: #f69d2222;
+    border-radius: 20px;
+    transition: 0.5ms;
+  }
+}
+
+/* ----Shopping Cart Iconr--- */
 .nav-bar-main-cart {
   height: 48px;
   width: 48px;
