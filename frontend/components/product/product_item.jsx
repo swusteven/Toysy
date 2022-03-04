@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import ReviewsContainer from './reviews_container'
+import ReviewsPostAReview from './reviews_post_a_review';
 
 
 class ProductItem extends React.Component{
@@ -17,7 +19,9 @@ class ProductItem extends React.Component{
                 <img src={product.imageUrl} />
             </div>
             <div className='product-item-reviews'>
-                <h1>NO REVIEW - PLACEHOLDER</h1>
+               <ReviewsContainer />
+               <br />
+               <ReviewsPostAReview />
             </div>
           </section>
 
@@ -66,7 +70,7 @@ class ProductItem extends React.Component{
                     <div><i className="fa-solid fa-truck-fast  "></i></div>  
                           <span>--------------</span>
                     <div><i class="fa-solid fa-gift"></i></div> 
-                  </div>
+                  </div><br />
 
                
                   <div className="product-items-shipping-center">
@@ -75,7 +79,7 @@ class ProductItem extends React.Component{
                     <h3>Mar 18-25</h3>  
                          <span>---------------</span>
                     <h3>Mar 31-Apr 15</h3> 
-                  </div>
+                  </div><br />
 
                   <div className="product-items-shipping-bottom">
                     <h3>Order placed</h3>
