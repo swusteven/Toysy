@@ -3,6 +3,7 @@ import ReviewsContainer from './reviews_container'
 import ReviewsPostAReview from './reviews_post_a_review';
 
 
+
 class ProductItem extends React.Component{
   componentDidMount(){
     return this.props.fetchSingleProduct(this.props.match.params.id)
@@ -15,15 +16,22 @@ class ProductItem extends React.Component{
     return(  !product ? null : 
         <section className="product-item-wrapper">
           <section className="product-item-left">
+
+
             <div className='product-item-gallery'>
                 <img src={product.imageUrl} />
             </div>
+
+
             <div className='product-item-reviews'>
-               <ReviewsContainer />
+               <ReviewsContainer product={product}/>
                <br />
                <ReviewsPostAReview />
             </div>
           </section>
+
+
+
 
           <section className="product-item-right">
             <div className='product-item-details'>
@@ -53,7 +61,7 @@ class ProductItem extends React.Component{
                 </form>
             </div>
             <p className="product-items-handling" ><i className="fa-solid fa-truck-fast fa-2x"></i> <span>Hooray!</span> This item ships free to the US.</p><br />
-            <p NameName="product-items-handling"><i className="fa-solid fa-gift fa-2x" ></i>  Gift wrapping available</p><br />
+            <p className="product-items-handling"><i className="fa-solid fa-gift fa-2x" ></i>  Gift wrapping available</p><br />
       
             <div className='product-item-description'>
                 <p>Description</p>
@@ -65,11 +73,11 @@ class ProductItem extends React.Component{
               <p>Estimated arrival</p>
                 <div>
                   <div className="product-items-shipping-top">
-                    <div><i class="fa-solid fa-cart-shopping"></i></div>
+                    <div><i className="fa-solid fa-cart-shopping"></i></div>
                           <span>--------------</span>
                     <div><i className="fa-solid fa-truck-fast  "></i></div>  
                           <span>--------------</span>
-                    <div><i class="fa-solid fa-gift"></i></div> 
+                    <div><i className="fa-solid fa-gift"></i></div> 
                   </div><br />
 
                

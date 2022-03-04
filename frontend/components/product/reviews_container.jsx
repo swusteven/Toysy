@@ -1,6 +1,17 @@
-import React from 'react'
 import { connect } from "react-redux";
-// import { fetchSingleProduct } from "../../actions/product"
-import ReviewIndex from './reviews_index';
+import {fetchAllReviews} from "../../actions/review"
+import ReviewsIndex from './reviews_index';
 
-export default connect(null, null)(ReviewIndex)
+const mSTP = (state) => {
+  return {
+    reviews: Object.values(state.reviews)
+  }
+};
+
+const mDTP = dispatch => {
+  return {
+    fetchAllReviews: (productId) => dispatch(fetchAllReviews(productId))
+}}
+
+
+export default connect(mSTP, mDTP)(ReviewsIndex)
