@@ -4,11 +4,13 @@ export const fetchReviews = (productId) =>(
   })
 );
 
-export const postReview = (data) =>(
+export const postReview = (data) =>{
+  return 
   $.ajax({
     url: "api/reviews",
     method: "POST",
     data: {data}
   })
-);
+}
+
 

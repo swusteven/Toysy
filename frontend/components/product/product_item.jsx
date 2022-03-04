@@ -1,6 +1,6 @@
 import React from 'react';
 import ReviewsContainer from './reviews_container'
-import ReviewsPostAReview from './reviews_post_a_review';
+import ReviewsPostAReviewContainer from './reviews_post_a_review_container';
 
 
 
@@ -26,7 +26,7 @@ class ProductItem extends React.Component{
             <div className='product-item-reviews'>
                <ReviewsContainer product={product}/>
                <br />
-               <ReviewsPostAReview />
+               <ReviewsPostAReviewContainer product={product}/>
             </div>
           </section>
 
