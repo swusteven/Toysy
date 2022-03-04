@@ -30,7 +30,7 @@ class ProductItem extends React.Component{
 
             <div className='product-item-purchase-btns'>
                 <form>
-                  <label>Quantity
+                  <label >Quantity
                   <br />
                   <select name="quantity">
                       <option value="1">1</option>
@@ -48,12 +48,55 @@ class ProductItem extends React.Component{
                   </label>
                 </form>
             </div>
+            <p className="product-items-handling" ><i className="fa-solid fa-truck-fast fa-2x"></i> <span>Hooray!</span> This item ships free to the US.</p><br />
+            <p NameName="product-items-handling"><i className="fa-solid fa-gift fa-2x" ></i>  Gift wrapping available</p><br />
+      
             <div className='product-item-description'>
-                <textarea disabled >{product.description}</textarea>
-  
-              
+                <p>Description</p>
+                <textarea disabled rows="20" cols="50" id="aboutDescription">{product.description}</textarea>
             </div>
+
+            <div className="product-item-shipping">
+              <h1>Shipping Details</h1>
+              <p>Estimated arrival</p>
+                <div>
+                  <div className="product-items-shipping-top">
+                    <div><i class="fa-solid fa-cart-shopping"></i></div>
+                          <span>--------------</span>
+                    <div><i className="fa-solid fa-truck-fast  "></i></div>  
+                          <span>--------------</span>
+                    <div><i class="fa-solid fa-gift"></i></div> 
+                  </div>
+
+               
+                  <div className="product-items-shipping-center">
+                    <h3>Mar 4</h3>
+                          <span>--------------</span>
+                    <h3>Mar 18-25</h3>  
+                         <span>---------------</span>
+                    <h3>Mar 31-Apr 15</h3> 
+                  </div>
+
+                  <div className="product-items-shipping-bottom">
+                    <h3>Order placed</h3>
+                          <span>--------------</span>
+                    <h3>Order ships</h3>  
+                         <span>---------------</span>
+                    <h3>Delivered!</h3> 
+                  </div>
+
+
+
+                </div>
+                
+                    
+              
+
+            </div>
+
           </section>
+
+
       </section>
     )
   }
