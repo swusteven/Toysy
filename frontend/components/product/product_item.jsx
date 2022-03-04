@@ -23,24 +23,34 @@ class ProductItem extends React.Component{
 
           <section className="product-item-right">
             <div className='product-item-details'>
-                <h1 className="seller-name">{product.seller.fname}'s store</h1>
-                <h1>{product.name}</h1>
-                <h3>{product.price}</h3>
+                <h1 className="product-item-seller-name">{product.seller.fname}'s store</h1>
+                <h1 className="product-item-name">{product.name}</h1>
+                <h1 className="product-item-price">${product.price}</h1>
             </div>
 
             <div className='product-item-purchase-btns'>
                 <form>
                   <label>Quantity
+                  <br />
                   <select name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                  </select>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                  </select><br />
+                  <button className="product-item-buy-now-btn">Buy it now</button><br />
+                  <button className="product-item-add-to-cart-btn">Add to cart</button>
                   </label>
                 </form>
             </div>
             <div className='product-item-description'>
-          
-                <textarea>{product.description}</textarea>
+                <textarea disabled >{product.description}</textarea>
+  
               
             </div>
           </section>

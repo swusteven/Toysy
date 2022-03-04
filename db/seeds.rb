@@ -11,7 +11,12 @@ mary = User.create("fname"=> "Mary", "email"=> "mary@yahoo.com", "password": "12
 
 product1 = Product.create!(
     "name" => "Leaf puzzle montessori toy toddler gift for baby | Wooden Leaf Puzzle | Leaf puzzle",
-    "description" => "<p>This listing is about our montessori toy puzzle Leaf. The toy is made from safe material, all protrusions and holes are thought out to the smallest detail and made conveniently so that the baby can play comfortably while exploring the present without distractions.<br><br>A unique educational toy from environmentally friendly materials - is the basis puzzle, you need for learning leaf trees. Your child will know leaf trees from childhood and may succeed in school :)<br><br>Material: high quality plywood. <br><br>The puzzle size is: 11.41 x 7.5 inches or 290 x 190 mm.</p>",
+    "description" => "This beautiful leaf puzzle is designed to help with a lot of areas in #botanyclass
+.
+🌿 The leaves are made of their respective woods (oak leaf in oak, Ash made of ash...) so you see how the wood looks like, the grain, the color and the hardness...
+🌿 Front of the leaf is it's natural wood color (summer is all green, so I chose to leave them natural, but the veins are engraved)
+🌿 Back of the leaves are its glorious fall colors. Learn about chlorophyll (green), carotenoids (yellow/orange), anthocyanins (reds) and their combination.
+🌿 I have chosen trees found in North America (I will happily do other regions, ask away!) With a mix of different leaf shapes, vein structure, leaf arrangements and edges.",
     "price" => 23.99,
     "quantity" => 20,
     "category" => "Learning and School",
