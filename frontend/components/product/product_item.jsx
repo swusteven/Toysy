@@ -22,7 +22,7 @@ class ProductItem extends React.Component{
                 <img src={product.imageUrl} />
             </div>
 
-
+      
             <div className='product-item-reviews'>
                <ReviewsContainer product={product}/>
                <br />

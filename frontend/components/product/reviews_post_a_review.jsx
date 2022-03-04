@@ -17,15 +17,12 @@ class ReviewsPostAReview extends React.Component{
   }
 
   handleSubmit(e){
-    e.preventDefault;
+    e.preventDefault();
     if (currentUser){
       debugger
       this.setState({["user_id"]: currentUser.id});
       debugger
       this.props.postReview(this.state)
-    } else {
-      debugger
-      this.props.history.push('./')
     }
   }
   
@@ -36,6 +33,7 @@ class ReviewsPostAReview extends React.Component{
         <h1 className="post-review-title">Post a product review here</h1>
  
         <form onSubmit={this.handleSubmit}>
+
           <select onChange={this.handleUpdate('rating')} name="star">
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -49,7 +47,9 @@ class ReviewsPostAReview extends React.Component{
                     cols="30" rows="10" 
                     placeholder='Share your review here with others'>
           </textarea>
-        <input type="submit" value="Submit" />
+
+          <input type="submit" value="Submit" />
+
         </form>
       </>
     )
