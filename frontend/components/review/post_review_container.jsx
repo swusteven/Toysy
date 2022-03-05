@@ -1,13 +1,15 @@
 import { connect } from "react-redux";
 import {postReview} from "../../actions/review"
-import ReviewsPostAReview from "./reviews_post_a_review";
+import PostReview from "./post_review";
 
+const mSTP = state =>({
+  currentUser: state.session.currentUser
+})
 
 const mDTP = dispatch => {
-  debugger
   return {
     postReview: (data) => dispatch(postReview(data))
 }}
 
 
-export default connect(null, mDTP)(ReviewsPostAReview)
+export default connect(mSTP, mDTP)(PostReview)

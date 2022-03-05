@@ -19,21 +19,21 @@ class ProductEditorsPicks extends React.Component{
                 </div>
 
                 <div className="editors-pick-inner-box-2 editors-pick-inner-box-images">
-                    <Link to={`/productitem/${products[0].id}`}>
+                    <Link to={`/products/${products[0].id}`}>
                             <img src={products[0].imageUrl} alt="" />      
                     </Link>                      
                     <span className="editors-pick-price">$20.99</span>
                 </div>
                   
                 <div className="editors-pick-inner-box-3 editors-pick-inner-box-images">
-                    <Link to={`/productitem/${products[1].id}`}>
+                    <Link to={`/products/${products[1].id}`}>
                       <img src={products[1].imageUrl}  alt="" />
                     </Link>
                     <span className="editors-pick-price">$220.99</span>
                 </div>
 
                 <div className="editors-pick-inner-box-4 editors-pick-inner-box-images">
-                    <Link to={`/productitem/${products[2].id}`}>
+                    <Link to={`/products/${products[2].id}`}>
                       <img src={products[2].imageUrl}  alt="" />
                     </Link>
                       <span className="editors-pick-price">$9.99</span>

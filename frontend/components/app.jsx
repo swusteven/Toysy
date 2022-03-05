@@ -24,7 +24,7 @@ const App = () => (
     <Route path="/signup" component={SignupContainer} />
     <Route path="/signup" component={HeaderSectionContainer} /> 
 
-    <Route path="/productitem/:id" component={ProductItemContainer} />
+    <Route path="/products/:id" component={ProductItemContainer} />
 
     <Route path="/" component={Footer} />
   </>

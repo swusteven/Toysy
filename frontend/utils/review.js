@@ -8,7 +8,7 @@ export const postReview = (data) =>(
   $.ajax({
     url: "api/reviews",
     method: "POST",
-    data: {data}
+    data: {review: data}
   })
 )
 

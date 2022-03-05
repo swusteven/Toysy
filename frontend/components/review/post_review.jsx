@@ -1,16 +1,19 @@
 import React from 'react'
 
-class ReviewsPostAReview extends React.Component{
+
+class PostReview extends React.Component{
   constructor (props) {
+    debugger
     super(props);
     this.state = {
       comment: "",
       rating: 1,
-      user_id: null,
+      user_id: props.currentUser ? props.currentUser.id : null,
       product_id: this.props.product.id
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
+
 
   handleUpdate(field){
     return (e)=> this.setState({[field]: e.currentTarget.value})
@@ -18,11 +21,11 @@ class ReviewsPostAReview extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    if (currentUser){
-      debugger
-      this.setState({["user_id"]: currentUser.id});
-      debugger
+    if (this.props.currentUser){
+    
       this.props.postReview(this.state)
+    } else {
+      alert("please log in")
     }
   }
   
@@ -56,4 +59,4 @@ class ReviewsPostAReview extends React.Component{
 }
 };
 
-export default ReviewsPostAReview
+export default PostReview

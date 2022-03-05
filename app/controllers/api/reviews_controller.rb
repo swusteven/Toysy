@@ -9,12 +9,12 @@ class Api::ReviewsController < ApplicationController
         if @review.save
             render :show
         else
-            render json @review.errors.full_messages, status: 401
+            render json: @review.errors.full_messages, status: 401
         end 
     end
 
     private
     def review_params
-        require
+        params.require(:review).permit(:user_id, :comment, :product_id, :rating)
     end
 end

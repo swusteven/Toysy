@@ -7,7 +7,7 @@ const AccountManager = ({ currentUser, logout, setModalToOpen }) => {
   //   return logout();
   //   this.props.history.push('./')
   // }
-
+  
   const display = currentUser ? (
     <div className="user-menu-dropdown-main">
         <div className="user-menu-account-entry-main">
