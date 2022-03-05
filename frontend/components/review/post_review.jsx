@@ -7,7 +7,7 @@ class PostReview extends React.Component{
     super(props);
     this.state = {
       comment: "",
-      rating: 1,
+      rating: 5,
       user_id: props.currentUser ? props.currentUser.id : null,
       product_id: this.props.product.id
     }
@@ -38,11 +38,11 @@ class PostReview extends React.Component{
         <form onSubmit={this.handleSubmit}>
 
           <select onChange={this.handleUpdate('rating')} name="star">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
                       <option value="5">5</option>
+                      <option value="4">4</option>
+                      <option value="3">3</option>
+                      <option value="2">2</option>
+                      <option value="1">1</option>
           </select><br />
 
           <textarea onChange={this.handleUpdate('comment')} 
