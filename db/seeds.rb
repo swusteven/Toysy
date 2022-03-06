@@ -317,7 +317,7 @@ AGE: 4+
 APPROX SIZE: 4",
     "price" => 11.99,
     "quantity" => 200,
-    "category" => "Miniature Toys",
+    "category" => "Dolls and Action Figures",
     "seller_id" => 9)
 product_17_image = URI.open('https://toysy-seeds.s3.amazonaws.com/17_godzilla.jpg')
 product17.image.attach(io: product_17_image, filename: "17_godzilla.jpg")
@@ -376,123 +376,123 @@ product20.image.attach(io: product_20_image, filename: "20_Dragonball_pop.jpg")
 Review.create!(
         "comment"=>"They look exactly like in the picture. Good quality and amazing customer service! I will buy more on the future for sure! ",
         "rating" => 5,
-        "user_id" => 2
+        "user_id" => 2,
         "product_id" => 1)
 
 
 Review.create!(
         "comment"=>"This was done so quickly, while still being perfect! Perfect size for my newborn born just a few days ago",
         "rating" => 4,
-        "user_id" => 9
+        "user_id" => 9,
         "product_id" => 1)
 
 
 Review.create!(
     "comment"=>"LOVE LOVE LOVE! delivered so quick! I can't wait for our friend to have her baby so we can give it to her!! Would definitely recommend this shop and will be ordering again whenever any of our other friends have babies! Thank you!!",
     "rating" => 5,
-    "user_id" => 7
+    "user_id" => 7,
     "product_id" => 2)
 
 Review.create!(
     "comment"=>"Absolutely beautifully made! My friend loves it. Couldn’t be happier! Will be making more purchases in the future! Shipped quick as well!",
     "rating" => 5,
-    "user_id" => 5
+    "user_id" => 5,
     "product_id" => 2)
 
 Review.create!(
     "comment"=>"Absolutely loved it! So cute, great quality. I highly recommend!",
     "rating" => 5,
-    "user_id" => 5
+    "user_id" => 5,
     "product_id" => 3)
 
 Review.create!(
     "comment"=>"Absolutely beautifully made! My friend loves it. Couldn’t be happier! Will be making more purchases in the future! Shipped quick as well!",
     "rating" => 5,
-    "user_id" => 4
+    "user_id" => 4,
     "product_id" => 3)    
 
 Review.create!(
     "comment"=>"It was so cute, loved the small details on it!! For some reason I thought it would be bigger but the size is still good enough!! Recommend getting it again!! 10/10 :)",
     "rating" => 5,
-    "user_id" => 9
+    "user_id" => 9,
     "product_id" => 4)    
 
 Review.create!(
     "comment"=>"Second time I’ve ordered this block for my kids, they turn out beautifully. Very fast shipping too!",
     "rating" => 4,
-    "user_id" => 1
+    "user_id" => 1,
     "product_id" => 4)    
 
 Review.create!(
     "comment"=>"Second time I’ve ordered this block for my kids, they turn out beautifully. Very fast shipping too!",
     "rating" => 4,
-    "user_id" => 7
+    "user_id" => 7,
     "product_id" => 5)    
 
 Review.create!(
     "comment"=>"So cute and well made!",
     "rating" => 5,
-    "user_id" => 2
+    "user_id" => 2,
     "product_id" => 5)    
 
 Review.create!(
     "comment"=>"So cute and well made!",
     "rating" => 5,
-    "user_id" => 2
+    "user_id" => 2,
     "product_id" => 6)    
 
 Review.create!(
     "comment"=>"Thank you I think this will be a fun gift.",
     "rating" => 3,
-    "user_id" => 8
+    "user_id" => 8,
     "product_id" => 6)    
 
 Review.create!(
     "comment"=>"So cute it makes my heart burst! I’m surprised this isn’t a well-known because the quality is amazing!!",
     "rating" => 3,
-    "user_id" => 8
+    "user_id" => 8,
     "product_id" => 7)    
 
 Review.create!(
     "comment"=>"I am so happy with this entire experience! The ordering process was straightforward and the seller was very friendly and helpful!",
     "rating" => 5,
-    "user_id" => 9
+    "user_id" => 9,
     "product_id" => 7)    
 
 Review.create!(
     "comment"=>"So cute it makes my heart burst! I’m surprised this isn’t a well-known because the quality is amazing!!",
     "rating" => 3,
-    "user_id" => 5
+    "user_id" => 5,
     "product_id" => 8)    
 
 Review.create!(
     "comment"=>"I am so happy with this entire experience! The ordering process was straightforward and the seller was very friendly and helpful!",
     "rating" => 5,
-    "user_id" => 10
+    "user_id" => 10,
     "product_id" => 8)    
 
 Review.create!(
     "comment"=>"So cute it makes my heart burst! I’m surprised this isn’t a well-known because the quality is amazing!!",
     "rating" => 3,
-    "user_id" => 5
+    "user_id" => 5,
     "product_id" => 9)    
 
 Review.create!(
     "comment"=>"Omg! This is the second baby I order from you and I'm in love. Sharing with all my friends. The perfect baby gift ever! Beautiful! My babies boy and girl love them",
     "rating" => 5,
-    "user_id" => 1
+    "user_id" => 1,
     "product_id" => 9)    
 
 Review.create!(
     "comment"=>"So cute it makes my heart burst! I’m surprised this isn’t a well-known because the quality is amazing!!",
     "rating" => 3,
-    "user_id" => 5
+    "user_id" => 5,
     "product_id" => 10)    
 
 Review.create!(
     "comment"=>"Omg! This is the second baby I order from you and I'm in love. Sharing with all my friends. The perfect baby gift ever! Beautiful! My babies boy and girl love them",
     "rating" => 5,
-    "user_id" => 10
+    "user_id" => 10,
     "product_id" => 10)    
 
 
@@ -501,123 +501,123 @@ Review.create!(
 Review.create!(
         "comment"=>"They look exactly like in the picture. Good quality and amazing customer service! I will buy more on the future for sure! ",
         "rating" => 5,
-        "user_id" => 2
+        "user_id" => 2,
         "product_id" => 11)
 
 
 Review.create!(
         "comment"=>"This was done so quickly, while still being perfect! Perfect size for my newborn born just a few days ago",
         "rating" => 4,
-        "user_id" => 9
+        "user_id" => 9,
         "product_id" => 11)
 
 
 Review.create!(
     "comment"=>"LOVE LOVE LOVE! delivered so quick! I can't wait for our friend to have her baby so we can give it to her!! Would definitely recommend this shop and will be ordering again whenever any of our other friends have babies! Thank you!!",
     "rating" => 5,
-    "user_id" => 7
+    "user_id" => 7,
     "product_id" => 12)
 
 Review.create!(
     "comment"=>"Absolutely beautifully made! My friend loves it. Couldn’t be happier! Will be making more purchases in the future! Shipped quick as well!",
     "rating" => 5,
-    "user_id" => 5
+    "user_id" => 5,
     "product_id" => 12)
 
 Review.create!(
     "comment"=>"Absolutely loved it! So cute, great quality. I highly recommend!",
     "rating" => 5,
-    "user_id" => 5
+    "user_id" => 5,
     "product_id" => 13)
 
 Review.create!(
     "comment"=>"Absolutely beautifully made! My friend loves it. Couldn’t be happier! Will be making more purchases in the future! Shipped quick as well!",
     "rating" => 5,
-    "user_id" => 4
+    "user_id" => 4,
     "product_id" => 13)    
 
 Review.create!(
     "comment"=>"It was so cute, loved the small details on it!! For some reason I thought it would be bigger but the size is still good enough!! Recommend getting it again!! 10/10 :)",
     "rating" => 5,
-    "user_id" => 9
+    "user_id" => 9,
     "product_id" => 14)    
 
 Review.create!(
     "comment"=>"Second time I’ve ordered this block for my kids, they turn out beautifully. Very fast shipping too!",
     "rating" => 4,
-    "user_id" => 1
+    "user_id" => 1,
     "product_id" => 14)    
 
 Review.create!(
     "comment"=>"Second time I’ve ordered this block for my kids, they turn out beautifully. Very fast shipping too!",
     "rating" => 4,
-    "user_id" => 7
+    "user_id" => 7,
     "product_id" => 15)    
 
 Review.create!(
     "comment"=>"So cute and well made!",
     "rating" => 5,
-    "user_id" => 2
+    "user_id" => 2,
     "product_id" => 15)    
 
 Review.create!(
     "comment"=>"So cute and well made!",
     "rating" => 5,
-    "user_id" => 2
+    "user_id" => 2,
     "product_id" => 16)    
 
 Review.create!(
     "comment"=>"Thank you I think this will be a fun gift.",
     "rating" => 3,
-    "user_id" => 8
+    "user_id" => 8,
     "product_id" => 16)    
 
 Review.create!(
     "comment"=>"So cute it makes my heart burst! I’m surprised this isn’t a well-known because the quality is amazing!!",
     "rating" => 3,
-    "user_id" => 8
+    "user_id" => 8,
     "product_id" => 17)    
 
 Review.create!(
     "comment"=>"I am so happy with this entire experience! The ordering process was straightforward and the seller was very friendly and helpful!",
     "rating" => 5,
-    "user_id" => 9
+    "user_id" => 9,
     "product_id" => 17)    
 
 Review.create!(
     "comment"=>"So cute it makes my heart burst! I’m surprised this isn’t a well-known because the quality is amazing!!",
     "rating" => 3,
-    "user_id" => 5
+    "user_id" => 5,
     "product_id" => 18)    
 
 Review.create!(
     "comment"=>"I am so happy with this entire experience! The ordering process was straightforward and the seller was very friendly and helpful!",
     "rating" => 5,
-    "user_id" => 10
+    "user_id" => 10,
     "product_id" => 18)    
 
 Review.create!(
     "comment"=>"So cute it makes my heart burst! I’m surprised this isn’t a well-known because the quality is amazing!!",
     "rating" => 3,
-    "user_id" => 5
+    "user_id" => 5,
     "product_id" => 19)    
 
 Review.create!(
     "comment"=>"Omg! This is the second baby I order from you and I'm in love. Sharing with all my friends. The perfect baby gift ever! Beautiful! My babies boy and girl love them",
     "rating" => 5,
-    "user_id" => 1
+    "user_id" => 1,
     "product_id" => 19)    
 
 Review.create!(
     "comment"=>"So cute it makes my heart burst! I’m surprised this isn’t a well-known because the quality is amazing!!",
     "rating" => 3,
-    "user_id" => 5
+    "user_id" => 5,
     "product_id" => 20)    
 
 Review.create!(
     "comment"=>"Omg! This is the second baby I order from you and I'm in love. Sharing with all my friends. The perfect baby gift ever! Beautiful! My babies boy and girl love them",
     "rating" => 5,
-    "user_id" => 10
+    "user_id" => 10,
     "product_id" => 20)    
 
 

@@ -12,7 +12,6 @@ class NavBarCategories extends React.Component{
         <div>Baby & Toddler Toys</div>
         <div>Stuffed Animals & Plushies</div>
         <div>Learning & School</div>
-        <div>Miniature Toys</div>
         <div>Dolls & Action Figures</div>
       </>
     )
