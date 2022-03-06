@@ -11,7 +11,7 @@ const Footer = () =>{
 
       <section className="footer-powered-by-renewable-elec">
         <i className="fa-solid fa-hand-peace fa-2x"></i>
-        <p>Artsy is powered by 100% renewable electricity.</p>
+        <p>Toysy is powered by 100% renewable electricity.</p>
       </section>
 
 
