@@ -22,21 +22,21 @@ class ProductEditorsPicks extends React.Component{
                     <Link to={`/products/${products[0].id}`}>
                             <img src={products[0].imageUrl} alt="" />      
                     </Link>                      
-                    <span className="editors-pick-price">$20.99</span>
+                    <span className="editors-pick-price">${products[0].price}</span>
                 </div>
                   
                 <div className="editors-pick-inner-box-3 editors-pick-inner-box-images">
                     <Link to={`/products/${products[1].id}`}>
                       <img src={products[1].imageUrl}  alt="" />
                     </Link>
-                    <span className="editors-pick-price">$220.99</span>
+                    <span className="editors-pick-price">${products[1].price}</span>
                 </div>
 
                 <div className="editors-pick-inner-box-4 editors-pick-inner-box-images">
                     <Link to={`/products/${products[2].id}`}>
                       <img src={products[2].imageUrl}  alt="" />
                     </Link>
-                      <span className="editors-pick-price">$9.99</span>
+                      <span className="editors-pick-price">${products[2].price}</span>
                   </div>
                 </div>
         
@@ -45,21 +45,21 @@ class ProductEditorsPicks extends React.Component{
                         <Link to={`/products/${products[3].id}`}>
                           <img src={products[3].imageUrl}  alt="" />
                         </Link>
-                        <span className="editors-pick-price">$40.99</span>
+                        <span className="editors-pick-price">${products[3].price}</span>
                     </div>
 
                     <div className="editors-pick-inner-box-6 editors-pick-inner-box-images" >
                          <Link to={`/products/${products[4].id}`}>
                           <img src={products[4].imageUrl}  alt="" />
                         </Link>
-                        <span className="editors-pick-price">$50.99</span> 
+                        <span className="editors-pick-price">${products[4].price}</span> 
                     </div>
 
                     <div className="editors-pick-inner-box-7 editors-pick-inner-box-images">
                          <Link to={`/products/${products[5].id}`}>
                           <img src={products[5].imageUrl}  alt="" />
                           </Link>
-                      <span className="editors-pick-price">$55.99</span> 
+                      <span className="editors-pick-price">${products[5].price}</span> 
                     </div> 
                     <div className="editors-pick-inner-box-8">
                       Express yourself in love with a collection of one-of-a-kind baby toys, games, learning, dolls and more</div>        
