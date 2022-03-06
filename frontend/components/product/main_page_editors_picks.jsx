@@ -42,17 +42,23 @@ class ProductEditorsPicks extends React.Component{
         
                 <div className='editors-pick-bottom'>    
                     <div className="editors-pick-inner-box-5 editors-pick-inner-box-images">
-                      <img src="https://i.etsystatic.com/17305851/r/il/6cb808/3152662087/il_1140xN.3152662087_kks0.jpg" alt="" />
+                        <Link to={`/products/${products[3].id}`}>
+                          <img src={products[3].imageUrl}  alt="" />
+                        </Link>
                         <span className="editors-pick-price">$40.99</span>
                     </div>
 
                     <div className="editors-pick-inner-box-6 editors-pick-inner-box-images" >
-                      <img src="https://i.etsystatic.com/29675269/r/il/e94189/3632188333/il_1140xN.3632188333_66va.jpg" alt="" />
+                         <Link to={`/products/${products[4].id}`}>
+                          <img src={products[4].imageUrl}  alt="" />
+                        </Link>
                         <span className="editors-pick-price">$50.99</span> 
                     </div>
 
                     <div className="editors-pick-inner-box-7 editors-pick-inner-box-images">
-                      <img src="https://i.etsystatic.com/9765767/r/il/13cc71/2870974651/il_1140xN.2870974651_dycz.jpg" alt="" /> 
+                         <Link to={`/products/${products[5].id}`}>
+                          <img src={products[5].imageUrl}  alt="" />
+                          </Link>
                       <span className="editors-pick-price">$55.99</span> 
                     </div> 
                     <div className="editors-pick-inner-box-8">

@@ -20,7 +20,7 @@ class ReviewsIndex extends React.Component{
                           key={idx.toString() + "reviewer"}>
                           {review.reviewer}
                     </span>
-                    <span key={idx.toString() + "date"}>
+                    <span className="product-item-review-date" key={idx.toString() + "date"}>
                           {formatDate(review.created_at)}
                     </span>
 

@@ -3,7 +3,6 @@ import React from 'react'
 
 class PostReview extends React.Component{
   constructor (props) {
-    debugger
     super(props);
     this.state = {
       comment: "",
@@ -47,12 +46,11 @@ class PostReview extends React.Component{
 
           <textarea onChange={this.handleUpdate('comment')} 
                     className="post-review-textarea" 
-                    cols="30" rows="10" 
+                    cols="30" rows="6" 
                     placeholder='Share your review here with others'>
           </textarea>
 
-          <input type="submit" value="Submit" />
-
+          <input className="post-review-submit-btn" type="submit" value="Submit" />
         </form>
       </>
     )
