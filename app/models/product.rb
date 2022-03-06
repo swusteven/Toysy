@@ -3,7 +3,6 @@ class Product < ApplicationRecord
         "Baby and Toddler Toys",
         "Stuffed Animals and Plushies",
         "Learning and School",
-        "Miniature Toys",
         "Dolls and Action Figures"    
     ]
     validates :name, :description, :price, :quantity, :seller_id, presence: true
