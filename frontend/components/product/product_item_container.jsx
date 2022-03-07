@@ -6,13 +6,14 @@ import {fetchAllCartItemsforUser} from "../../actions/cart"
 
 
 const mSTP = (state,ownProps) => {
+  debugger
   return {
     product: state.products[ownProps.match.params.id],
     currentUser: state.session.currentUser,
     cartDetails: {
       quantity: 1,
       product_id: ownProps.match.params.id, 
-      cart_id: state.session.currentUser ? state.session.currentUser.cart_id : null
+      cart_id: state.session.currentUser ? state.session.currentUser.cart.id : null
     }
   }
 };

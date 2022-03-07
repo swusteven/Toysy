@@ -18,15 +18,21 @@ class ProductItem extends React.Component{
     return (e) => this.setState({["quantity"]: e.currentTarget.value})
   }
 
+
+
   handleAddToCart(e){
     e.preventDefault();
-    if (this.state.cart_id){
-      this.props.postItemToCartItem(this.state)
-        .then(()=>this.props.history.push('/cart'))
+    const {currentUser} = this.props 
+
+    if (currentUser){
+        debugger 
+        this.props.postItemToCartItem(this.state)
+           .then(()=>this.props.history.push('/cart'))        
     } else {
-      this.props.history.push('/login')
+        this.props.history.push('/login')
     }
   }
+
 
   render(){
     const {product} = this.props    //:id, :name, :description, :price, :quantity, :category, :seller_id: :imageUrl :seller
