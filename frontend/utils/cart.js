@@ -12,3 +12,14 @@ export const postItemToCartItem = (cartItem) =>(
     data: {item: cartItem}
   })
 )
+
+
+//create a new cart for user who doesn't have a cart
+export const createCart = (userId) => {
+  debugger
+ return $.ajax({
+    url: `/api/carts`,
+    method: "POST", 
+    data: {cart: userId}
+  })
+}

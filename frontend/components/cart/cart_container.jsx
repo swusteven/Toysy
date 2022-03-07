@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import CartIndex from './cart_index'
 import { fetchAllCartItemsforUser } from '../../actions/cart'
 
-const mSTP = (state, ownProps) =>{
+const mSTP = state =>{
   return {
   cart: Object.values(state.cart),
   currentUser: state.session.currentUser,

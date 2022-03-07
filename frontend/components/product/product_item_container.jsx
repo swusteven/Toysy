@@ -8,7 +8,6 @@ import {fetchAllCartItemsforUser} from "../../actions/cart"
 const mSTP = (state,ownProps) => {
     return {
     product: state.products[ownProps.match.params.id],
-    cart: Object.values(state.cart),
     currentUser: state.session.currentUser
   }
 };

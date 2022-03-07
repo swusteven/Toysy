@@ -8,10 +8,9 @@ import * as sessionActions from "./actions/session"
 
 document.addEventListener("DOMContentLoaded", function(){
   const root = document.querySelector("#root");
- 
-   
+     
   let preloadedState = undefined;
-  if (window.currentUser){
+  if (window.currentUser){  
     preloadedState = {
       session: {
         currentUser: window.currentUser
@@ -22,9 +21,6 @@ document.addEventListener("DOMContentLoaded", function(){
   const store = configureStore(preloadedState);
   ReactDOM.render(<Root store ={store}/>, root)
 
-
-
- 
 })
 
 

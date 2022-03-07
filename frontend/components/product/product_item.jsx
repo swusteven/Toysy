@@ -9,7 +9,6 @@ class ProductItem extends React.Component{
                   quantity: 1,
                   cart_id: this.props.currentUser.cart_id,
                   product_id: this.props.product.id
-
     };
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -25,11 +24,8 @@ class ProductItem extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-
-    debugger
     this.props.postItemToCartItem(this.state)
     this.props.history.push('/cart')
-
   }
 
   render(){
