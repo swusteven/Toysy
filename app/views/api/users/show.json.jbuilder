@@ -1,2 +1,3 @@
-
-json.extract! @user, :id, :fname, :email, :cart
+debugger 
+json.extract! @user, :id, :fname, :email
+json.cartId @user.cart.id

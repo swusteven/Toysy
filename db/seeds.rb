@@ -25,7 +25,16 @@ noah = User.create("fname"=> "Noah", "email"=> "noah@yahoo.com", "password": "12
 liam = User.create("fname"=> "Liam", "email"=> "Liam@yahoo.com", "password": "123456")
 
 
-
+Cart.create('user_id'=>awesome_guest.id)
+Cart.create('user_id'=>mary.id)
+Cart.create('user_id'=>emma.id)
+Cart.create('user_id'=>ava.id)
+Cart.create('user_id'=>oliver.id)
+Cart.create('user_id'=>lucas.id)
+Cart.create('user_id'=>isabella.id)
+Cart.create('user_id'=>charlotte.id)
+Cart.create('user_id'=>noah.id)
+Cart.create('user_id'=>liam.id)
 
 
 ##category "Baby and Toddler Toys"

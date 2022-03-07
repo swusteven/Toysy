@@ -13,7 +13,7 @@
              "id": <%= current_user.id %>,
              "fname": "<%= current_user.fname %>",
              "email": "<%= current_user.email %>",
-             "cart_id": "<%= current_user.cart ? current_user.cart.id : nil %>"
+             "cart_id": "<%= current_user.cart.id %>"
           }; 
        </script>
     <% end %>

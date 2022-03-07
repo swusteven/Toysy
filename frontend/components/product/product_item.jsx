@@ -5,34 +5,33 @@ import PostReviewContainer from '../review/post_review_container';
 class ProductItem extends React.Component{
   constructor(props){
     super(props);
-    this.state = this.props.cartDetails;
-
+    this.state = this.props.cartDetails
     this.handleAddToCart = this.handleAddToCart.bind(this)
   }
 
   componentDidMount(){
-    this.props.fetchSingleProduct(this.props.match.params.id);
+    this.props.fetchSingleProduct(this.props.match.params.id)
   } 
   
   handleUpdate(){
     return (e) => this.setState({["quantity"]: e.currentTarget.value})
   }
 
-
-
   handleAddToCart(e){
     e.preventDefault();
     const {currentUser} = this.props 
 
+    // if (!this.state.cart_id && currentUser){
+    //     this.setState({cart_id: currentUser.cart.id})
+    //   }
+
     if (currentUser){
-        debugger 
-        this.props.postItemToCartItem(this.state)
-           .then(()=>this.props.history.push('/cart'))        
+      this.props.postItemToCartItem(this.state)
+      .then(()=>this.props.history.push('/cart'))        
     } else {
         this.props.history.push('/login')
     }
   }
-
 
   render(){
     const {product} = this.props    //:id, :name, :description, :price, :quantity, :category, :seller_id: :imageUrl :seller

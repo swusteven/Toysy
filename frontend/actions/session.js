@@ -1,4 +1,5 @@
 import * as SessionUtil from '../utils/session'
+import { createCart } from '../utils/cart';
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
@@ -29,8 +30,12 @@ const receiveToRemoveErrors=()=>({
 export const signup = (user) => dispatch =>{
   return SessionUtil.signup(user)
     .then((user) => dispatch(receiveCurrentUser(user)),
-          (errors) => dispatch(receiveErrors(errors)) 
-         )
+          (errors) => dispatch(receiveErrors(errors)))
+    // .then((res)=> {
+    //   debu
+    //   const data = {user_id: res.user.id}
+    //   return createCart(data)
+    // })
 };
 
 

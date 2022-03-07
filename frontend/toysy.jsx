@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function(){
   if (window.currentUser){  
     preloadedState = {
       session: {
-        currentUser: window.currentUser
+        currentUser: window.currentUser,
+        cartId: window.currentUser.cart_id
       }
     };
   }

@@ -3,6 +3,7 @@ import {signup, login, removeErrors} from "../../actions/session"
 import Signup from './signup';
 import { setModalToClose } from '../../actions/modal';
 
+
 const mapStateToProps = state => ({
     modalOpen: state.modalOpen,
     errors: Object.values(state.errors)

@@ -2,18 +2,16 @@ import { connect } from "react-redux";
 import { fetchSingleProduct } from "../../actions/product"
 import { postItemToCartItem } from "../../actions/cart"
 import ProductItem from "./product_item";
-import {fetchAllCartItemsforUser} from "../../actions/cart"
 
 
 const mSTP = (state,ownProps) => {
-  debugger
   return {
     product: state.products[ownProps.match.params.id],
     currentUser: state.session.currentUser,
     cartDetails: {
       quantity: 1,
-      product_id: ownProps.match.params.id, 
-      cart_id: state.session.currentUser ? state.session.currentUser.cart.id : null
+      product_id: ownProps.match.params.id,
+      cart_id: state.session ? state.session.cartId : null
     }
   }
 };
