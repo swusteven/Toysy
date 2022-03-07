@@ -3,7 +3,6 @@ import CartIndex from './cart_index'
 import { fetchAllCartItemsforUser } from '../../actions/cart'
 
 const mSTP = (state, ownProps) =>{
-  debugger
   return {
   cart: Object.values(state.cart),
   currentUser: state.session.currentUser,

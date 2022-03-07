@@ -13,7 +13,7 @@ Rails.application.routes.draw do
       resource :session, only:[:create, :destroy]
       resources :reviews, only:[:create]
       resources :carts, only:[:create]
-      resources :cart_items, only:[:create, :update, :destroy]
+      resources :cart_items, only:[:create, :show, :update, :destroy]
 
   end
 

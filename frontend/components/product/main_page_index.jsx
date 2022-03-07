@@ -5,7 +5,7 @@ import ProductMostPopular from './main_page_most_popular';
 
 class MainPageGallery extends React.Component{
   componentDidMount(){
-     this.props.fetchAllProducts();
+    this.props.fetchAllProducts();
   }
 
   render(){

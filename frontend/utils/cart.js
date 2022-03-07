@@ -3,3 +3,12 @@ export const fetchAllCartItems = (userId) =>(
     url: `api/users/${userId}/carts`
   })
 )
+
+
+export const postItemToCartItem = (cartItem) =>(
+  $.ajax({
+    url: 'api/cart_items',
+    method: "POST",
+    data: {item: cartItem}
+  })
+)

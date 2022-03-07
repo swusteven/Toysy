@@ -11,7 +11,7 @@ const mSTP = state => {
 
 const mDTP = dispatch => ({
   fetchAllProducts: ()=> dispatch(fetchAllProducts()),
-  fetchSingleProduct: (productId)=> dispatch(fetchSingleProduct(productId))
+  fetchSingleProduct: (productId)=> dispatch(fetchSingleProduct(productId)),
 })
 
 export default connect(mSTP, mDTP)(MainPageIndex)
