@@ -5,27 +5,27 @@ import PostReviewContainer from '../review/post_review_container';
 class ProductItem extends React.Component{
   constructor(props){
     super(props);
-    this.state = {
-                  quantity: 1,
-                  cart_id: this.props.currentUser.cart_id,
-                  product_id: this.props.product.id
-    };
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.state = this.props.cartDetails;
+
+    this.handleAddToCart = this.handleAddToCart.bind(this)
   }
 
   componentDidMount(){
     this.props.fetchSingleProduct(this.props.match.params.id);
-    this.props.fetchAllCartItemsforUser(this.props.currentUser.id)
   } 
   
   handleUpdate(){
     return (e) => this.setState({["quantity"]: e.currentTarget.value})
   }
 
-  handleSubmit(e){
+  handleAddToCart(e){
     e.preventDefault();
-    this.props.postItemToCartItem(this.state)
-    this.props.history.push('/cart')
+    if (this.state.cart_id){
+      this.props.postItemToCartItem(this.state)
+        .then(()=>this.props.history.push('/cart'))
+    } else {
+      this.props.history.push('/login')
+    }
   }
 
   render(){
@@ -52,7 +52,7 @@ class ProductItem extends React.Component{
             </div>
 
             <div className='product-item-purchase-btns'>
-                <form onSubmit={this.handleSubmit}>
+                <form>
                   <label >Quantity<br />
                   <select name="quantity"
                           onChange={this.handleUpdate()} 
@@ -70,7 +70,7 @@ class ProductItem extends React.Component{
                   </label><br />
 
                   <button className="product-item-buy-now-btn">Buy it now</button><br />
-                  <button className="product-item-add-to-cart-btn">Add to cart</button>                
+                  <button type='submit' onClick={this.handleAddToCart}className="product-item-add-to-cart-btn">Add to cart</button>                
                 </form>
             </div>
             <p className="product-items-handling" ><i className="fa-solid fa-truck-fast fa-2x"></i> <span>Hooray!</span> This item ships free to the US.</p><br />
@@ -78,7 +78,7 @@ class ProductItem extends React.Component{
       
             <div className='product-item-description'>
                 <p>Description</p>
-                <textarea disabled rows="20" cols="50" id="aboutDescription">{product.description}</textarea>
+                <textarea disabled rows="20" cols="50" id="aboutDescription" value={product.description} />
             </div>
 
             <div className="product-item-shipping">
