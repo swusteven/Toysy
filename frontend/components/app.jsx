@@ -7,6 +7,7 @@ import LoginContainer from "./session/login_container"
 import ProductsContainer from './product/products_container';
 import ProductItemContainer from './product/product_item_container';
 import Footer from './footer/footer';
+import CartContainer from './cart/cart_container';
 
 const App = () => (
   <>
@@ -23,8 +24,11 @@ const App = () => (
     
     <Route path="/signup" component={SignupContainer} />
     <Route path="/signup" component={HeaderSectionContainer} /> 
+    <Route path="/cart" component={CartContainer} /> 
 
     <Route path="/products/:id" component={ProductItemContainer} />
+    
+
 
     <Route path="/" component={Footer} />
   </>

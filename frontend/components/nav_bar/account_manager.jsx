@@ -16,7 +16,7 @@ const AccountManager = ({ currentUser, logout, setModalToOpen }) => {
       <div className="user-menu-dropdown" >
           <div> <i className="fa-solid fa-circle-user fa-2x"></i>   {currentUser.fname}</div>
           <p className="user-menu-clicks-orders"><i className="fa-solid fa-list-check fa-2x"></i>Purchases and Reviews</p>
-          <p className="user-menu-clicks-logout" onClick={ logout }><i class="fa-solid fa-right-from-bracket fa-2x fa-flip-horizontal"></i>Log out</p>
+          <p className="user-menu-clicks-logout" onClick={ logout }><i className="fa-solid fa-right-from-bracket fa-2x fa-flip-horizontal"></i>Log out</p>
       </div>
       
     </ul>

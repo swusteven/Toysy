@@ -4,6 +4,7 @@ import ModalReducer from "./modal_reducer";
 import productReducer from "./product_reducer";
 import reviewReducer from "./review_reducer";
 import sessionErrorsReducer from "./session_errors";
+import cartReducer from "./cart"
 
 
 
@@ -12,7 +13,9 @@ const RootReducer = combineReducers({
   products: productReducer,
   errors: sessionErrorsReducer,
   modalOpen: ModalReducer,
-  reviews: reviewReducer
+  reviews: reviewReducer,
+  cart: cartReducer
+
 });
 
 export default RootReducer
