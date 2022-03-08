@@ -29,11 +29,10 @@ class ProductItem extends React.Component{
       if (!!cartItems[this.state.product_id]){
         let data = Object.assign({}, cartItems[this.state.product_id]);     
         data['quantity'] = (parseInt(data.quantity) + parseInt(this.state.quantity));
-        debugger
-         this.props.updateItemInCartItem(this.state.product_id, data)
+    
+         this.props.updateItemInCartItem(cartItems[this.state.product_id].id, data)
           .then(()=>this.props.history.push('/cart'))        
       } else {
-        debugger
         this.props.postItemToCartItem(this.state)
           .then(()=>this.props.history.push('/cart'))        
       }
