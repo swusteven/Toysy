@@ -28,16 +28,23 @@ class CartIndex extends React.Component{
             {cart.length === 0 ? null : 
               cart.map((item) =>{
                 return <div className="cart-index-item-wrapper" key={item.name}>
-                    <div className="cart_index-item-image">
-                        <img src={item.imageUrl}/>
-                    </div>
-                    <div classname="cart_index-item-details">
-                        <h3>{item.name}</h3>
-                    </div>
-                   quantity: {item.quantity}
-                
+
+                        <p className='cart-index-item-seller'>
+                          <i className="fa-solid fa-store fa-lg"></i>   
+                          {item.seller}'s store
+                        </p>
+
+                        <div className="cart-index-item-info-wrapper">
+                          <div className="cart-index-item-image">
+                            <img src={item.imageUrl}/>
+                          </div>
+                          <div className="cart_index-item-details">
+                            <h3>{item.name}</h3>
+                          </div>
+                          quantity: {item.quantity}
+                        </div>
                               
-                </div>
+                      </div>
               })
 
             }
