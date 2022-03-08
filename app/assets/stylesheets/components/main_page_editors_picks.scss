@@ -13,7 +13,6 @@
 .editors-pick-bottom {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
   height: 50%;
   div {
     margin: 15px;
@@ -75,6 +74,9 @@
   left: 40px;
   font-size: medium;
   padding: 5px;
+  &:hover {
+    outline: auto;
+  }
 }
 
 .editors-pick-inner-box-images:hover {
@@ -84,4 +86,53 @@
   cursor: pointer;
 
   border-radius: 20px;
+}
+
+//hover text
+.hover-area {
+  position: relative;
+  padding: 0;
+  width: 300px;
+  display: block;
+  cursor: pointer;
+  overflow: hid;
+}
+
+.hover-text {
+  opacity: 0;
+  font-size: 15px;
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.551);
+  width: 210px;
+  height: 45px;
+  -webkit-transition: all 400ms ease-out;
+  -moz-transition: all 400ms ease-out;
+  -o-transition: all 400ms ease-out;
+  -ms-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+  text-align: center;
+  font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans",
+    Arial, sans-serif;
+  font-weight: 400;
+}
+
+.hover-area .hover-text:hover {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.hover-area .hover-text .text {
+  height: 0;
+  opacity: 1;
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  overflow: hidden;
+}
+
+.hover-area .hover-text .text {
+  opacity: 1;
+  overflow: hidden;
 }

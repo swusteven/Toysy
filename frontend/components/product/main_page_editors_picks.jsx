@@ -7,6 +7,7 @@ class ProductEditorsPicks extends React.Component{
     super(props);
   }
 
+
   render(){  
     const {products} = this.props
     let productsList = products.length === 0 ? null : shuffleArray(products, 6)
@@ -21,50 +22,57 @@ class ProductEditorsPicks extends React.Component{
                     <h3>Shop these unique finds <i className="fa-solid fa-arrow-right"></i></h3>
                 </div>
 
-                <div className="editors-pick-inner-box-2 editors-pick-inner-box-images">
+                <div className="editors-pick-inner-box-2 editors-pick-inner-box-images hover-area">
+                     
                     <Link to={`/products/${productsList[0].id}`}>
                             <img src={productsList[0].imageUrl} />      
                     </Link>                      
                     <span className="editors-pick-price">${productsList[0].price}</span>
+                    <text className="hover-text">{productsList[0].name}</text>
                 </div>
                   
-                <div className="editors-pick-inner-box-3 editors-pick-inner-box-images">
+                <div className="editors-pick-inner-box-3 editors-pick-inner-box-images hover-area">
                     <Link to={`/products/${productsList[1].id}`}>
                       <img src={productsList[1].imageUrl}  />
                     </Link>
                     <span className="editors-pick-price">${productsList[1].price}</span>
+                    <text className="hover-text">{productsList[1].name}</text>
                 </div>
 
-                <div className="editors-pick-inner-box-4 editors-pick-inner-box-images">
+                <div className="editors-pick-inner-box-4 editors-pick-inner-box-images hover-area">
                     <Link to={`/products/${productsList[2].id}`}>
                       <img src={productsList[2].imageUrl}  />
                     </Link>
                       <span className="editors-pick-price">${productsList[2].price}</span>
+                      <text className="hover-text">{productsList[2].name}</text>
                   </div>
                 </div>
 
 
         
                 <div className='editors-pick-bottom'>    
-                    <div className="editors-pick-inner-box-5 editors-pick-inner-box-images">
+                    <div className="editors-pick-inner-box-5 editors-pick-inner-box-images hover-area">
                         <Link to={`/products/${products[3].id}`}>
                           <img src={products[3].imageUrl}  />
                         </Link>
                         <span className="editors-pick-price">${products[3].price}</span>
+                        <text className="hover-text">{productsList[3].name}</text>
                     </div>
 
-                    <div className="editors-pick-inner-box-6 editors-pick-inner-box-images" >
+                    <div className="editors-pick-inner-box-6 editors-pick-inner-box-images hover-area" >
                          <Link to={`/products/${products[4].id}`}>
                           <img src={products[4].imageUrl}  />
                         </Link>
                         <span className="editors-pick-price">${products[4].price}</span> 
+                        <text className="hover-text">{productsList[4].name}</text>
                     </div>
 
-                    <div className="editors-pick-inner-box-7 editors-pick-inner-box-images">
+                    <div className="editors-pick-inner-box-7 editors-pick-inner-box-images hover-area">
                          <Link to={`/products/${products[5].id}`}>
                           <img src={products[5].imageUrl}  />
                           </Link>
                       <span className="editors-pick-price">${products[5].price}</span> 
+                      <text className="hover-text">{productsList[5].name}</text>
                     </div> 
                     <div className="editors-pick-inner-box-8">
                       Express yourself in love with a collection of one-of-a-kind baby toys, games, learning, dolls and more</div>        
