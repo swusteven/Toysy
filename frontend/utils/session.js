@@ -1,6 +1,5 @@
 //user signup
 export const signup = (user) =>{
-  debugger
   return $.ajax({
     url: "api/users",
     method: "POST",

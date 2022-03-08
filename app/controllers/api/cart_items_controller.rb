@@ -1,10 +1,17 @@
 class Api::CartItemsController < ApplicationController
-    skip_before_action :verify_authenticity_token
-
     def create
         @item = CartItem.new(cart_items_params)
 
         if @item.save
+            render :show
+        else
+            render json: @item.errors.full_messages, status: 401
+        end
+    end
+
+    def update
+        @item = CartItem.find(params[:id])
+        if @item.update(cart_items_params)
             render :show
         else
             render json: @item.errors.full_messages, status: 401

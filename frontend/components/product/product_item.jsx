@@ -11,6 +11,9 @@ class ProductItem extends React.Component{
 
   componentDidMount(){
     this.props.fetchSingleProduct(this.props.match.params.id)
+    if (this.props.currentUser){
+      this.props.fetchAllCartItemsforUser(this.props.currentUser.id)      
+    }
   } 
   
   handleUpdate(){
@@ -19,15 +22,18 @@ class ProductItem extends React.Component{
 
   handleAddToCart(e){
     e.preventDefault();
-    const {currentUser} = this.props 
-
-    // if (!this.state.cart_id && currentUser){
-    //     this.setState({cart_id: currentUser.cart.id})
-    //   }
+    const {currentUser, cartItems} = this.props 
 
     if (currentUser){
-      this.props.postItemToCartItem(this.state)
-      .then(()=>this.props.history.push('/cart'))        
+      if (!!cartItems[this.state.product_id]){
+         let data = Object.assign({}, cartItems[this.state.product_id]);     
+         data['quantity'] = (parseInt(data.quantity) + parseInt(this.state.quantity));
+         this.props.updateItemInCartItem(this.state.product_id, data)
+          .then(()=>this.props.history.push('/cart'))        
+      } else {
+        this.props.postItemToCartItem(this.state)
+          .then(()=>this.props.history.push('/cart'))        
+      }
     } else {
         this.props.history.push('/login')
     }

@@ -25,3 +25,8 @@ export const postItemToCartItem = (cartItem) => dispatch =>{
   return ApiUtilCart.postItemToCartItem(cartItem)
     .then(cartItem => dispatch(receiveSingleItemForUser(cartItem)))
 };
+
+export const updateItemInCartItem =(cartItemId, cartItem) => dispatch =>{
+  return ApiUtilCart.updateItemInCartItem(cartItemId, cartItem)
+    .then(cartItem => dispatch(receiveSingleItemForUser(cartItem)))
+}
