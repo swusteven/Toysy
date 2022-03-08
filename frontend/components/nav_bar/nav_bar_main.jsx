@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from './search_bar';
 import AccountManager from './account_manager';
-import Cart from './cart';
+import CartContainer from "./cart_container"
 import { Link } from 'react-router-dom';
 
 
@@ -22,7 +22,7 @@ const NavBarMain = ({currentUser, logout, setModalToOpen }) =>{
         </div>
 
         <div className="nav-bar-main-cart">
-          <Cart currentUser={currentUser} />
+          <CartContainer />
         </div>
 
       </div>

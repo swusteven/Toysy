@@ -1,12 +1,10 @@
 import React from 'react'
-import { render } from 'react-dom'
-import {createCart} from "../../utils/cart"
+import { Link } from 'react-router-dom';
 
 class CartIndex extends React.Component{
   constructor(props){
     super(props);
   }
-
 
   componentDidMount(){  
     if (this.props.currentUser){
@@ -16,16 +14,42 @@ class CartIndex extends React.Component{
 
   render(){
     const { cart, products } = this.props
-    return(
-      <>
-        {cart.length === 0 ? null : 
-          cart.map((item, idx) =>{
-            return <li key={idx}> Name: {item.name}  quantity: {item.quantity}</li>
-          })
 
-        }      
+    return(
+      <div className="cart-index-page">
+        <div>
+          <h1>{Object.values(cart).length} items in your cart</h1>
+          <span><Link to="/" style={{ textDecoration: 'none' }} >Keep Shopping</Link></span>
+        </div>
+
+         <div className="cart-index-wrapper">
+       
+            <section className="cart-index-left">
+            {cart.length === 0 ? null : 
+              cart.map((item) =>{
+                return <div className="cart-index-item-wrapper" key={item.name}>
+                    <div className="cart_index-item-image">
+                        <img src={item.imageUrl}/>
+                    </div>
+                    <div classname="cart_index-item-details">
+                        <h3>{item.name}</h3>
+                    </div>
+                   quantity: {item.quantity}
+                
+                              
+                </div>
+              })
+
+            }
+
+            </section>
+
+            <section className="cart-index-right-payment">
+                  <h1>payment section goes here</h1>
+            </section>      
       
-      </>
+         </div>
+    </div>
     )
   }
 }

@@ -210,9 +210,22 @@
 
 /* ----Shopping Cart Iconr--- */
 .nav-bar-main-cart {
+  position: relative;
   height: 48px;
-  width: 48px;
+  width: 58px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.cartQuantity {
+  position: absolute;
+  padding: 5 10px;
+  background-color: orange;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: small;
+  top: 0;
+  left: 35px;
 }
