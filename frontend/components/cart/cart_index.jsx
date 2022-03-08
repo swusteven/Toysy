@@ -16,10 +16,11 @@ class CartIndex extends React.Component{
     let total = null;
 
     Object.values(cart).forEach(item => {
-      total = total + Number(((Number(item.quantity) * Number(item.price))).toFixed(2))
+      total = total + Number(((Number(item.quantity) * Number(item.price))))
     })
 
-    return total
+    
+    return total ? total.toFixed(2) : 0
   }
 
   render(){
@@ -46,7 +47,8 @@ class CartIndex extends React.Component{
 
                         <div className="cart-index-item-info-wrapper">
                           <section className="cart-index-item-image">
-                            <img src={item.imageUrl}/>
+            
+                            <Link to={`products/${item.product_id}`}><img src={item.imageUrl}/></Link>
                           </section>
                           <section className="cart_index-item-details">
                             <h3>{item.name}</h3><br />
@@ -70,13 +72,15 @@ class CartIndex extends React.Component{
                     <h1>How you'll pay</h1>
                     <form>
                       <input type="radio" name="checkout-payment" id="visa" />
-                      <label htmlFor="visa">Visa</label><br />
+                        <label htmlFor="visa"><i className="fa-brands fa-cc-visa fa-2x"></i></label><br />
                       <input type="radio" name="checkout-payment" id="master" />
-                      <label htmlFor="master">Master</label><br />
+                        <label htmlFor="master"><i className="fa-brands fa-cc-mastercard fa-2x"></i></label><br />
                       <input type="radio" name="checkout-payment" id="paypal" />
-                      <label htmlFor="paypal">Paypal</label><br />
-                      <input type="radio" name="checkout-payment" id="klarna" />
-                      <label htmlFor="klarna">Klarna</label><br />
+                        <label htmlFor="paypal"><i className="fa-brands fa-cc-paypal fa-2x"></i></label><br />
+                      <input type="radio" name="checkout-payment" id="AE" />
+                        <label htmlFor="AE"><i className="fa-brands fa-cc-amex fa-2x"></i></label><br />
+                      <input type="radio" name="checkout-payment" id="discover" />
+                        <label htmlFor="discover"><i className="fa-brands fa-cc-discover fa-2x"></i></label><br />
                     </form>
                   </section>
 
@@ -94,12 +98,11 @@ class CartIndex extends React.Component{
                       <div className='cart-iden-total-inner'>
                           <p>Total {Object.values(cart).length} item(s)</p>
                           <p>$ {this.calculateTotalAmount(cart)}</p>
-                      </div>
-                                         
+                      </div>                                   
                   </section>
 
                   <section className='cart-index-checkout-btn-section'>
-                    <button className='cart-index-checkout-btn'>Proceed to checkout</button>
+                    <button className='cart-index-checkout-btn'>Submit Order</button>
                   </section>
 
             </section>      
