@@ -7,6 +7,7 @@ class ProductItem extends React.Component{
     super(props);
     this.state = this.props.cartDetails
     this.handleAddToCart = this.handleAddToCart.bind(this)
+    this.handleBuyItNow = this.handleBuyItNow.bind(this)
   }
 
   componentDidMount(){
@@ -37,6 +38,11 @@ class ProductItem extends React.Component{
     } else {
         this.props.history.push('/login')
     }
+  }
+
+  handleBuyItNow(e){
+    e.preventDefault()
+    //// code here
   }
 
   render(){
@@ -80,8 +86,8 @@ class ProductItem extends React.Component{
                   </select>
                   </label><br />
 
-                  <button className="product-item-buy-now-btn">Buy it now</button><br />
-                  <button type='submit' onClick={this.handleAddToCart}className="product-item-add-to-cart-btn">Add to cart</button>                
+                  <button type='submit' onClick={this.handleBuyItNow} className="product-item-buy-now-btn">Buy it now</button><br />
+                  <button type='submit' onClick={this.handleAddToCart} className="product-item-add-to-cart-btn">Add to cart</button>                
                 </form>
             </div>
             <p className="product-items-handling" ><i className="fa-solid fa-truck-fast fa-2x"></i> <span>Hooray!</span> This item ships free to the US.</p><br />

@@ -21,10 +21,13 @@ class PostReview extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     if (this.props.currentUser){
-    
       this.props.postReview(this.state)
+      const textAreafield = document.querySelector(".post-review-textarea")
+        textAreafield.value = '';
+      const starRating = document.querySelector(".star-rating-selection")
+        starRating.selectedIndex = 0
     } else {
-      alert("please log in")
+      this.props.history.push('/login')
     }
   }
   
@@ -36,7 +39,7 @@ class PostReview extends React.Component{
  
         <form onSubmit={this.handleSubmit}>
 
-          <select onChange={this.handleUpdate('rating')} name="star">
+          <select onChange={this.handleUpdate('rating')} name="star" className="star-rating-selection">
                       <option value="5">5</option>
                       <option value="4">4</option>
                       <option value="3">3</option>
