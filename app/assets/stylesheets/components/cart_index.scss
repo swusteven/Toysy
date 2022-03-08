@@ -2,11 +2,11 @@
   padding-top: 40px;
   max-width: 1350px;
   margin: auto;
-  background-color: antiquewhite;
-  div {
+  .cart-item-message {
     display: flex;
     justify-content: space-between;
     padding: 10p 0x;
+    align-items: center;
     h1 {
       font-size: xx-large;
       font-weight: 300;
@@ -23,6 +23,8 @@
 .cart-index-item-wrapper {
   display: flex;
   flex-direction: column;
+  border-bottom: 2px lightgray solid;
+  margin-bottom: 40px;
 }
 
 .cart-index-left {
@@ -34,16 +36,15 @@
   font-weight: 500;
   i {
     color: orange;
+    padding-right: 5px;
   }
 }
 
 /* --- product detail section -- */
 .cart-index-item-info-wrapper {
-  background-color: lightgreen;
-  width: 60%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   div {
     padding-right: 30px;
   }
@@ -57,11 +58,64 @@
   }
 }
 
+.cart_index-item-details {
+  width: 35%;
+  padding: 10px;
+}
+
+.cart_index-item-quantity {
+  padding: 10px;
+}
+
+.cart_index-item-amount {
+  padding: 10px 0;
+  width: 15%;
+  h2 {
+    font-size: large;
+    font-weight: 500;
+    padding-bottom: 10px;
+    text-align: right;
+  }
+  h3 {
+    text-align: right;
+  }
+}
+
 /* ---  payment section --*/
 .cart-index-right-payment {
   height: 600px;
   width: 30%;
   border-radius: 20px;
   border: 1px lightgray solid;
-  background-color: lightseagreen;
+  padding: 20px;
+  padding-top: 30px;
+  box-shadow: 0px 0px 17px 2px rgba(108, 107, 107, 0.43);
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-iden-total-inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.cart-iden-total-inner:nth-child(2) {
+  border-bottom: 2px lightgray solid;
+  padding-bottom: 2px;
+}
+
+.cart-index-checkout-btn {
+  margin: 20px 0;
+  border-radius: 20px;
+  width: 100%;
+  height: 45px;
+  font-size: larger;
+  color: white;
+  background-color: black;
+  &:hover {
+    transition: 0.5ms;
+    cursor: pointer;
+    outline: 1px solid black;
+  }
 }

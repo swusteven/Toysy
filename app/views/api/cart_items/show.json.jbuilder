@@ -5,6 +5,6 @@
         json.price @item.product.price
         json.category @item.product.category
         json.seller_id @item.product.seller_id
-        json.seller item.product.seller.fname
+        json.seller @item.product.seller.fname
         json.imageUrl url_for(@item.product.image)
 
