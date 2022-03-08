@@ -18,7 +18,7 @@ class ProductEditorsPicks extends React.Component{
 
                 <div className="editors-pick-inner-box-1">
                     <p>Editors’ Picks</p>
-                    <h1>Made with love</h1>
+                    <h1>Curated collections hand-picked by Toysy editors</h1>
                     <h3>Shop these unique finds <i className="fa-solid fa-arrow-right"></i></h3>
                 </div>
 
