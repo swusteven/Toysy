@@ -1,0 +1,21 @@
+.category-top-title {
+  height: 60px;
+  background-color: #f7e6e6;
+  div {
+    max-width: 1350px;
+    margin: auto;
+    h1 {
+      font-size: xx-large;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      padding-top: 15px;
+    }
+  }
+}
+
+.category-wrapper {
+  max-width: 1350px;
+  margin: auto;
+  background-color: lightgrey;
+}

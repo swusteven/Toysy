@@ -31,8 +31,8 @@ class ProductMostPopular extends React.Component{
                           <Link to={`/products/${productsList[6].id}`}>
                                   <img src={productsList[6].imageUrl} />      
                           </Link>                      
-                          <span className="most-popular-price">${productsList[0].price}</span>
-                        <text className="hover-text">{productsList[0].name}</text>
+                          <span className="most-popular-price">${productsList[6].price}</span>
+                        <text className="hover-text">{productsList[6].name}</text>
                       </div>
                   </div>
 

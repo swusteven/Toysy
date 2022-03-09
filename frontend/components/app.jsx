@@ -8,6 +8,8 @@ import ProductsContainer from './product/products_container';
 import ProductItemContainer from './product/product_item_container';
 import Footer from './footer/footer';
 import CartContainer from './cart/cart_container';
+import CategoriesContainer from './category/categories_container';
+
 
 const App = () => (
   <>
@@ -15,6 +17,8 @@ const App = () => (
     <Route exact path="/" component={HeaderSectionContainer} /> 
     
     <Route exact path="/" component={ProductsContainer} />
+    <Route exact path="/category/:category" component={CategoriesContainer} />
+
 
     
 
