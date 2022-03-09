@@ -1,5 +1,5 @@
 import * as SessionUtil from '../utils/session'
-import { createCart } from '../utils/cart';
+import { fetchAllCartItemsforUser } from './cart';
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
@@ -26,24 +26,25 @@ const receiveToRemoveErrors=()=>({
 })
 
 
+const receiveCurrentUserAndCartItems=[
+  fetchAllCartItemsforUser(),
+  receiveCurrentUser()
+]
+  
 //thunk action creators
 export const signup = (user) => dispatch =>{
   return SessionUtil.signup(user)
     .then((user) => dispatch(receiveCurrentUser(user)),
           (errors) => dispatch(receiveErrors(errors)))
-    // .then((res)=> {
-    //   debu
-    //   const data = {user_id: res.user.id}
-    //   return createCart(data)
-    // })
 };
 
 
+// receiveCurrentUserAndCartItems.map((action, idx) => idx === 0 ? dispatch(action(user.id)) : dispatch(action(user)))
+
 export const login = (user) => dispatch =>{
   return SessionUtil.login(user)
-    .then(user => dispatch(receiveCurrentUser(user)),
-        (errors) => dispatch(receiveErrors(errors)) 
-    )
+    .then((user) => dispatch(receiveCurrentUser(user)),
+        (errors) => dispatch(receiveErrors(errors)))
 };
 
 export const logout = () => dispatch => {

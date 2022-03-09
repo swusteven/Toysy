@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch =>({
   login: formUser => dispatch(login(formUser)),
   setModalToClose: (currentStatus) => dispatch(setModalToClose(currentStatus)),
-  removeErrors: ()=> dispatch(removeErrors()),
+  removeErrors: ()=> dispatch(removeErrors())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)
