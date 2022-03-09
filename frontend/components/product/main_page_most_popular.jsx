@@ -26,13 +26,12 @@ class ProductMostPopular extends React.Component{
                 <div className='most-popular-bottom'>  
                   <div className='most-popular-bottom-left'>
                       <div className="most-popular-inner-box-1 hover-area">
-                          <p >{productsList[6].name}</p>
                           
                           <Link to={`/products/${productsList[6].id}`}>
-                                  <img src={productsList[6].imageUrl} />      
-                          </Link>                      
-                          <span className="most-popular-price">${productsList[6].price}</span>
-                        <text className="hover-text">{productsList[6].name}</text>
+                                <p >{productsList[6].name}</p>
+                                <img src={productsList[6].imageUrl} />        
+                                <span className="most-popular-price">${productsList[6].price}</span>
+                           </Link>        
                       </div>
                   </div>
 
@@ -41,11 +40,10 @@ class ProductMostPopular extends React.Component{
                         <div className="most-popular-inner-boxes most-popular-inner-box-images hover-area">
                             
                             <Link to={`/products/${productsList[0].id}`}>
-                                    <img src={productsList[0].imageUrl} />      
-                            </Link>       
-                            <p >{productsList[0].name}</p>               
-                            <span className="most-popular-price">${productsList[0].price}</span>
-                            <text className="hover-text">{productsList[0].name}</text>
+                                  <img src={productsList[0].imageUrl} />          
+                                  <p >{productsList[0].name}</p>               
+                                  <span className="most-popular-price">${productsList[0].price}</span>
+                            </Link>    
                         </div>
                           
                         <div className="most-popular-inner-boxes most-popular-inner-box-images hover-area">
@@ -54,16 +52,14 @@ class ProductMostPopular extends React.Component{
                             </Link>
                             <p >{productsList[1].name}</p>   
                             <span className="most-popular-price">${productsList[1].price}</span>
-                            <text className="hover-text">{productsList[1].name}</text>
                         </div>
 
                         <div className="most-popular-inner-boxes most-popular-inner-box-images hover-area">
                             <Link to={`/products/${productsList[2].id}`}>
                               <img src={productsList[2].imageUrl}  />
-                            </Link>
-                            <p >{productsList[2].name}</p>   
+                              <p >{productsList[2].name}</p>   
                               <span className="most-popular-price">${productsList[2].price}</span>
-                              <text className="hover-text">{productsList[2].name}</text>
+                            </Link>
                         </div>
                     </div>
 
@@ -71,31 +67,27 @@ class ProductMostPopular extends React.Component{
                       <div className="most-popular-inner-boxes most-popular-inner-box-images hover-area">
                           <Link to={`/products/${products[3].id}`}>
                             <img src={products[3].imageUrl}  />
+                            <p>{productsList[3].name}</p>   
+                            <span className="most-popular-price">${products[3].price}</span>
                           </Link>
-                          <p >{productsList[3].name}</p>   
-                          <span className="most-popular-price">${products[3].price}</span>
-                          <text className="hover-text">{productsList[3].name}</text>
                       </div>
 
                       <div className="most-popular-inner-boxes most-popular-inner-box-images hover-area" >
                           <Link to={`/products/${products[4].id}`}>
                             <img src={products[4].imageUrl}  />
+                            <p>{productsList[4].name}</p>   
+                            <span className="most-popular-price">${products[4].price}</span> 
                           </Link>
-                          <p >{productsList[4].name}</p>   
-                          <span className="most-popular-price">${products[4].price}</span> 
-                          <text className="hover-text">{productsList[4].name}</text>
                       </div>
 
                       <div className="most-popular-inner-boxes most-popular-inner-box-images hover-area">
                           <Link to={`/products/${products[5].id}`}>
                             <img src={products[5].imageUrl}  />
-                            </Link>
-                            <p >{productsList[5].name}</p>   
-                        <span className="most-popular-price">${products[5].price}</span> 
-                        <text className="hover-text">{productsList[5].name}</text>
+                            <p>{productsList[5].name}</p>   
+                            <span className="most-popular-price">${products[5].price}</span> 
+                          </Link>
                       </div> 
 
-                      
                     </div>
                     </div>       
                   </div>

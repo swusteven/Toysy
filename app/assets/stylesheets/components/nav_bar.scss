@@ -216,6 +216,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
 .cartQuantity {
@@ -228,4 +229,7 @@
   font-size: small;
   top: 0;
   left: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
