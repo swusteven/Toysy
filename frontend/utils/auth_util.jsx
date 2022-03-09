@@ -12,7 +12,7 @@ const mDTP = dispatch =>{
   }
 }
 
-//<AuthRoute path="" component={} />
+//<AuthRoute path="" component={} /> 
 
 const Auth = ({ loggedIn, path, component: Component}) =>(
   <Route 
