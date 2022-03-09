@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Cart = ({cart, currentUser}) =>{
-  // debugger
+  debugger
     return (
       <>
         <Link to="/cart"><i className="fa-solid fa-cart-shopping fa-2x"></i></Link>

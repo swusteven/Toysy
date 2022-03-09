@@ -4,9 +4,9 @@ import Login from './login';
 import { setModalToClose } from '../../actions/modal';
 
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   return {
-    modalOpen: state.modalOpen,
+    modalOpen: ownProps.location.pathname === '/login' ? true : state.modalOpen,
     errors: Object.values(state.errors),
     currentUser: state.session.currentUser
 }};

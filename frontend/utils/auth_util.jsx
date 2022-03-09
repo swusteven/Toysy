@@ -6,26 +6,32 @@ const mSTP = state => ({
   loggedIn: Boolean(state.session.currentUser)
 })
 
+const mDTP = dispatch =>{
+  return {
+    setModalToOpen: (currentStatus) => dispatch(setModalToOpen(currentStatus)),
+  }
+}
+
 //<AuthRoute path="" component={} />
 
 const Auth = ({ loggedIn, path, component: Component}) =>(
   <Route 
     path={path}
     render={props=>(
-      loggedIn ? <Redirect to="/"/> : <component {...props} />
+      loggedIn ? <Redirect to="/"/> : <Component {...props} />
     )}
   />
 )
 
+
 const Protected = ({ loggedIn, path, component: Component}) =>{
-  debugger
   return <Route 
     path={path}
     render={props=>(
-      loggedIn ? <component {...props}/>: <Redirect to="/signup"/>
+      loggedIn ? <Component {...props}/>: <Redirect to="/signup"/>
     )}
   />
 }
 
 export const AuthRoute = withRouter(connect(mSTP)(Auth))
-export const ProtectedRoute = withRouter(connect(mSTP)(Protected))
+export const ProtectedRoute = withRouter(connect(mSTP, mDTP)(Protected))

@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "react-modal"
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import {createCart} from "../../utils/cart"
 
 class Signup extends React.Component{
@@ -15,6 +15,10 @@ class Signup extends React.Component{
     this.handleSubmitAsDemoUser = this.handleSubmitAsDemoUser.bind(this);
   }
 
+  componentDidMount(){
+    this.props.setModalToOpen()
+  }
+  
   componentWillUnmount(){
     this.props.removeErrors()
   }
@@ -44,6 +48,11 @@ class Signup extends React.Component{
     Modal.setAppElement('#root');
   }
 
+
+  routeToHomePage(){
+    return this.props.history.push('./')
+  }
+
   _renderError(error, fieldname){
     if (error.includes(fieldname) && fieldname === "Fname"){
       return "First name can't be blank";    
@@ -60,15 +69,15 @@ class Signup extends React.Component{
     ))
   }
 
+  
 
   render(){
     const { setModalToClose, modalOpen } = this.props;
-
     return (
       <div className="session-form-wrapper">
         <Modal  isOpen={modalOpen} 
                 ariaHideApp={false}
-                onRequestClose={()=>setModalToClose()}
+                onRequestClose={()=>this.routeToHomePage()}
                 style={{
                     overlay: {
                       backgroundColor: "rgba(0, 0, 0, .5)",
@@ -85,7 +94,7 @@ class Signup extends React.Component{
         >
 
           <div className="modal-close-x">
-            <button onClick={() => setModalToClose(false)}>X</button>
+            <button onClick={()=>this.routeToHomePage()}>X</button>
           </div>
           
 

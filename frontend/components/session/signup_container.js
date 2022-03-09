@@ -4,18 +4,23 @@ import Signup from './signup';
 import { setModalToClose } from '../../actions/modal';
 
 
-const mapStateToProps = state => ({
-    modalOpen: state.modalOpen,
+const mapStateToProps = (state, ownProps) => {
+  debugger
+  return{
+    modalOpen: ownProps.location.pathname === '/signup' ? true : state.modalOpen,
     errors: Object.values(state.errors)
-});
+  }
+}
 
-const mapDispatchToProps = dispatch =>({
-  createNewUser: formUser => dispatch(signup(formUser)),
-  login: formUser => dispatch(login(formUser)),
-  setModalToClose: (currentStatus) => dispatch(setModalToClose(currentStatus)),
-  removeErrors: ()=> dispatch(removeErrors())
+const mapDispatchToProps = dispatch =>{
+  return {
+    createNewUser: formUser => dispatch(signup(formUser)),
+    login: formUser => dispatch(login(formUser)),
+    setModalToClose: (currentStatus) => dispatch(setModalToClose(currentStatus)),
+    removeErrors: ()=> dispatch(removeErrors()),
+  }
+}
 
-})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Signup)
 

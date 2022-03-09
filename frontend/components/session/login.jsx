@@ -38,15 +38,20 @@ class Login extends React.Component{
       .then(()=> this.props.history.push('./'))
   }
 
-    _renderError(error, fieldname){
-      if (fieldname === "backend"){
-        return error;    
-      } else if (fieldname === 'Email' && this.state.email ===""){
-        return "Email can't be blank"
-      } else if (fieldname === 'Password' &&this.state.password ===""){
-        return "Password can't be blank"
-      }
+
+ routeToHomePage(){
+    return this.props.history.push('./')
+  }
+
+  _renderError(error, fieldname){
+    if (fieldname === "backend"){
+      return error;    
+    } else if (fieldname === 'Email' && this.state.email ===""){
+      return "Email can't be blank"
+    } else if (fieldname === 'Password' &&this.state.password ===""){
+      return "Password can't be blank"
     }
+  }
 
   renderErrors(fieldname){
     return this.props.errors.map((error, i)=>(
@@ -63,7 +68,7 @@ class Login extends React.Component{
       <div className="session-form-wrapper">
         <Modal  isOpen={modalOpen} 
                 ariaHideApp={false}
-                onRequestClose={()=>setModalToClose()}
+                onRequestClose={()=>this.routeToHomePage()}
                 style={{
                     overlay: {
                       backgroundColor: "rgba(0, 0, 0, .5)",
@@ -80,7 +85,7 @@ class Login extends React.Component{
         >
           
         <div className="modal-close-x">
-          <button onClick={() => setModalToClose(false)}>X</button>
+          <button onClick={() => this.routeToHomePage()}>X</button>
         </div>
 
              <div className="session-error-invalid-credentials">{this.renderErrors("backend")}</div>
