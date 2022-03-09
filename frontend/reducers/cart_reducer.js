@@ -13,7 +13,8 @@ const cartReducer = (oldState = {}, action) => {
     case RECEIVE_ALL_CART_ITEMS_FOR_USER:
         return Object.assign({}, action.cartItems)
     case RECEIVE_SINGLE_ITEM_FOR_USER:
-        return Object.assign({}, oldState, {[action.cartItem.id]: action.cartItem})
+        delete nextState[action.cartItem.product_id]  
+        return Object.assign({}, nextState, {[action.cartItem.product_id]: action.cartItem})
     case REMOVE_SINGLE_ITEM_FOR_USER:
         delete nextState[action.cartItem.product_id]  
         return nextState  

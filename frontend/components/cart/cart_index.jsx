@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 class CartIndex extends React.Component{
   constructor(props){
     super(props);
-    this.handleRemove = this.handleRemove.bind(this)
+    this.handleRemoveSingleItem = this.handleRemoveSingleItem.bind(this)
+    this.handleUpdateQuantity = this.handleUpdateQuantity.bind(this)
   }
 
   componentDidMount(){  
@@ -23,10 +24,18 @@ class CartIndex extends React.Component{
     return total ? total.toFixed(2) : 0
   }
 
-  handleRemove(cartItemId){
+  handleRemoveSingleItem(cartItemId){
     return (e) => {
       e.preventDefault()
       this.props.removeSingleItemInCartItem(cartItemId)
+    }
+  }
+
+  
+  handleUpdateQuantity(itemId){
+    return (e) => {
+      const cartItem = {"quantity": e.currentTarget.value};
+     this.props.updateItemInCartItem(itemId, cartItem) 
     }
   }
 
@@ -42,10 +51,11 @@ class CartIndex extends React.Component{
          <div className="cart-index-wrapper">
        
             <section className="cart-index-left">
+
             {cart.length === 0 ? null : 
               cart.map((item) =>{
                 return <div className="cart-index-item-wrapper" key={item.name}>
-
+                        
                         <p className='cart-index-item-seller'>
                           <i className="fa-solid fa-store fa-lg"></i>   
                           {item.seller}'s store
@@ -60,12 +70,27 @@ class CartIndex extends React.Component{
 
                           <section className="cart_index-item-details">
                             <h3>{item.name}</h3><br />
-                            <button type='submit' onClick={this.handleRemove(item.id)}>Remove{item.id}</button>
+                            <button type='submit' onClick={this.handleRemoveSingleItem(item.id)}>Remove{item.id}</button>
                           </section>
 
 
                           <section className="cart_index-item-quantity">
-                            <h3>Quantity: {item.quantity}</h3>
+                            <form>
+                                <select name="quantity"
+                                        defaultValue={item.quantity}
+                                        onChange={this.handleUpdateQuantity(item.id)} 
+                                >
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>         
+                              </form>
                           </section>
                           <section className="cart_index-item-amount">
                             <h2>${(item.quantity * item.price).toFixed(2)}</h2>
