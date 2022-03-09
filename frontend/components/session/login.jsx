@@ -15,6 +15,7 @@ class Login extends React.Component{
 
   componentWillUnmount(){
     this.props.removeErrors()
+    this.props.fetchAllCartItemsforUser(this.props.currentUser.id)
   }
 
 
@@ -23,7 +24,7 @@ class Login extends React.Component{
       this.setState({[type]: e.target.value})    
     }
   }
-
+  
   handleSubmit(e){
     e.preventDefault();    
     this.props.login(this.state)
