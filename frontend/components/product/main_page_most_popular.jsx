@@ -16,7 +16,7 @@ class ProductMostPopular extends React.Component{
             <section className="most-popular-wrapper">
                 <div className='most-popular-top'>
                     <div className="most-popular-top-left">
-                      <h1>Most Popular </h1>
+                      <h1>Explore Unique Finds</h1>
                     </div>
                     <div className="most-popular-top-right">
                       <i className="fa-solid fa-arrow-trend-up fa-4x"></i>

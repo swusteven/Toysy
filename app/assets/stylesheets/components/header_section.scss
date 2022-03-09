@@ -67,4 +67,8 @@
   width: 114px;
   border-radius: 50%;
   border: 1px solid rgba(34, 34, 34, 0.15) !important;
+  &:hover {
+    transform: scale(1.1);
+    transition: 200ms;
+  }
 }

@@ -1,48 +1,62 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import {shuffleArray} from '../../utils/shuffle_products.array'
 
 const loggedOutMessage = <h1 className="header-section-message-logged-out">Explore one-of-a-kind finds from independent makers</h1>
 
 
-const HeaderSection = ({currentUser}) =>{
-  return(
+const HeaderSection = ({currentUser, products}) =>{
+
+  const classic = products.length === 0 ? null : shuffleArray([products[2], products[16], products[17], products[18], products[15]], 1)[0]
+  const personalized = products.length === 0 ? null : shuffleArray([products[0], products[3]], 1)[0]
+  const learning = products.length === 0 ? null : shuffleArray([products[1], products[11], products[12]], 1)[0]
+  const doll = products.length === 0 ? null : shuffleArray([products[9], products[8], products[7], products[10]], 1)[0]
+  const toddler = products.length === 0 ? null : shuffleArray([products[4], products[5], products[6]], 1)[0]
+  const puzzle = products.length === 0 ? null : shuffleArray([products[1], products[13], products[14]], 1)[0]
+  
+
+  return(products.length === 0 ? null : 
+    
     <section className='header-section-wrapper'> 
       <div className='header-section-top'>
         {currentUser ? <h1 className="header-section-message-logged-in">{`Welcome! ${currentUser.fname}` }</h1> : loggedOutMessage }
       </div>
 
       <div className='header-section-bottom'>
-
         <div className='header-section-bottom-contents'>
 
           <div className="header-section-bottom-contents-container">
-            <img src="https://i.etsystatic.com/9622611/r/il/379693/1487501389/il_1140xN.1487501389_s5f3.jpg" alt="" /><br />
+            <Link to={`products/${classic.id}`}><img src={classic.imageUrl}/></Link><br />
+            Classic
+          </div>
+          
+          <div className="header-section-bottom-contents-container">
+            <Link to={`products/${personalized.id}`}><img src={personalized.imageUrl}/></Link><br />
             Personalized Gifts
           </div>
 
           <div className="header-section-bottom-contents-container">
-            <img src="https://i.etsystatic.com/15428306/r/il/18a5ab/3115774139/il_1140xN.3115774139_i3n8.jpg" alt="" /><br />
-            Puzzles
+            <Link to={`products/${learning.id}`}><img src={learning.imageUrl}/></Link><br />
+            Learning
           </div>
 
           <div className="header-section-bottom-contents-container">
-            <img src="https://i.etsystatic.com/15889684/r/il/fc6e71/3442069743/il_1140xN.3442069743_a9qv.jpg" alt="" /><br />
-            Games
-          </div>
-          
-          <div className="header-section-bottom-contents-container">
-            <img src="https://i.etsystatic.com/10854692/r/il/f6e1b6/3003335858/il_794xN.3003335858_qjfp.jpg" alt="" /><br />
-           Outdoor Recreation
+            <Link to={`products/${doll.id}`}><img src={doll.imageUrl}/></Link><br />
+            Doll
           </div>
 
           <div className="header-section-bottom-contents-container">
-            <img src="https://i.etsystatic.com/11995091/r/il/f1c017/1331186084/il_1140xN.1331186084_ac2h.jpg" alt="" /><br />
-          Do It Yourself
+            <Link to={`products/${toddler.id}`}><img src={toddler.imageUrl}/></Link><br />
+            Toddler
           </div>
 
           <div className="header-section-bottom-contents-container">
-            <img src="https://i.etsystatic.com/32351657/r/il/022a26/3704764509/il_1140xN.3704764509_n4j5.jpg" alt="" /><br />
-            Coloring
+            <Link to={`products/${puzzle.id}`}><img src={puzzle.imageUrl}/></Link><br />
+            Puzzle
           </div>
+
+
+
           
         </div> 
       </div>
