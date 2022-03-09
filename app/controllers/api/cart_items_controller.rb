@@ -19,6 +19,17 @@ class Api::CartItemsController < ApplicationController
         end
     end
 
+    def destroy
+        @item = CartItem.find(params[:id])
+
+        if @item
+            @item.destroy
+            render :show
+        else 
+            render json: @item.errors.full_messages, status: 401
+        end
+    end
+
     private
     def cart_items_params
         params.require(:item).permit(:cart_id, :product_id, :quantity)

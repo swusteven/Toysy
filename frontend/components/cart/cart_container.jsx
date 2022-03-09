@@ -1,6 +1,10 @@
 import { connect } from 'react-redux'
 import CartIndex from './cart_index'
-import { fetchAllCartItemsforUser } from '../../actions/cart'
+import { 
+  fetchAllCartItemsforUser,
+  removeSingleItemInCartItem 
+} from '../../actions/cart'
+
 
 const mSTP = state =>{
   return {
@@ -10,7 +14,8 @@ const mSTP = state =>{
 }
 
 const mDTP = dispatch => ({
-  fetchAllCartItems: (userId) => dispatch(fetchAllCartItemsforUser(userId))
+  fetchAllCartItems: (userId) => dispatch(fetchAllCartItemsforUser(userId)),
+  removeSingleItemInCartItem: (cartItemId) => dispatch(removeSingleItemInCartItem(cartItemId))
 })
 
 export default connect(mSTP, mDTP)(CartIndex)

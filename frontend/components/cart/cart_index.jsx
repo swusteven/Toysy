@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+
 class CartIndex extends React.Component{
   constructor(props){
     super(props);
+    this.handleRemove = this.handleRemove.bind(this)
   }
 
   componentDidMount(){  
@@ -15,18 +17,21 @@ class CartIndex extends React.Component{
 
   calculateTotalAmount(cart){
     let total = null;
-
     Object.values(cart).forEach(item => {
       total = total + Number(((Number(item.quantity) * Number(item.price))))
     })
-
-    
     return total ? total.toFixed(2) : 0
+  }
+
+  handleRemove(cartItemId){
+    return (e) => {
+      e.preventDefault()
+      this.props.removeSingleItemInCartItem(cartItemId)
+    }
   }
 
   render(){
     const { cart, products } = this.props
-
     return(
       <div className="cart-index-page">
         <div className="cart-item-message">
@@ -51,10 +56,14 @@ class CartIndex extends React.Component{
             
                             <Link to={`products/${item.product_id}`}><img src={item.imageUrl}/></Link>
                           </section>
+
+
                           <section className="cart_index-item-details">
                             <h3>{item.name}</h3><br />
-                            <h1>Remove</h1>
+                            <button type='submit' onClick={this.handleRemove(item.id)}>Remove{item.id}</button>
                           </section>
+
+
                           <section className="cart_index-item-quantity">
                             <h3>Quantity: {item.quantity}</h3>
                           </section>

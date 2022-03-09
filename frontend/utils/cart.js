@@ -20,17 +20,13 @@ export const updateItemInCartItem = (cartItemId, cartItem) =>{
             url: `api/cart_items/${cartItemId}`,
             method: "PATCH",
             data: {item: cartItem}
-  })
+         })
 }
 
+export const removeSingleItemInCartItem = (cartItemId) => {
+  return $.ajax({
+          url: `api/cart_items/${cartItemId}`,
+          method: "DELETE"
+        })
+}
 
-
-
-//create a new cart for user who doesn't have a cart
-// export const createCart = (userId) => {
-//  return $.ajax({
-//     url: `/api/carts`,
-//     method: "POST", 
-//     data: {cart: userId}
-//   })
-// }
