@@ -10,6 +10,8 @@ import Footer from './footer/footer';
 import CartContainer from './cart/cart_container';
 import CategoriesContainer from './category/categories_container';
 
+import {AuthRoute, ProtectedRoute} from '../utils/auth_util'
+
 
 const App = () => (
   <>
@@ -18,16 +20,14 @@ const App = () => (
     
     <Route exact path="/" component={ProductsContainer} />
     <Route exact path="/category/:category" component={CategoriesContainer} />
-
-
     
 
     <Route path="/login" component={LoginContainer} />
     <Route path="/login" component={HeaderSectionContainer} /> 
     
-    <Route path="/signup" component={SignupContainer} />
-    <Route path="/signup" component={HeaderSectionContainer} /> 
-    <Route path="/cart" component={CartContainer} /> 
+    <AuthRoute path="/signup" component={SignupContainer} />
+    <AuthRoute path="/signup" component={HeaderSectionContainer} /> 
+    <ProtectedRoute path="/cart" component={CartContainer} /> 
 
     <Route path="/products/:id" component={ProductItemContainer} />
     
