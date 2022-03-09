@@ -70,7 +70,7 @@ class CartIndex extends React.Component{
 
                           <section className="cart_index-item-details">
                             <h3>{item.name}</h3><br />
-                            <button type='submit' onClick={this.handleRemoveSingleItem(item.id)}>Remove{item.id}</button>
+                            <button type='submit' onClick={this.handleRemoveSingleItem(item.id)}>Remove</button>
                           </section>
 
 
