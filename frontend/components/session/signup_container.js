@@ -5,7 +5,6 @@ import { setModalToClose } from '../../actions/modal';
 
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return{
     modalOpen: ownProps.location.pathname === '/signup' ? true : state.modalOpen,
     errors: Object.values(state.errors)

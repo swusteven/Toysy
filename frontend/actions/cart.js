@@ -22,7 +22,6 @@ const clearCartItems = () =>({
 
 //thunk action creator
 export const fetchAllCartItemsforUser = (userId) => dispatch =>{
-  debugger
   return ApiUtilCart.fetchAllCartItems(userId)
     .then(cartItems => dispatch(receiveAllCartItemsForUser(cartItems)))
 };
