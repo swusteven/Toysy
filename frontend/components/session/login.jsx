@@ -15,7 +15,6 @@ class Login extends React.Component{
 
   componentWillUnmount(){
     this.props.removeErrors()
-    this.props.fetchAllCartItemsforUser(this.props.currentUser.id)
   }
 
 

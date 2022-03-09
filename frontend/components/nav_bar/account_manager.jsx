@@ -2,12 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AccountManager = ({ currentUser, logout, setModalToOpen }) => {
-  
-  // const logUserOutandRedirect =() => {
-  //   return logout();
-  //   this.props.history.push('./')
-  // }
-  
+    
   const display = currentUser ? (
     <ul className="user-menu-main">
       <li className="user-menu-entry">
