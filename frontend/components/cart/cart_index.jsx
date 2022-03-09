@@ -10,6 +10,7 @@ class CartIndex extends React.Component{
     if (this.props.currentUser){
     return this.props.fetchAllCartItems(this.props.currentUser.id)
     }
+    window.scrollTo(0, 0)   //scroll to the top of the page
   }
 
   calculateTotalAmount(cart){

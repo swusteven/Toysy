@@ -15,6 +15,8 @@ class ProductItem extends React.Component{
     if (this.props.currentUser){
       this.props.fetchAllCartItemsforUser(this.props.currentUser.id)      
     }
+    
+    window.scrollTo(0, 0)   //scroll to the top of the page
   } 
   
   handleUpdate(){

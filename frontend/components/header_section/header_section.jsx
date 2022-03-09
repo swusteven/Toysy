@@ -6,7 +6,7 @@ const loggedOutMessage = <h1 className="header-section-message-logged-out">Explo
 
 
 const HeaderSection = ({currentUser, products}) =>{
-
+  console.log(products.length)
   const classic = products.length === 0 ? null : shuffleArray([products[2], products[16], products[17], products[18], products[15]], 1)[0]
   const personalized = products.length === 0 ? null : shuffleArray([products[0], products[3]], 1)[0]
   const learning = products.length === 0 ? null : shuffleArray([products[1], products[11], products[12]], 1)[0]
