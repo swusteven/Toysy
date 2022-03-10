@@ -1,12 +1,13 @@
 class Api::OrderItemsController < ApplicationController
     def index
-
+        @user = User.find(params[:user_id])
+        @orderItems = @user.products_on_an_order
+        render :index
     end
 
     def create
         @user = User.find(params[:user_id])
         @order = Order.create!('user_id' =>@user.id)
-        debugger
         @data = params[:itemsInArray]
         @data.each do |key, val|
             OrderItem.create!('product_id'=> val['product_id'].to_i, 'quantity' => val['quantity'].to_i, 'price' => val['price'].to_i, 'order_id' => @order.id)

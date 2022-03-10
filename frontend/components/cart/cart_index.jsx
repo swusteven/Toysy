@@ -43,11 +43,8 @@ class CartIndex extends React.Component{
   handleOrder(e){
     e.preventDefault();
     const {cart, currentUser, postItemsToOrderItem}= this.props;
-    debugger
-    //need user_id,  cart_id, quantity, product_id
     postItemsToOrderItem(currentUser.id, cart)
   }
-
 
 
   render(){

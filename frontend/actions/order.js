@@ -10,7 +10,6 @@ const receiveAllOrdersForUser = (orders) => ({
 
 
 export const postItemsToOrderItem = (userId, itemsInArray) => dispatch => {
-  debugger
   return ApiUtilOrder.addItemsToOrderItem(userId, itemsInArray)
     .then(orders => dispatch(receiveAllOrdersForUser(orders)))
 }
