@@ -6,7 +6,7 @@ import {
   fetchAllCartItemsforUser, 
   updateItemInCartItem 
 } from "../../actions/cart";
-
+import { postItemsToOrderItem } from "../../actions/order";
 
 
 const mSTP = (state,ownProps) => {
@@ -27,7 +27,8 @@ const mDTP = dispatch => ({
   fetchSingleProduct: (productId)=> dispatch(fetchSingleProduct(productId)),
   postItemToCartItem: (item) => dispatch(postItemToCartItem(item)),
   fetchAllCartItemsforUser: (userId) => dispatch(fetchAllCartItemsforUser(userId)),
-  updateItemInCartItem: (cartItemId, cartItem) => dispatch(updateItemInCartItem(cartItemId, cartItem))
+  updateItemInCartItem: (cartItemId, cartItem) => dispatch(updateItemInCartItem(cartItemId, cartItem)),
+  postItemsToOrderItem: (userId, itemsInArray) => dispatch(postItemsToOrderItem(userId, itemsInArray)),
 })
 
 export default connect(mSTP, mDTP)(ProductItem)

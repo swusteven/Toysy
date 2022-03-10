@@ -30,3 +30,10 @@ export const removeSingleItemInCartItem = (cartItemId) => {
         })
 }
 
+export const removeAllItemsInCartItem = (cartId) =>{
+  return $.ajax({
+    url: `/api/carts/${cartId}`,
+    method: "DELETE"
+  })
+}
+

@@ -8,6 +8,7 @@ class CartIndex extends React.Component{
     this.handleRemoveSingleItem = this.handleRemoveSingleItem.bind(this)
     this.handleUpdateQuantity = this.handleUpdateQuantity.bind(this)
     this.handleOrder = this.handleOrder.bind(this)
+    this.handleRemoveAllItems = this.handleRemoveAllItems.bind(this)
   }
 
   componentDidMount(){  
@@ -44,9 +45,16 @@ class CartIndex extends React.Component{
     e.preventDefault();
     const {cart, currentUser, postItemsToOrderItem}= this.props;
     postItemsToOrderItem(currentUser.id, cart)
+      .then(()=> this.props.removeAllItemsInCartItem(this.props.cartId))
       .then(()=> this.props.history.push('/orders'))
+      
   }
 
+  handleRemoveAllItems(e){
+    e.preventDefault()
+    debugger
+    this.props.removeAllItemsInCartItem(this.props.cartId)
+  }
 
   render(){
     const { cart, products } = this.props
@@ -60,7 +68,7 @@ class CartIndex extends React.Component{
          <div className="cart-index-wrapper">
        
             <section className="cart-index-left">
-
+            {cart.length === 0 ? null : <button type="submit" onClick={this.handleRemoveAllItems}> REMOVE ALL ITEMS </button> }
             {cart.length === 0 ? null : 
               cart.map((item) =>{
                 return <div className="cart-index-item-wrapper" key={item.name}>
@@ -75,7 +83,6 @@ class CartIndex extends React.Component{
             
                             <Link to={`products/${item.product_id}`}><img src={item.imageUrl}/></Link>
                           </section>
-
 
                           <section className="cart_index-item-details">
                             <h3>{item.name}</h3><br />

@@ -45,7 +45,14 @@ class ProductItem extends React.Component{
 
   handleBuyItNow(e){
     e.preventDefault()
-    //// code here
+    const {currentUser, product, postItemsToOrderItem} = this.props 
+    if (currentUser){
+      let data = [{'quantity': this.state.quantity, 'product_id': product.id, 'price': product.price}]
+      postItemsToOrderItem(currentUser.id, data)
+      .then(()=> this.props.history.push('/orders'))
+    } else {
+        this.props.history.push('/login')
+    }  
   }
 
   render(){

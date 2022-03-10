@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { formatDateTime} from '../../utils/date_util'
 
 class OrderIndex extends React.Component{
   componentDidMount(){
@@ -18,13 +20,18 @@ class OrderIndex extends React.Component{
         <div>
             <h1>Order History</h1>
             {
-              (Object.values(orders)).map(order=>(
+              (Object.values(orders)).reverse().map(order=>(
                 <section className='order-index-at-order-level'>
                   {
                   Object.values(order).map(item=>(
                    <div className='order-index-order-level-items'>
-                        <h1>Name: {item.name}</h1><br />
-                        <h3>Quanitity: {item.quantity}</h3>
+                        <div>
+                          <Link to={`products/${item.product_id}`}><img src={item.imageUrl}/></Link>
+                          <h1>Name: {item.name}</h1>
+                          <h3>Quantity: {item.quantity}</h3>
+                          <h3>Price: ${item.price}</h3>
+                          <h3>Order Date: {formatDateTime(item.created_at)}</h3>
+                        </div><br />
                    </div>
                   ))
                 }
