@@ -39,7 +39,7 @@ class CategoriesIndex extends React.Component{
         {products.length === 0 ? null : 
           <section className='category-wrapper'>
             <div className='category-left'>
-                  <h1>filter goes here</h1>
+                  <h1></h1>
             </div>
 
             <div className='category-right'>
@@ -53,11 +53,10 @@ class CategoriesIndex extends React.Component{
                     return <div key={product.name} className="category-right-product-container">
                             <Link to={`/products/${product.id}`}>
                                 <img src={product.imageUrl} />
-                                <p>{product.name}</p>
+                                <h2>{product.name}</h2>
                                 <p>${product.price}</p>
                                 <p>{product.seller.fname}'s store</p> 
                               </Link>
-
                           </div>
                   })
                 }

@@ -50,6 +50,7 @@ class PostReview extends React.Component{
         <h1 className="post-review-title">Post a product review here</h1>
  
         <form onSubmit={this.handleSubmit}>
+          <span>Rating: </span>
           {stars.map((_, idx) => {
             return <i className={`fa-solid fa-star ${(this.state.hoverValue || this.state.rating) > idx ? 'review-star-orange' : "review-star-grey"}`} key={idx} 
                       onClick={()=>this.handleClick(idx + 1)}
@@ -60,11 +61,12 @@ class PostReview extends React.Component{
           
           <textarea onChange={this.handleUpdate('comment')} 
                     className="post-review-textarea" 
-                    cols="30" rows="6" 
+                    cols="30" rows="4" 
                     placeholder='Share your review here with others'>
           </textarea>
-
-          <input className="post-review-submit-btn" type="submit" value="Submit" />
+          <div className="post-review-submit-btn-container">
+            <input className="post-review-submit-btn" type="submit" value="Submit" />
+          </div>
         </form>
       </>
     )
