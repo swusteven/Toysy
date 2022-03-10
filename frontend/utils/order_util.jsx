@@ -6,3 +6,10 @@ export const addItemsToOrderItem= (userId, itemsInArray) => {
   })
 }
 
+
+export const fetchOrders = (userId) =>{
+  return $.ajax({
+    url: `api/users/${userId}/order_items`,
+    method: "GET"
+  })
+}

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import HeaderSectionContainer from './header_section/header_section_container';
+import OrderContainer from "./order/order_container"
 import SignupContainer from './session/signup_container';
 import LoginContainer from "./session/login_container"
 import ProductsContainer from './product/products_container';
@@ -21,6 +22,7 @@ const App = () => (
     <Route exact path="/" component={ProductsContainer} />
     <Route exact path="/category/:category" component={CategoriesContainer} />
     
+    <ProtectedRoute path="/orders" component={OrderContainer}/>
 
     <Route path="/login" component={LoginContainer} />
     <Route path="/login" component={HeaderSectionContainer} /> 
