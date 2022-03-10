@@ -35,6 +35,10 @@ class ProductMostPopular extends React.Component{
                         </Link>                  
                   </div>
 
+
+
+                
+
                   <div className='most-popular-bottom-right'>
                     <div className='most-popular-bottom-right-top' >
                         <div className="most-popular-inner-boxes most-popular-inner-box-images">
@@ -48,9 +52,9 @@ class ProductMostPopular extends React.Component{
                         <div className="most-popular-inner-boxes most-popular-inner-box-images">
                             <Link to={`/products/${productsList[1].id}`}>
                               <img src={productsList[1].imageUrl}  />
-                            </Link>
                             <p >{productsList[1].name}</p>   
                             <span className="most-popular-price">${productsList[1].price}</span>
+                            </Link>
                         </div>
 
                         <div className="most-popular-inner-boxes most-popular-inner-box-images">
