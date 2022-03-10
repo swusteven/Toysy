@@ -62,13 +62,13 @@ class CartIndex extends React.Component{
       <div className="cart-index-page">
         <div className="cart-item-message">
           <h1>{Object.values(cart).length} items in your cart</h1>
-          <span><Link to="/" style={{ textDecoration: 'none' }} >Keep Shopping</Link></span>
+          <span><Link to="/" style={{ textDecoration: 'none', color: 'black' }} >Keep Shopping</Link></span>
         </div>
 
          <div className="cart-index-wrapper">
        
             <section className="cart-index-left">
-            {cart.length === 0 ? null : <button type="submit" onClick={this.handleRemoveAllItems}> REMOVE ALL ITEMS </button> }
+            {cart.length === 0 ? null : <button class="cart-index-remove-all-items" type="submit" onClick={this.handleRemoveAllItems}> REMOVE ALL ITEMS </button> }
             {cart.length === 0 ? null : 
               cart.map((item) =>{
                 return <div className="cart-index-item-wrapper" key={item.name}>
@@ -86,7 +86,7 @@ class CartIndex extends React.Component{
 
                           <section className="cart_index-item-details">
                             <h3>{item.name}</h3><br />
-                            <button type='submit' onClick={this.handleRemoveSingleItem(item.id)}>Remove</button>
+                            <button className="cart-index-item-remove-btn"type='submit' onClick={this.handleRemoveSingleItem(item.id)}>Remove</button>
                           </section>
 
 
@@ -119,19 +119,23 @@ class CartIndex extends React.Component{
             </section>
 
             <section className="cart-index-right-payment">
-                  <section className='cart-index-cards'>
                     <h1>How you'll pay</h1>
+                  <section className='cart-index-cards'>
                     <form>
-                      <input type="radio" name="checkout-payment" id="visa" />
-                        <label htmlFor="visa"><i className="fa-brands fa-cc-visa fa-2x"></i></label><br />
-                      <input type="radio" name="checkout-payment" id="master" />
-                        <label htmlFor="master"><i className="fa-brands fa-cc-mastercard fa-2x"></i></label><br />
-                      <input type="radio" name="checkout-payment" id="paypal" />
-                        <label htmlFor="paypal"><i className="fa-brands fa-cc-paypal fa-2x"></i></label><br />
+
+                      <input type="radio" name="checkout-payment" id="visa" checked/>
+                        <label htmlFor="visa"><img className="checkout-payment-icons" src={window.visaIcon} /></label><br />
+                      
                       <input type="radio" name="checkout-payment" id="AE" />
-                        <label htmlFor="AE"><i className="fa-brands fa-cc-amex fa-2x"></i></label><br />
-                      <input type="radio" name="checkout-payment" id="discover" />
-                        <label htmlFor="discover"><i className="fa-brands fa-cc-discover fa-2x"></i></label><br />
+                        <label htmlFor="AE"><img className="checkout-payment-icons" src={window.aeIcon} /></label><br />
+                      
+                        
+                      <input type="radio" name="checkout-payment" id="paypal" />
+                        <label htmlFor="paypal"><img className="checkout-payment-icons" src={window.paypalIcon} /></label><br />
+                      
+                      <input type="radio" name="checkout-payment" id="bitcoin" />
+                        <label htmlFor="bitcoin"><img className="checkout-payment-icons" src={window.bitcoinIcon} /></label><br />
+                      
                     </form>
                   </section>
 

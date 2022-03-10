@@ -45,7 +45,7 @@
 .product-item-name {
   margin: 0 0 20px 0;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.2;
 }
 
@@ -109,6 +109,10 @@
   }
   .fa-truck-fast {
     color: rgb(182, 222, 122);
+  }
+  .fa-gift {
+    color: red;
+    padding: 4px;
   }
 }
 

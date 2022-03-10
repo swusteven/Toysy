@@ -50,7 +50,7 @@ class PostReview extends React.Component{
         <h1 className="post-review-title">Post a product review here</h1>
  
         <form onSubmit={this.handleSubmit}>
-          <span>Rating: </span>
+          <span className='post-review-rating'>Rating: </span>
           {stars.map((_, idx) => {
             return <i className={`fa-solid fa-star ${(this.state.hoverValue || this.state.rating) > idx ? 'review-star-orange' : "review-star-grey"}`} key={idx} 
                       onClick={()=>this.handleClick(idx + 1)}

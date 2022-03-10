@@ -15,7 +15,7 @@
 }
 
 .cart-index-wrapper {
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -25,6 +25,21 @@
   flex-direction: column;
   border-bottom: 2px lightgray solid;
   margin-bottom: 40px;
+}
+
+.cart-index-remove-all-items {
+  margin-bottom: 30px;
+  border: none;
+  font-size: medium;
+  border-radius: 5px;
+  padding: 10px;
+  &:hover {
+    border: none;
+    font-size: medium;
+    border-radius: 5px;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
 }
 
 .cart-index-left {
@@ -58,6 +73,20 @@
   }
 }
 
+.cart-index-item-remove-btn {
+  border: none;
+  font-size: medium;
+  border-radius: 5px;
+  padding: 10px;
+  &:hover {
+    border: none;
+    font-size: medium;
+    border-radius: 5px;
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+
 .cart_index-item-details {
   width: 35%;
   padding: 10px;
@@ -65,6 +94,19 @@
 
 .cart_index-item-quantity {
   padding: 10px;
+  width: 90px;
+}
+
+.cart_index-item-quantity > form > select {
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  font-weight: 500;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 17px 2px rgba(162, 160, 160, 0.33);
+    background-color: transparent;
+  }
 }
 
 .cart_index-item-amount {
@@ -82,6 +124,25 @@
 }
 
 /* ---  payment section --*/
+
+.checkout-payment-icons {
+  width: 44px;
+}
+
+.cart-index-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#visa,
+#AE,
+#paypal,
+#bitcoin {
+  transform: translateY(-15px);
+  padding-right: 5px;
+}
+
 .cart-index-right-payment {
   height: 400px;
   width: 30%;
@@ -92,12 +153,17 @@
   box-shadow: 0px 0px 17px 2px rgba(108, 107, 107, 0.43);
   display: flex;
   flex-direction: column;
+  h1 {
+    font-weight: 500;
+  }
 }
 
 .cart-iden-total-inner {
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
+  padding-top: 20px;
+  font-weight: 500;
+  padding-right: 10px;
 }
 
 .cart-iden-total-inner:nth-child(2) {
