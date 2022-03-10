@@ -6,13 +6,26 @@ class PostReview extends React.Component{
     super(props);
     this.state = {
       comment: "",
-      rating: 5,
+      rating: 0,
+      hoverValue: undefined,
       user_id: props.currentUser ? props.currentUser.id : null,
       product_id: this.props.product.id
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
+  handleClick(value){
+    this.setState({rating: value})
+  }
+
+  handleMouseOver(value){
+    this.setState({hoverValue: value})
+    // this.setState({rating: value})
+  }
+
+  handleMouseLeave(){
+    this.setState({hoverValue: undefined})
+  }
 
   handleUpdate(field){
     return (e)=> this.setState({[field]: e.currentTarget.value})
@@ -33,20 +46,20 @@ class PostReview extends React.Component{
   
   render(){
     const {reviews} = this.props 
+    const stars = Array(5).fill(0)
     return (
       <>
         <h1 className="post-review-title">Post a product review here</h1>
  
         <form onSubmit={this.handleSubmit}>
-
-          <select onChange={this.handleUpdate('rating')} name="star" className="star-rating-selection">
-                      <option value="5">5</option>
-                      <option value="4">4</option>
-                      <option value="3">3</option>
-                      <option value="2">2</option>
-                      <option value="1">1</option>
-          </select><br />
-
+          {stars.map((_, idx) => {
+            return <i className={`fa-solid fa-star ${(this.state.hoverValue || this.state.rating) > idx ? 'review-star-orange' : "review-star-grey"}`} key={idx} 
+                      onClick={()=>this.handleClick(idx + 1)}
+                      onMouseOver={()=> this.handleMouseOver(idx + 1)}
+                      onMouseLeave={()=> this.handleMouseLeave()}
+                      > </i>
+          })}
+          
           <textarea onChange={this.handleUpdate('comment')} 
                     className="post-review-textarea" 
                     cols="30" rows="6" 
