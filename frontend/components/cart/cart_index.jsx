@@ -44,6 +44,7 @@ class CartIndex extends React.Component{
     e.preventDefault();
     const {cart, currentUser, postItemsToOrderItem}= this.props;
     postItemsToOrderItem(currentUser.id, cart)
+      .then(()=> this.props.history.push('/orders'))
   }
 
 

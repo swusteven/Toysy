@@ -164,6 +164,11 @@
   font-family: "Guardian-EgypTT", Charter, "Charter Bitstream", Cambria,
     "Noto Serif Light", "Droid Serif", Georgia, serif;
   font-size: small;
+  text-decoration: none;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   i {
     // color: orange;
   }

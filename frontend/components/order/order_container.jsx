@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import OrderIndex from './order_index'
-import { fetchOrders } from '../../actions/order'
+import { fetchOrders, clearOrderHistoryCheckout } from '../../actions/order'
 
 const mSTP = state =>{
   return {
@@ -11,9 +11,9 @@ const mSTP = state =>{
 
 
 const mDTP = dispatch =>{
-
   return {
-    fetchOrders: (userId) => dispatch(fetchOrders(userId))    
+    fetchOrders: (userId) => dispatch(fetchOrders(userId)),
+    clearOrderHistoryCheckout: () => dispatch(clearOrderHistoryCheckout())
   }
 }
 

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import {logout} from "../../actions/session"
 import { clearCartItemsUponCheckout } from '../../actions/cart';
+import { clearOrderHistoryCheckout} from "../../actions/order"
 import NavBar from "./nav_bar"
 import { setModalToOpen } from '../../actions/modal';
 
@@ -10,6 +11,7 @@ const mSTP = state =>({
 
 const clearCartAndThenLogout = [
   clearCartItemsUponCheckout(),
+  clearOrderHistoryCheckout(),
   logout()
 ]
 
