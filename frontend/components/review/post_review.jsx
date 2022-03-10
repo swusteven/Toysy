@@ -6,7 +6,7 @@ class PostReview extends React.Component{
     super(props);
     this.state = {
       comment: "",
-      rating: 1,
+      rating: 5,
       hoverValue: undefined,
       user_id: props.currentUser ? props.currentUser.id : null,
       product_id: this.props.product.id
