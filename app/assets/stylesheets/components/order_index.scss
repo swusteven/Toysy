@@ -7,13 +7,23 @@
     font-weight: bold;
   }
   img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border-radius: 20px;
   }
 }
 
 .order-index-at-order-level {
   border: 3px red solid;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.order-index-header {
+  border-bottom: 2x solid black;
+  background-color: lightgreen;
 }

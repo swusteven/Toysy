@@ -22,6 +22,10 @@ class OrderIndex extends React.Component{
             {
               (Object.values(orders)).reverse().map(order=>(
                 <section className='order-index-at-order-level'>
+                  <div className='order-index-header'>
+                      <h3>Order Date: {formatDateTime(Object.values(order)[0].created_at)}</h3>
+                  </div>
+                  
                   {
                   Object.values(order).map(item=>(
                    <div className='order-index-order-level-items'>
@@ -30,7 +34,6 @@ class OrderIndex extends React.Component{
                           <h1>Name: {item.name}</h1>
                           <h3>Quantity: {item.quantity}</h3>
                           <h3>Price: ${item.price}</h3>
-                          <h3>Order Date: {formatDateTime(item.created_at)}</h3>
                         </div><br />
                    </div>
                   ))
