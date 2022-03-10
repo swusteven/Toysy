@@ -5,15 +5,11 @@ class Api::OrderItemsController < ApplicationController
 
     def create
         @user = User.find(params[:user_id])
+        @order = Order.create!('user_id' =>@user.id)
         debugger
-        if @user
-            ##data will come in an array with each product as elelment. Need to check how it looks like first
-            @order = Order.new(order_items_params)
-            if @order.save
-                render :show
-            else
-                render json: @order.errors.full_messages, status: 401
-            end
+        @data = params[:itemsInArray]
+        @data.each do |key, val|
+            OrderItem.create!('product_id'=> val['product_id'].to_i, 'quantity' => val['quantity'].to_i, 'price' => val['price'].to_i, 'order_id' => @order.id)
         end
     end
 
