@@ -7,6 +7,7 @@ class CartIndex extends React.Component{
     super(props);
     this.handleRemoveSingleItem = this.handleRemoveSingleItem.bind(this)
     this.handleUpdateQuantity = this.handleUpdateQuantity.bind(this)
+    this.handleOrder = this.handleOrder.bind(this)
   }
 
   componentDidMount(){  
@@ -38,6 +39,17 @@ class CartIndex extends React.Component{
      this.props.updateItemInCartItem(itemId, cartItem) 
     }
   }
+
+  handleOrder(e){
+    e.preventDefault();
+    const {cart, currentUser, postItemsToOrderItem}= this.props
+    const items = Object.values(cart)
+    debugger
+    //need user_id,  cart_id, quantity, product_id
+    postItemsToOrderItem(currentUser.id, itemsinArray)
+  }
+
+
 
   render(){
     const { cart, products } = this.props
@@ -137,7 +149,7 @@ class CartIndex extends React.Component{
                   </section>
 
                   <section className='cart-index-checkout-btn-section'>
-                    <button className='cart-index-checkout-btn'>Submit Order</button>
+                    <button type="submit" onClick={this.handleOrder} className='cart-index-checkout-btn'>Submit Order</button>
                   </section>
 
             </section>      

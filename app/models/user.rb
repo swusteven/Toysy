@@ -26,6 +26,16 @@ class User < ApplicationRecord
         source: :products
 
 
+    has_many :orders,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :Order
+
+
+    ## user's order transactions
+    has_many :products_on_an_order,
+        through: :orders,
+        source: :products
 
      
     def self.find_by_credentials(email, password)

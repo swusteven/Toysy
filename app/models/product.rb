@@ -22,9 +22,13 @@ class Product < ApplicationRecord
         foreign_key: :product_id,
         class_name: :CartItem
 
+    has_many :order_items, 
+        primary_key: :id,
+        foreign_key: :product_id,
+        class_name: :OrderItem
+
 
     has_one_attached :image 
-    
 end
 
 
