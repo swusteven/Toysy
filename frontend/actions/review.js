@@ -21,7 +21,6 @@ export const fetchAllReviews = (productId) => dispatch => {
 };
 
 export const postReview = (review) => dispatch =>{
-  debugger
   return ApiUtilReview.postReview(review)
     .then(review => dispatch(receiveReview(review)))
 };

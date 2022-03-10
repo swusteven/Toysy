@@ -6,7 +6,7 @@ class PostReview extends React.Component{
     super(props);
     this.state = {
       comment: "",
-      rating: 0,
+      rating: 1,
       hoverValue: undefined,
       user_id: props.currentUser ? props.currentUser.id : null,
       product_id: this.props.product.id
@@ -36,9 +36,7 @@ class PostReview extends React.Component{
     if (this.props.currentUser){
       this.props.postReview(this.state)
       const textAreafield = document.querySelector(".post-review-textarea")
-        textAreafield.value = '';
-      const starRating = document.querySelector(".star-rating-selection")
-        starRating.selectedIndex = 0
+      textAreafield.value = '';
     } else {
       this.props.history.push('/login')
     }
