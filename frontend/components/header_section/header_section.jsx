@@ -26,33 +26,40 @@ const HeaderSection = ({currentUser, products}) =>{
         <div className='header-section-bottom-contents'>
 
           <div className="header-section-bottom-contents-container">
-            <Link to={`products/${classic.id}`}><img src={classic.imageUrl}/></Link><br />
-            Classic
+            <Link to={`products/${classic.id}`}><img src={classic.imageUrl}/>
+            <p>Classic</p>
+            </Link>
+            
           </div>
           
           <div className="header-section-bottom-contents-container">
-            <Link to={`products/${personalized.id}`}><img src={personalized.imageUrl}/></Link><br />
-            Personalized Gifts
+            <Link to={`products/${personalized.id}`}><img src={personalized.imageUrl}/>
+              <p>Personalized Gifts</p>
+            </Link>
           </div>
 
           <div className="header-section-bottom-contents-container">
-            <Link to={`products/${learning.id}`}><img src={learning.imageUrl}/></Link><br />
-            Learning
+            <Link to={`products/${learning.id}`}><img src={learning.imageUrl}/>
+              <p>Learning</p>
+            </Link>
           </div>
 
           <div className="header-section-bottom-contents-container">
-            <Link to={`products/${doll.id}`}><img src={doll.imageUrl}/></Link><br />
-            Doll
+            <Link to={`products/${doll.id}`}><img src={doll.imageUrl}/>            
+              <p>Plush</p>
+            </Link>
           </div>
 
           <div className="header-section-bottom-contents-container">
-            <Link to={`products/${toddler.id}`}><img src={toddler.imageUrl}/></Link><br />
-            Toddler
+            <Link to={`products/${toddler.id}`}><img src={toddler.imageUrl}/>
+              <p>Gift for Toddler</p>            
+            </Link>
           </div>
 
           <div className="header-section-bottom-contents-container">
-            <Link to={`products/${puzzle.id}`}><img src={puzzle.imageUrl}/></Link><br />
-            Puzzle
+            <Link to={`products/${puzzle.id}`}><img src={puzzle.imageUrl}/>
+              <p>Puzzle</p>
+            </Link>
           </div>
 
 

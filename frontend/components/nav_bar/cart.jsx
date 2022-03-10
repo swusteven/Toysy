@@ -16,8 +16,9 @@ class Cart extends React.Component{
       const {cart, currentUser} = this.props
     return (
       <>
-        <Link to="/cart"><i className="fa-solid fa-cart-shopping fa-2x"></i></Link>
+        <Link to="/cart"><i className="fa-solid fa-cart-shopping fa-2x "></i></Link>
         <span className="cartQuantity" >{Object.keys(cart).length}</span>
+
       </>
     )
   }

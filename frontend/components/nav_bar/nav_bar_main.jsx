@@ -21,7 +21,7 @@ const NavBarMain = ({currentUser, logout, setModalToOpen }) =>{
           <AccountManager currentUser={currentUser}  logout={logout} setModalToOpen={setModalToOpen}/>
         </div>
 
-        <div className="nav-bar-main-cart">
+        <div className="nav-bar-main-cart hover-area">
           <CartContainer />
         </div>
 

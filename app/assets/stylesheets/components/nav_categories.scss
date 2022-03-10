@@ -6,19 +6,26 @@
   font-family: "Graphik Webfont", -apple-system, "Helvetica Neue", "Droid Sans",
     Arial, sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 18px;
+  height: 19px;
+  padding: 5x;
   a {
     color: rgb(100, 100, 100);
     text-decoration: none;
+    padding: 5x;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    height: 19px;
+    &:hover {
+      text-decoration: underline 2px rgb(100, 100, 100);
+      transform: scale(1.1);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      cursor: pointer;
+      transition: 300ms;
+    }
   }
-}
-
-.nav-bar-categories-section:hover {
-  transform: scale(1.1);
-  text-decoration: underline;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  cursor: pointer;
 }
