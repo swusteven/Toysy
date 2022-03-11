@@ -8,7 +8,7 @@ class Product < ApplicationRecord
     validates :name, :description, :price, :quantity, :seller_id, presence: true
     validates :category, presence: true, inclusion: {in:CATEGORIES,  message: "invalid category" }
 
-    belongs_to :seller,
+    belongs_to :seller, optional: true,
         primary_key: :id,
         class_name: :User
 

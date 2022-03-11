@@ -9,6 +9,11 @@
 require 'open-uri'
 User.destroy_all
 Product.destroy_all
+CartItem.destroy_all
+Cart.destroy_all
+OrderItem.destroy_all
+Order.destroy_all
+Review.destroy_all
 
 
 
