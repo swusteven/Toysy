@@ -164,13 +164,11 @@
   font-family: "Guardian-EgypTT", Charter, "Charter Bitstream", Cambria,
     "Noto Serif Light", "Droid Serif", Georgia, serif;
   font-size: small;
+  font-weight: 600;
   text-decoration: none;
   a {
     text-decoration: none;
     color: inherit;
-  }
-  i {
-    // color: orange;
   }
   div {
     background-color: rgb(235, 233, 233);
@@ -194,6 +192,7 @@
 
 .user-menu-dropdown a:hover {
   cursor: pointer;
+  transition: 300ms;
 }
 
 .user-menu-clicks-orders {

@@ -118,6 +118,7 @@ class CartIndex extends React.Component{
             }
             </section>
 
+            {cart.length === 0 ? null : 
             <section className="cart-index-right-payment">
                     <h1>How you'll pay</h1>
                   <section className='cart-index-cards'>
@@ -161,7 +162,7 @@ class CartIndex extends React.Component{
                   </section>
 
             </section>      
-      
+            }
          </div>
     </div>
     )

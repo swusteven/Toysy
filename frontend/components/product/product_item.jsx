@@ -66,8 +66,8 @@ class ProductItem extends React.Component{
             </div>
 
             <div className='product-item-reviews'>
-               <ReviewsContainer product={product}/><br />
-               <PostReviewContainer product={product}/>
+               <PostReviewContainer product={product}/><br />
+               <ReviewsContainer product={product}/>
             </div>
           </section>
 

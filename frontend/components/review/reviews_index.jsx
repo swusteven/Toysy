@@ -14,7 +14,7 @@ class ReviewsIndex extends React.Component{
         <h1 className="product-item-review-title">Reviews for this item <span>{reviews.length}</span></h1>
         
         { reviews.length === 0 ? null : 
-          reviews.map((review, idx)=>{ 
+          reviews.reverse().map((review, idx)=>{ 
             return <div key={idx.toString()+"reviews"}>
                     <span className="product-item-reviewer" 
                           key={idx.toString() + "reviewer"}>
