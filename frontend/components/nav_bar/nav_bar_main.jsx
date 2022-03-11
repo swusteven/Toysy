@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBar from './search_bar';
 import AccountManager from './account_manager';
 import CartContainer from "./cart_container"
+import SearchBarContainer from './search_bar_container';
 import { Link } from 'react-router-dom';
 
 
@@ -14,7 +15,7 @@ const NavBarMain = ({currentUser, logout, setModalToOpen }) =>{
         </div>
 
         <div className="nav-bar-main-search">
-          <SearchBar />
+          <SearchBarContainer />
         </div>
 
         <div className="nav-bar-main-accout-manager">

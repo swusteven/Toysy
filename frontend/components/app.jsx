@@ -10,6 +10,7 @@ import ProductItemContainer from './product/product_item_container';
 import Footer from './footer/footer';
 import CartContainer from './cart/cart_container';
 import CategoriesContainer from './category/categories_container';
+import SearchResultsContainer from './nav_bar/search_results_container';
 
 import {AuthRoute, ProtectedRoute} from '../utils/auth_util'
 
@@ -32,6 +33,7 @@ const App = () => (
     <ProtectedRoute path="/cart" component={CartContainer} /> 
 
     <Route path="/products/:id" component={ProductItemContainer} />
+    <Route path="/search" component={SearchResultsContainer} />
     
 
 

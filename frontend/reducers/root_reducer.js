@@ -6,6 +6,7 @@ import reviewReducer from "./review_reducer";
 import sessionErrorsReducer from "./session_errors";
 import cartReducer from "./cart_reducer";
 import orderReducer from "./order_reducer"
+import searchReducer from "./search_reducer";
 
 
 const RootReducer = combineReducers({
@@ -15,7 +16,8 @@ const RootReducer = combineReducers({
   modalOpen: ModalReducer,
   reviews: reviewReducer,
   cart: cartReducer,
-  orders: orderReducer 
+  orders: orderReducer,
+  search: searchReducer
 });
 
 export default RootReducer
