@@ -27,7 +27,7 @@ const removeAllItemsforUser = (cartItems) => ({
 })
 
 
-//fontend only
+//fontend only 
 const clearCartItems = () =>({
   type: CLEAR_CART_ITEMS_UPON_LOGOUT
 })
