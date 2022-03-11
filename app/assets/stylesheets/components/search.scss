@@ -27,6 +27,7 @@
   margin: auto;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   img {
     width: 200px;
     height: 70%;
@@ -37,7 +38,7 @@
 }
 
 .search-results-container {
-  width: 23%;
+  width: 15%;
   margin-bottom: 20px;
   margin-right: 10px;
   padding: 20px 20px 20px 0;

@@ -25,6 +25,7 @@ export const searchQuery =(searchValue, products) =>{
   
  for (let i = 0; i < results.length; i++) {
     if (!visited.includes(results[i].id)){
+      visited.push(results[i].id)
       finalResults.push(results[i])
     }   
  }
