@@ -17,6 +17,7 @@ class SearchBar extends React.Component{
     fetchAllProducts();
     receieveSearchRequest(this.state)
     this.props.history.push('/search')
+    document.querySelector("#search-field").value = ""
   }
 
   handleUpdate(){
@@ -27,7 +28,8 @@ class SearchBar extends React.Component{
     return (
       <>
         <form action="" className="nav-bar-search-section">
-          <input onChange={this.handleUpdate()} 
+          <input onChange={this.handleUpdate()}
+                 id="search-field" 
                  type="search" 
                  placeholder='Search for anything'/>
         
