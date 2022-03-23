@@ -85,13 +85,20 @@
   justify-content: space-between;
 }
 
+.footer-my-info-container {
+  width: 1350px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-my-info-left {
   display: flex;
   justify-content: left;
   align-items: center;
   color: white;
   padding: 20px;
-  margin-left: 100px;
+  margin-left: 10px;
   p {
     margin-left: 10px;
   }
@@ -109,18 +116,19 @@
     color: white;
   }
   p {
-    text-align: right;
-    padding: 5px 0;
+    text-align: left;
+    padding: 5px 10px;
   }
   a {
     padding: 8px;
-    background-color: black;
     border-radius: 10px;
   }
 }
 
 .footer-my-info-right a:hover {
-  background-color: black;
   border-radius: 10px;
-  transform: scale(1.1);
+  transform: scale(1.2);
+}
+
+@media (max-width: 1300px) {
 }

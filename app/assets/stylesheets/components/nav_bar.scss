@@ -112,6 +112,18 @@
     cursor: pointer;
   }
 }
+@media (max-width: 1150px) {
+  .signin-link {
+    text-decoration: none;
+    padding: 15px 10px;
+    &:hover {
+      background-color: #f69d2222;
+      border-radius: 20px;
+      transition: 0.5ms;
+      cursor: pointer;
+    }
+  }
+}
 
 /* ----Account Manager--- */
 

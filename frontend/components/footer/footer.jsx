@@ -11,23 +11,26 @@ const Footer = () =>{
 
       <section className="footer-powered-by-renewable-elec">
         <i className="fa-solid fa-hand-peace fa-2x"></i>
-        <p>Toysy is powered by 100% renewable electricity.</p>
+        <p>Toysy is made possible by React and Ruby on Rails technologies.</p>
+        <i className="fa-solid fa-hand-peace fa-2x"></i>
       </section>
 
 
       <section className="footer-my-info">
+        <div className='footer-my-info-container'>
         <div className="footer-my-info-left">
           <i className="fa-solid fa-earth-americas fa-2x"></i>
-          <p>  United States   |   English (US)   |   $ (USD)</p>
+          <p>  New York, United States </p>
         </div>
 
         <div className="footer-my-info-right">
           <div>
-            <p>I would like to say thank you and would love to connect </p>
-            <p>Please connect with me on LinkedIn</p>
+            <p>I would like to say thank you for visiting. Please connect with me on LinkedIn </p>
+            
           </div>
-          <a href="https://www.linkedin.com/in/steven-wu-cams-29814136/" target="_blank"><i className="fa-brands fa-linkedin fa-4x"></i> LinkedIn</a>
-          <a href="https://github.com/swusteven" target="_blank"><i className="fa-brands fa-github fa-4x"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/steven-wu-29814136/" target="_blank"><i className="fa-brands fa-linkedin fa-3x"></i> LinkedIn</a>
+          <a href="https://github.com/swusteven" target="_blank"><i className="fa-brands fa-github fa-3x"></i> GitHub</a>
+        </div>
         </div>
       </section>
     </>
