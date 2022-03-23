@@ -23,19 +23,19 @@ class ProductEditorsPicks extends React.Component {
 
           <div className="editors-pick-inner-box-2 editors-pick-inner-box-images hover-area">
 
-            <Link to={`/products/${products[12].id}`}>
-              <img src={products[12].imageUrl} />
+            <Link to={`/products/${products[3].id}`}>
+              <img src={products[3].imageUrl} />
             </Link>
-            <span className="editors-pick-price">${products[12].price}</span>
-            <h4 className="hover-text">{products[12].name}</h4>
+            <span className="editors-pick-price">${products[3].price}</span>
+            <h4 className="hover-text">{products[3].name}</h4>
           </div>
 
           <div className="editors-pick-inner-box-3 editors-pick-inner-box-images hover-area">
-            <Link to={`/products/${products[6].id}`}>
-              <img src={products[6].imageUrl} />
+            <Link to={`/products/${products[1].id}`}>
+              <img src={products[1].imageUrl} />
             </Link>
-            <span className="editors-pick-price">${products[6].price}</span>
-            <h4 className="hover-text">{products[6].name}</h4>
+            <span className="editors-pick-price">${products[1].price}</span>
+            <h4 className="hover-text">{products[1].name}</h4>
           </div>
 
           <div className="editors-pick-inner-box-4 editors-pick-inner-box-images hover-area">
@@ -50,14 +50,6 @@ class ProductEditorsPicks extends React.Component {
 
         <div className='editors-pick-bottom'>
           <div className="editors-pick-inner-box-5 editors-pick-inner-box-images hover-area">
-            <Link to={`/products/${products[3].id}`}>
-              <img src={products[3].imageUrl} />
-            </Link>
-            <span className="editors-pick-price">${products[3].price}</span>
-            <h4 className="hover-text">{products[3].name}</h4>
-          </div>
-
-          <div className="editors-pick-inner-box-6 editors-pick-inner-box-images hover-area" >
             <Link to={`/products/${products[4].id}`}>
               <img src={products[4].imageUrl} />
             </Link>
@@ -65,12 +57,20 @@ class ProductEditorsPicks extends React.Component {
             <h4 className="hover-text">{products[4].name}</h4>
           </div>
 
-          <div className="editors-pick-inner-box-7 editors-pick-inner-box-images hover-area">
+          <div className="editors-pick-inner-box-6 editors-pick-inner-box-images hover-area" >
             <Link to={`/products/${products[5].id}`}>
               <img src={products[5].imageUrl} />
             </Link>
             <span className="editors-pick-price">${products[5].price}</span>
             <h4 className="hover-text">{products[5].name}</h4>
+          </div>
+
+          <div className="editors-pick-inner-box-7 editors-pick-inner-box-images hover-area">
+            <Link to={`/products/${products[12].id}`}>
+              <img src={products[12].imageUrl} />
+            </Link>
+            <span className="editors-pick-price">${products[12].price}</span>
+            <h4 className="hover-text">{products[12].name}</h4>
           </div>
           <div className="editors-pick-inner-box-8">
             Express yourself in love with a collection of one-of-a-kind baby toys, games, learning, dolls and more</div>
