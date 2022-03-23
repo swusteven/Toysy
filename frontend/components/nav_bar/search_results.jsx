@@ -18,7 +18,7 @@ class SearchResults extends React.Component{
       <>
            <section className='search-result-top'>
              <div>
-               <h1>{Object.values(searchQuery(searchValue, products)).length === 0 ? 0 : Object.values(searchQuery(searchValue, products)).length} Results Found</h1>   
+               <h1>{Object.values(searchQuery(searchValue, products)).length === 0 ? 0 : Object.values(searchQuery(searchValue, products)).length} Result(s) Found</h1>   
             </div>
           </section> 
           <section className='search-result-wrapper'>
