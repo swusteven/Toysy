@@ -68,7 +68,7 @@ class CartIndex extends React.Component{
          <div className="cart-index-wrapper">
        
             <section className="cart-index-left">
-            {cart.length === 0 ? null : <button class="cart-index-remove-all-items" type="submit" onClick={this.handleRemoveAllItems}> REMOVE ALL ITEMS </button> }
+            {cart.length === 0 ? null : <button className="cart-index-remove-all-items" type="submit" onClick={this.handleRemoveAllItems}> REMOVE ALL ITEMS </button> }
             {cart.length === 0 ? null : 
               cart.map((item) =>{
                 return <div className="cart-index-item-wrapper" key={item.name}>
@@ -124,7 +124,7 @@ class CartIndex extends React.Component{
                   <section className='cart-index-cards'>
                     <form>
 
-                      <input type="radio" name="checkout-payment" id="visa" checked/>
+                      <input type="radio" name="checkout-payment" id="visa" defaultChecked/>
                         <label htmlFor="visa"><img className="checkout-payment-icons" src={window.visaIcon} /></label><br />
                       
                       <input type="radio" name="checkout-payment" id="AE" />

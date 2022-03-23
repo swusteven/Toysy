@@ -80,7 +80,7 @@ class ProductItem extends React.Component{
 
             <div className='product-item-purchase-btns'>
                 <form>
-                  <label >Quantity<br />
+                  <label >Quantity:<br />
                   <select name="quantity"
                           onChange={this.handleUpdate()} 
                           >
@@ -105,15 +105,10 @@ class ProductItem extends React.Component{
             <p className="product-items-handling"><i className="fa-solid fa-gift fa-2x" ></i>  Gift wrapping available</p><br />
       
             <div className='product-item-description'>
-                <p>Description</p>
+                <p>Description:</p>
                 <textarea disabled rows="20" cols="50" id="aboutDescription" value={product.description} />
             </div>
-
-            
-
           </section>
-
-
       </section>
     )
   }

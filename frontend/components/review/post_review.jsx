@@ -20,7 +20,6 @@ class PostReview extends React.Component{
 
   handleMouseOver(value){
     this.setState({hoverValue: value})
-    // this.setState({rating: value})
   }
 
   handleMouseLeave(){
@@ -37,6 +36,7 @@ class PostReview extends React.Component{
       this.props.postReview(this.state)
       const textAreafield = document.querySelector(".post-review-textarea")
       textAreafield.value = '';
+      this.setState({comment: "", rating: 5})
     } else {
       this.props.history.push('/login')
     }

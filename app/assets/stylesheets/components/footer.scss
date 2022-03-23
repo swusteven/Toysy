@@ -1,6 +1,6 @@
 .footer-what-is-toysy {
   background-color: #fbeedc;
-  height: 380px;
+  height: 320px;
   margin-top: 150px;
 }
 
@@ -58,6 +58,46 @@
       text-align: center;
       transform: translateY(5px);
       letter-spacing: 1.5px;
+    }
+  }
+}
+
+@media (max-width: 1230px) {
+  .footer-WIA-inner {
+    margin: 10px;
+    width: 33%;
+    h1 {
+      font-size: 28px;
+      display: flex;
+      justify-content: center;
+      font-weight: 300;
+      padding-top: 5px;
+    }
+    h2 {
+      font-size: 18px;
+      padding: 10px 10px 10px 0;
+      text-align: left;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media (max-width: 1230px) {
+  .footer-WIA-inner {
+    margin: 10px;
+    width: 33%;
+    h1 {
+      font-size: 28px;
+      display: flex;
+      justify-content: center;
+      font-weight: 300;
+      padding-top: 5px;
+    }
+    h2 {
+      font-size: 18px;
+      padding: 10px 10px 10px 0;
+      text-align: left;
+      line-height: 1.5;
     }
   }
 }
