@@ -80,7 +80,24 @@ The shopping cart model was built based on one-to-many associations that connect
         json.imageUrl url_for(item.product.image)
     end
 end
+```
 
+One of the challenges to create a purchase order in the backend was to dissect the HTTP POST request that contained more than one product items. Typically, a POST request only contains data for one object/item that can be easily parsed. However, order purchases contain multiple items that need to be store in the database individually. Below snippet illustrate the steps that I've taken to store all items in the OrderItem model and linked to a unique record in the Order model for the current user.
+
+1. find the current user in the User model,
+2. create an new order/record in the Order model for this transaction,
+3. parsed order details from the HTTP request.
+4. iterate through all the items and store them individually in the OrderItem model along with all the relevant info such as quantity, product_id, and order_id that created in step 2.
+
+```ruby
+    def create
+        @user = User.find(params[:user_id])
+        @order = Order.create!('user_id' =>@user.id)
+        @data = params[:itemsInArray]
+        @data.each do |key, val|
+            OrderItem.create!('product_id'=> val['product_id'].to_i, 'quantity' => val['quantity'].to_i, 'price' => val['price'].to_i, 'order_id' => @order.id)
+        end
+    end
 ```
 
 ## Licensing
