@@ -9,7 +9,7 @@ class PostReview extends React.Component{
       rating: 5,
       hoverValue: undefined,
       user_id: props.currentUser ? props.currentUser.id : null,
-      product_id: this.props.product.id
+      product_id: this.props.product.id,
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -30,13 +30,24 @@ class PostReview extends React.Component{
     return (e)=> this.setState({[field]: e.currentTarget.value})
   }
 
+  componentDidUpdate(){
+    const errorField = document.getElementById("review_error")
+        errorField.replaceChildren()
+  }
+
   handleSubmit(e){
     e.preventDefault();
     if (this.props.currentUser){
+      if (this.state.comment === ""){
+        const errorField = document.getElementById("review_error")
+        errorField.replaceChildren()
+        errorField.append("Comment field can't be blank")
+      } else {
       this.props.postReview(this.state)
       const textAreafield = document.querySelector(".post-review-textarea")
       textAreafield.value = '';
       this.setState({comment: "", rating: 5})
+      }
     } else {
       this.props.history.push('/login')
     }
@@ -64,6 +75,7 @@ class PostReview extends React.Component{
                     cols="30" rows="4" 
                     placeholder='Share your review here with others'>
           </textarea>
+          <p id="review_error"></p>
           <div className="post-review-submit-btn-container">
             <input className="post-review-submit-btn" type="submit" value="Submit" />
           </div>
