@@ -28,7 +28,7 @@ const Footer = () =>{
             <p>I would like to say thank you for visiting. Please connect with me on LinkedIn </p>
             
           </div>
-          <a href="https://www.linkedin.com/in/steven-wu-29814136/" target="_blank"><i className="fa-brands fa-linkedin fa-3x"></i> LinkedIn</a>
+          <a href="https://www.linkedin.com/in/swusteven/" target="_blank"><i className="fa-brands fa-linkedin fa-3x"></i> LinkedIn</a>
           <a href="https://github.com/swusteven" target="_blank"><i className="fa-brands fa-github fa-3x"></i> GitHub</a>
         </div>
         </div>
