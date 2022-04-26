@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       end
       
       resource :session, only:[:create, :destroy]
-      resources :reviews, only:[:create]
+      resources :reviews, only:[:create, :show, :destroy]
       resources :carts, only:[:create, :destroy]
       resources :cart_items, only:[:create, :show, :update, :destroy]
       
