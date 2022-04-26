@@ -7,8 +7,7 @@ class ReviewsIndex extends React.Component{
   } 
   
   render(){
-    const {reviews} = this.props
-    
+    const {reviews, currentUserId} = this.props
     return (
       <>
         <h1 className="product-item-review-title">Reviews for this item <span>{reviews.length}</span></h1>
@@ -22,6 +21,14 @@ class ReviewsIndex extends React.Component{
                     </span>
                     <span className="product-item-review-date" key={idx.toString() + "date"}>
                           {formatDate(review.created_at)}
+                    </span>
+
+                    <span className='product-item-review-edit' key={idx.toString() + 'edit'}>
+                          {currentUserId === review.user_id ? "EDIT " : null}                           
+                    </span>
+
+                    <span className='product-item-review-delete' key={idx.toString() + 'delete'}>
+                          {currentUserId === review.user_id ? "DELETE" : null}                           
                     </span>
 
                     <p className="product-review-rating-stars" key={idx.toString() + "rating-stars"}>

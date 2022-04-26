@@ -4,7 +4,8 @@ import ReviewsIndex from './reviews_index';
 
 const mSTP = (state) => {
   return {
-    reviews: Object.values(state.reviews)
+    reviews: Object.values(state.reviews),
+    currentUserId: state.session.currentUser ? state.session.currentUser.id : null    
   }
 };
 
