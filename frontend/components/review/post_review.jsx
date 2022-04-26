@@ -56,10 +56,10 @@ class PostReview extends React.Component{
   render(){
     const {reviews} = this.props 
     const stars = Array(5).fill(0)
-    return (
+
+    return (  
       <>
         <h1 className="post-review-title">Post a product review here</h1>
- 
         <form onSubmit={this.handleSubmit}>
           <span className='post-review-rating'>Rating: </span>
           {stars.map((_, idx) => {
@@ -82,7 +82,7 @@ class PostReview extends React.Component{
         </form>
       </>
     )
-}
+  }
 };
 
 export default PostReview

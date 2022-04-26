@@ -56,7 +56,7 @@ class ProductItem extends React.Component{
   }
 
   render(){
-    const {product} = this.props    //:id, :name, :description, :price, :quantity, :category, :seller_id: :imageUrl :seller
+    const {product, showReviewBox} = this.props    //:id, :name, :description, :price, :quantity, :category, :seller_id: :imageUrl :seller
     return(  !product ? null : 
         <section className="product-item-wrapper">
           <section className="product-item-left">
@@ -66,7 +66,8 @@ class ProductItem extends React.Component{
             </div>
 
             <div className='product-item-reviews'>
-               <PostReviewContainer product={product}/><br />
+               {showReviewBox ? <PostReviewContainer product={product}/> : null}
+               <br />
                <ReviewsContainer product={product}/>
             </div>
           </section>
