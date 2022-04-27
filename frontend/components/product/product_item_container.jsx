@@ -31,12 +31,15 @@ const mSTP = (state,ownProps) => {
 
 //able to post a review if purchased the item && no review posted before
 function showPostReviewField(currentUser, reviews, orders, product){
-  if (!currentUser ||  !Object.keys(currentUser).length === 0 || !Object.keys(reviews).length === 0) return false
-  
+  if (!currentUser) return false;
+  if (!product) return false;
+  if (Object.keys(currentUser).length === 0)return false;
+  if (Object.keys(reviews).length === 0) return false;
+  if (Object.keys(orders).length === 0) return false;
+ 
   let bought = false;
   let noReview = true;
   //checks if currentUser ever purchased this product
-  //if no, return false
   for (let order in orders){
     for (let key in orders[order]){
       let purchaseProduct = orders[order]
@@ -47,6 +50,8 @@ function showPostReviewField(currentUser, reviews, orders, product){
     }
   }
 
+  if (!bought) return false
+
   //check if there's an existing review 
   for (let review in reviews){ 
     if (reviews[review].user_id === currentUser.id){
@@ -56,7 +61,7 @@ function showPostReviewField(currentUser, reviews, orders, product){
 
   
   // purchased the item && no review posted before
-  return bought && noReview ? true : false
+  return noReview ? true : false
 }
 
 

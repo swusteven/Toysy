@@ -20,6 +20,29 @@
   margin-bottom: 10px;
 }
 
+.product-item-review-edit{
+    padding: 10px 0 10px 20px;
+    margin-bottom: 10px;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: bolder;
+    }
+}
+
+.product-item-review-delete {
+  padding: 10px 10px 10px 20px;
+  margin-bottom: 10px;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bolder;
+  }
+}
+
+
+
 .product-item-review-date {
   // font-weight: 300;
   font-size: small;
@@ -39,6 +62,24 @@
   margin: 10px 10px 20px;
   transform: translateX(10px);
 }
+
+//submit button for edit
+.product-item-reviews>div:nth-child(3)>div>form>span.post-review-submit-btn-container>input{
+  margin: 0 10px 5px 0;
+    &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+
+//cancel button for edit
+#root>section.product-item-wrapper>section.product-item-left>div.product-item-reviews>div:nth-child(3)>div>form>button{      
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+}
+
 
 /* ----post a review section -----*/
 
@@ -73,6 +114,7 @@
   letter-spacing: 1.3;
 }
 
+//button
 .product-item-reviews > form > div > input {
   margin-top: 5px;
 
@@ -87,6 +129,9 @@
     transform: scale(1.1);
   }
 }
+
+
+
 
 #review_error {
   color: red;

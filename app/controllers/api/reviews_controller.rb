@@ -13,6 +13,16 @@
         end 
     end
 
+    def update
+        @review = Review.find(params[:id])
+
+        if @review.update(review_params)
+            render :show
+        else
+            render json: @review.errors.full_messages, status: 401
+        end
+    end
+
     def destroy
         @review = Review.find(params[:id])
 

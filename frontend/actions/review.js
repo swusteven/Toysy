@@ -3,6 +3,7 @@ import * as ApiUtilReview from "../utils/review";
 export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS"
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW"
 export const DELETE_REVIEW = "DELETE_REVIEW"
+export const UPDATE_REVIEW = "UPDATE_REVIEW"
 
 const receiveReviews = (reviews) =>({
   type: RECEIVE_REVIEWS,
@@ -21,7 +22,6 @@ const deleteReview = (review) => {
   }
 }
 
-
 //thunk action creators
 export const fetchAllReviews = (productId) => dispatch => {
   return ApiUtilReview.fetchReviews(productId)
@@ -37,5 +37,10 @@ export const postReview = (review) => dispatch =>{
 export const removeReview = (reviewId) => dispatch =>{
   return ApiUtilReview.deleteReview(reviewId)
     .then(review => dispatch(deleteReview(review)))
+};
+
+export const editReview = (reviewId, review) => dispatch =>{
+  return ApiUtilReview.updateReview(reviewId, review)
+    .then(review => dispatch(receiveReview(review)))
 };
 
