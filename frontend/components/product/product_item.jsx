@@ -16,8 +16,13 @@ class ProductItem extends React.Component{
       this.props.fetchAllCartItemsforUser(this.props.currentUser.id)      
     }
     
+    this.props.fetchOrders(this.props.currentUser.id)
     window.scrollTo(0, 0)   //scroll to the top of the page
   } 
+
+  componentWillUnmount(){
+    this.props.clearOrderHistoryCheckout()
+  }
   
   handleUpdate(){
     return (e) => this.setState({["quantity"]: e.currentTarget.value})

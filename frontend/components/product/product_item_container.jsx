@@ -7,17 +7,19 @@ import {
   updateItemInCartItem 
 } from "../../actions/cart";
 import { postItemsToOrderItem } from "../../actions/order";
-
+import { fetchOrders, clearOrderHistoryCheckout } from "../../actions/order"
 
 const mSTP = (state,ownProps) => {
   let currentUser = state.session.currentUser;
   let reviews = state.reviews
-  debugger
+  let orders = state.orders
+  let product = state.products[ownProps.match.params.id]
+  
   return {
-    product: state.products[ownProps.match.params.id],
-    currentUser: state.session.currentUser,
+    product: product,
+    currentUser: currentUser,
     cartItems: state.cart,
-    showReviewBox: showPostReviewField(currentUser, reviews),
+    showReviewBox: showPostReviewField(currentUser, reviews, orders, product),
     cartDetails: {
       quantity: 1,
       product_id: ownProps.match.params.id,
@@ -28,19 +30,33 @@ const mSTP = (state,ownProps) => {
  
 
 //able to post a review if purchased the item && no review posted before
-function showPostReviewField(currentUser, reviews, orders){
+function showPostReviewField(currentUser, reviews, orders, product){
   if (!currentUser ||  !Object.keys(currentUser).length === 0 || !Object.keys(reviews).length === 0) return false
   
+  let bought = false;
+  let noReview = true;
   //checks if currentUser ever purchased this product
-
-
-  //check if there's an existing review
-  for (let review in reviews){ 
-    if (reviews[review].user_id === currentUser.id) return false
+  //if no, return false
+  for (let order in orders){
+    for (let key in orders[order]){
+      let purchaseProduct = orders[order]
+      if (purchaseProduct[key].product_id === product.id){
+        bought = true;
+        break;
+      }     
+    }
   }
 
+  //check if there's an existing review 
+  for (let review in reviews){ 
+    if (reviews[review].user_id === currentUser.id){
+      noReview = false;
+    }
+  }
 
-  return true
+  
+  // purchased the item && no review posted before
+  return bought && noReview ? true : false
 }
 
 
@@ -50,6 +66,8 @@ const mDTP = dispatch => ({
   fetchAllCartItemsforUser: (userId) => dispatch(fetchAllCartItemsforUser(userId)),
   updateItemInCartItem: (cartItemId, cartItem) => dispatch(updateItemInCartItem(cartItemId, cartItem)),
   postItemsToOrderItem: (userId, itemsInArray) => dispatch(postItemsToOrderItem(userId, itemsInArray)),
+  fetchOrders: (userId) => dispatch(fetchOrders(userId)),
+  clearOrderHistoryCheckout: () => dispatch(clearOrderHistoryCheckout())
 })
 
 export default connect(mSTP, mDTP)(ProductItem)
