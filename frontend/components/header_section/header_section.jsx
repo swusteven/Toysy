@@ -14,7 +14,6 @@ const HeaderSection = ({currentUser, products}) =>{
   const toddler = products.length === 0 ? null : shuffleArray([products[4], products[5], products[6]], 1)[0]
   const puzzle = products.length === 0 ? null : shuffleArray([products[1], products[13], products[14]], 1)[0]
   
-
   return(products.length === 0 ? null : 
     
     <section className='header-section-wrapper'> 
