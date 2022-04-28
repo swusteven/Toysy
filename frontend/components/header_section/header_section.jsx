@@ -7,14 +7,14 @@ const loggedOutMessage = <h1 className="header-section-message-logged-out">Explo
 
 const HeaderSection = ({currentUser, products}) =>{
   
-  const classic = products.length === 0 ? null : shuffleArray([products[2], products[16], products[17], products[18], products[15]], 1)[0]
-  const personalized = products.length === 0 ? null : shuffleArray([products[0], products[3]], 1)[0]
-  const learning = products.length === 0 ? null : shuffleArray([products[1], products[11], products[12]], 1)[0]
-  const doll = products.length === 0 ? null : shuffleArray([products[9], products[8], products[7], products[10]], 1)[0]
-  const toddler = products.length === 0 ? null : shuffleArray([products[4], products[5], products[6]], 1)[0]
-  const puzzle = products.length === 0 ? null : shuffleArray([products[1], products[13], products[14]], 1)[0]
+  const classic = products.length < 20 ? null : shuffleArray([products[2], products[16], products[17], products[18], products[15]], 1)[0]
+  const personalized = products.length < 20 ? null : shuffleArray([products[0], products[3]], 1)[0]
+  const learning = products.length < 20 ? null : shuffleArray([products[1], products[11], products[12]], 1)[0]
+  const doll = products.length < 20 ? null : shuffleArray([products[9], products[8], products[7], products[10]], 1)[0]
+  const toddler = products.length < 20 ? null : shuffleArray([products[4], products[5], products[6]], 1)[0]
+  const puzzle = products.length < 20 ? null : shuffleArray([products[1], products[13], products[14]], 1)[0]
   
-  return(products.length === 0 ? null : 
+  return(products.length < 20 ? null : 
     
     <section className='header-section-wrapper'> 
       <div className='header-section-top'>

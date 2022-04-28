@@ -15,8 +15,14 @@ class ReviewShow extends React.Component{
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  changeDisplayStatus(){
-    return this.setState({display: 'edit'})
+  changeDisplayStatus(e){
+    e.preventDefault();
+
+    if (this.state.display === 'review'){
+     return this.setState({display: 'edit'})
+    } else {
+      return this.setState({display: 'review'})
+    }
   }
 
   handleClick(value){
@@ -35,10 +41,6 @@ class ReviewShow extends React.Component{
     return (e)=> this.setState({[field]: e.currentTarget.value})
   }
 
-  // componentDidUpdate(){
-  //   const errorField = document.getElementById("review_error")
-  //       errorField.replaceChildren()
-  // }
 
   handleSubmit(e){
     e.preventDefault();
@@ -53,9 +55,8 @@ class ReviewShow extends React.Component{
  
   }
 
-  editComment(){
+  editComment(comment, rating){
     return <form onSubmit={this.handleSubmit}>
-           
               <span className='post-review-rating'>Rating: </span>
               {Array(5).fill(0).map((_, idx) => {
                 return <i className={`fa-solid fa-star ${(this.state.hoverValue || this.state.rating) > idx ? 'review-star-orange' : "review-star-grey"}`} key={idx} 
@@ -71,7 +72,7 @@ class ReviewShow extends React.Component{
                         className="post-review-textarea" 
                         cols="30" rows="4" 
                         placeholder='Share your review here with others'
-                        defaultValue={this.state.comment}  
+                        defaultValue={comment}  
                         >
               </textarea>
               <p id="review_error"></p>
@@ -79,7 +80,8 @@ class ReviewShow extends React.Component{
               <span className="post-review-submit-btn-container">
                 <input className="post-review-submit-btn" type="submit" value="Submit" />
               </span>
-              <button onClick={()=>this.setState({display: 'review'})}>Cancel</button>
+              {/* <button onClick={()=>this.setState({display: 'review'})}>Cancel</button> */}
+              <button onClick={(e)=>this.changeDisplayStatus(e)}>Cancel</button>
               <br />
               <br />
            </form>
@@ -94,7 +96,7 @@ class ReviewShow extends React.Component{
                     {formatDate(review.updated_at)}
               </span>
 
-              <span onClick={()=>this.changeDisplayStatus()}
+              <span onClick={(e)=>this.changeDisplayStatus(e)}
                     className='product-item-review-edit'>
                     {currentUserId === review.user_id ? "EDIT" : null}                           
               </span>
@@ -121,9 +123,8 @@ class ReviewShow extends React.Component{
   render(){
     const {review, currentUserId, deleteComment} = this.props
     return(
-      
       <div >
-          {this.state.display === "review" ? this.displayComment(review, currentUserId, deleteComment) : this.editComment()}
+          {this.state.display === "review" ? this.displayComment(review, currentUserId, deleteComment) : this.editComment(review.comment, review.rating)}
       </div>
     )
   }

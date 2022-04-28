@@ -40,7 +40,7 @@ class OrderIndex extends React.Component{
                           <h2>Total: ${this.calculateTotalAmount(order)}</h2>
                       </div>
                       
-                      {
+                    {
                       Object.values(order).map(item=>(
                       <div className='order-index-order-level-items'>
                             <div className="order-index-order-level-details">
