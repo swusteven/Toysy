@@ -55,7 +55,7 @@ class ReviewShow extends React.Component{
  
   }
 
-  editComment(comment, rating){
+  editComment(comment){
     return <form onSubmit={this.handleSubmit}>
               <span className='post-review-rating'>Rating: </span>
               {Array(5).fill(0).map((_, idx) => {
@@ -80,7 +80,6 @@ class ReviewShow extends React.Component{
               <span className="post-review-submit-btn-container">
                 <input className="post-review-submit-btn" type="submit" value="Submit" />
               </span>
-              {/* <button onClick={()=>this.setState({display: 'review'})}>Cancel</button> */}
               <button onClick={(e)=>this.changeDisplayStatus(e)}>Cancel</button>
               <br />
               <br />
@@ -124,7 +123,7 @@ class ReviewShow extends React.Component{
     const {review, currentUserId, deleteComment} = this.props
     return(
       <div >
-          {this.state.display === "review" ? this.displayComment(review, currentUserId, deleteComment) : this.editComment(review.comment, review.rating)}
+          {this.state.display === "review" ? this.displayComment(review, currentUserId, deleteComment) : this.editComment(review.comment)}
       </div>
     )
   }
