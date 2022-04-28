@@ -19,7 +19,7 @@ class ReviewsIndex extends React.Component{
 
         { reviews.length === 0 ? null : 
           reviews.reverse().map((review, idx)=>{ 
-            return  <div key={idx.toString()+"reviews"}>
+            return  <div key={idx.toString()+review.id}>
                       <ReviewShow review = {review} currentUserId = {currentUserId} deleteComment={this.props.removeReview} editReview = {editReview}/> 
                     </div>   
           })

@@ -44,11 +44,13 @@ class ReviewShow extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
+    
     if (this.state.comment === ""){
         const errorField = document.getElementById("review_error")
         errorField.replaceChildren()
         errorField.append("Comment field can't be blank")
       } else {
+        debugger
       this.props.editReview(this.props.review.id, this.state) 
       this.setState({display: 'review'})
     }
@@ -56,6 +58,7 @@ class ReviewShow extends React.Component{
   }
 
   editComment(comment){
+    
     return <form onSubmit={this.handleSubmit}>
               <span className='post-review-rating'>Rating: </span>
               {Array(5).fill(0).map((_, idx) => {

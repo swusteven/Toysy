@@ -11,9 +11,9 @@ class ProductMostPopular extends React.Component{
   render(){  
     const {products} = this.props
     let productsCopy = Array.from(products.slice(1))
-    let productsList = (products.length === 0 ? null : shuffleArray(productsCopy, 7))
+    let productsList = (products.length < 20  ? null : shuffleArray(productsCopy, 7))
 
-    return( products.length === 0 ? null : 
+    return( products.length < 20 ? null : 
             <section className="most-popular-wrapper">
                 <div className='most-popular-top'>  
                     <div className="most-popular-top-left">

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { shuffleArray } from '../../utils/shuffle_products.array'
 
 class ProductEditorsPicks extends React.Component {
   constructor(props) {
@@ -11,7 +10,7 @@ class ProductEditorsPicks extends React.Component {
   render() {
     const { products } = this.props
 
-    return (products.length === 0 ? null :
+    return (products.length <20  ? null :
       <section className="editors-pick-wrapper">
         <div className='editors-pick-top'>
 
