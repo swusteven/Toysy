@@ -81,3 +81,6 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
+  database: toysy_production
+  username: toysy_production_user
+  password: <%= ENV['TOYSY_PRODUCTION_DATABASE_PASSWORD'] %>
