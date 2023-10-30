@@ -23,7 +23,9 @@
 /public/assets
 .byebug_history
 
-.DS_Store 
+# Ignore Mac DS_Store files
+.DS_Store
+**/.DS_Store
 
 node_modules/
 bundle.js
@@ -32,3 +34,6 @@ bundle.js.map
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+
+
