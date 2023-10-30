@@ -8,6 +8,7 @@ bundle exec rails assets:clean
 bundle exec rails db:migrate
 
 npm install
+npm run postinstall
 
 #if you have seeds to run add:
 bundle exec rails db:setup
